@@ -1,41 +1,12 @@
 {
   "sections": {
-    "collage_868NFx": {
-      "type": "collage",
-      "blocks": {
-        "image_xrPq4q": {
-          "type": "image",
-          "settings": {
-          }
-        },
-        "product_pXdUL8": {
-          "type": "product",
-          "settings": {
-            "product": "best-dad-ever-family-personalized-custom-hat-fathers-day-gift-for-dad-grandpa",
-            "second_image": true
-          }
-        },
-        "collection_EHXgdh": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_xrPq4q",
-        "product_pXdUL8",
-        "collection_EHXgdh"
-      ],
+    "custom_liquid_y8DXbc": {
+      "type": "custom-liquid",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Converted HTML CSS<\/title>\n    <style>\n        .banner_container {\n            display: flex;\n            width: 1200px;\n            height: 400px;\n            margin: auto;\n            gap: 20px;\n            align-items: center;\n            padding: 0 auto;\n        }\n\n        .main-banner {\n            width: 800px;\n            height: 400px;\n            background-color: yellow;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .main-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .side-banners {\n            display: flex;\n            flex-direction: column;\n            width: 400px;\n            height: 400px;\n            gap: 20px;\n        }\n\n        .side-banner {\n            width: 100%;\n            height: 200px;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .side-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .green-banner {\n            background-color: green;\n        }\n\n        .orange-banner {\n            background-color: orange;\n        }\n    <\/style>\n<\/head>\n<body>\n\n<div class=\"banner_container\">\n    <div class=\"main-banner\">\n        <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\" alt=\"\">\n    <\/div>\n    <div class=\"side-banners\">\n        <div class=\"side-banner green-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\" alt=\"\">\n        <\/div>\n        <div class=\"side-banner orange-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\" alt=\"\">\n        <\/div>\n    <\/div>\n<\/div>\n\n<\/body>\n<\/html>",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_WiTxCB": {
@@ -228,6 +199,15 @@
         "padding_bottom": 8
       }
     },
+    "custom_liquid_mG9GCP": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Container chứa hình tròn và tên<\/title>\n    <style>\n        .container_product {\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: space-around;\n            max-width: 1100px;\n            margin: 0 auto;\n        }\n\n        .container_product .info {\n            text-align: center;\n            margin-bottom: 20px;\n            width: calc(20% - 20px);\n        }\n\n        .container_product img {\n            border-radius: 50%;\n            width: 198px;\n            height: 198px;\n            transition: transform 0.3s ease;\n        }\n\n        .container_product p {\n            margin-top: 10px;\n        }\n\n        .container_product img:hover {\n            transform: scale(1.1);\n        }\n    <\/style>\n<\/head>\n\n<body>\n    <div class=\"container_product\">\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_AxxmXF": {
       "type": "custom-liquid",
       "settings": {
@@ -285,7 +265,7 @@
     }
   },
   "order": [
-    "collage_868NFx",
+    "custom_liquid_y8DXbc",
     "rich_text_WiTxCB",
     "collection_list_KWjDF4",
     "rich_text_mHnp7Y",
@@ -293,6 +273,7 @@
     "custom_liquid_MBjmg7",
     "featured_collection",
     "rich_text_bJdQEp",
+    "custom_liquid_mG9GCP",
     "custom_liquid_AxxmXF",
     "rich_text_PbP4wP",
     "custom_liquid_FxV9Y9"
