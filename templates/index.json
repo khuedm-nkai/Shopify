@@ -32,65 +32,13 @@
         "padding_bottom": 0
       }
     },
-    "collection_list_KWjDF4": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_zmjzqe": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_9MxErF": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_3Wnqe6": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_c9q38n": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_yF9RMz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_fM4ygN": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_zmjzqe",
-        "featured_collection_9MxErF",
-        "featured_collection_3Wnqe6",
-        "featured_collection_c9q38n",
-        "featured_collection_yF9RMz",
-        "featured_collection_fM4ygN"
-      ],
+    "custom_liquid_mXYTMq": {
+      "type": "custom-liquid",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_ratio": "adapt",
-        "columns_desktop": 6,
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Image Hover Zoom with Text Underline<\/title>\n  <style>\n    .container_recipient {\n      display: flex;\n      width: 100%;\n      max-width: 1200px;\n      height: 250px;\n      margin: 0 auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .item_recipient {\n      display: flex;\n      flex-direction: column;\n      width: 250px;\n      height: 250px;\n      align-items: center;\n      gap: 5px;\n      position: relative;\n      cursor: pointer;\n    }\n\n    .image-container_recipient {\n      width: 187px;\n      height: 187px;\n      border-radius: 50%;\n      overflow: hidden;\n      position: relative;\n    }\n\n    .image {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      transition: transform 0.3s ease;\n    }\n\n    .image-container_recipient:hover .image {\n      transform: scale(1.1); \n    }\n\n    .text {\n      font-size: 1.25rem;\n      font-weight: 500;\n      position: relative;\n    }\n\n    .text::after {\n      content: '';\n      position: absolute;\n      width: 0;\n      height: 2px;\n      bottom: -2px;\n      left: 50%;\n      background-color: black;\n      transition: width 0.3s ease, left 0.3s ease;\n    }\n\n    .item_recipient:hover .text::after {\n      width: 100%;\n      left: 0;\n    }\n  <\/style>\n<\/head>\n  <div class=\"container_recipient\">\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 1\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 2\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 3\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 4\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 5\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 6\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n  <\/div>\n<\/html>",
         "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 8,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_mHnp7Y": {
@@ -123,26 +71,19 @@
         "padding_bottom": 0
       }
     },
-    "image_banner": {
-      "type": "image-banner",
+    "custom_liquid_dBdN8h": {
+      "type": "custom-liquid",
       "settings": {
-        "image": "shopify:\/\/shop_images\/BKD-Banner.webp",
-        "image_overlay_opacity": 20,
-        "image_height": "small",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/BKD-Banner.png?v=1715700910\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_MBjmg7": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Navbar<\/title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            margin: 0;\n            padding: 0;\n        }\n\n        .navbar {\n            background-color: white;\n            overflow: hidden;\n            padding: 10px 0;\n        }\n\n        .navbar-list {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            display: flex;\n            justify-content: space-around;\n            gap: 10px; \/* Khoảng cách giữa các nút *\/\n        }\n\n        .navbar-item {\n            flex-grow: 1;\n        }\n\n        .navbar-link {\n            display: block;\n            text-align: center;\n            padding: 14px 20px;\n            text-decoration: none;\n            color: white;\n            background-color: gray; \/* Màu xám cho nút *\/\n            border-radius: 8px;\n            transition: background-color 0.3s, color 0.3s;\n        }\n\n        .navbar-link:hover {\n            background-color: #575757;\n            color: white;\n        }\n    <\/style>\n<\/head>\n<body>\n    <nav class=\"navbar\">\n        <ul class=\"navbar-list\">\n            {% assign menu_items = \"Home,About,Services,Portfolio,Contact,Blog\" | split: \",\" %}\n            {% for item in menu_items %}\n                <li class=\"navbar-item\"><a href=\"#\" class=\"navbar-link\">{{ item }}<\/a><\/li>\n            {% endfor %}\n        <\/ul>\n    <\/nav>\n<\/body>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Navbar<\/title>\n    <style>\n        .navbar {\nmargin:0 auto;\n            background-color: white;\n            overflow: hidden;\n            padding: 10px 0;\nmax-width:1100px;\n        }\n\n        .navbar-list {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            display: flex;\n            justify-content: space-around;\n            gap: 10px; \/* Khoảng cách giữa các nút *\/\n        }\n\n        .navbar-item {\n            flex-grow: 1;\n        }\n\n        .navbar-link {\n            display: block;\n            text-align: center;\n            padding: 14px 20px;\n            text-decoration: none;\n            color: white;\n            background-color: gray; \/* Màu xám cho nút *\/\n            border-radius: 8px;\n            transition: background-color 0.3s, color 0.3s;\n        }\n\n        .navbar-link:hover {\n            background-color: #575757;\n            color: white;\n        }\n    <\/style>\n<\/head>\n<body>\n    <nav class=\"navbar\">\n        <ul class=\"navbar-list\">\n            {% assign menu_items = \"Home,About,Services,Portfolio,Contact,Blog\" | split: \",\" %}\n            {% for item in menu_items %}\n                <li class=\"navbar-item\"><a href=\"#\" class=\"navbar-link\">{{ item }}<\/a><\/li>\n            {% endfor %}\n        <\/ul>\n    <\/nav>\n<\/body>\n<\/html>",
         "color_scheme": "",
         "padding_top": 4,
         "padding_bottom": 4
@@ -267,9 +208,9 @@
   "order": [
     "custom_liquid_y8DXbc",
     "rich_text_WiTxCB",
-    "collection_list_KWjDF4",
+    "custom_liquid_mXYTMq",
     "rich_text_mHnp7Y",
-    "image_banner",
+    "custom_liquid_dBdN8h",
     "custom_liquid_MBjmg7",
     "featured_collection",
     "rich_text_bJdQEp",
