@@ -139,6 +139,13 @@
   padding: 1.3rem 1rem;
 }
 
+@media screen and (max-width: 749px) {
+  .card__information h3 {
+    font-size: calc(var(--font-heading-scale) * 1.4rem);
+    line-height: calc(1 + 0.4 / var(--font-body-scale));
+  }
+}
+
 .card:not(.ratio) > .card__content {
   grid-template-rows: max-content minmax(0, 1fr) max-content auto;
 }
