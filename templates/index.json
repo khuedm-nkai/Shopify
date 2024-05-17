@@ -35,7 +35,7 @@
     "custom_liquid_mXYTMq": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Image Hover Zoom with Text Underline<\/title>\n  <style>\n    .container_recipient {\n      display: flex;\n      width: 100%;\n      max-width: 1200px;\n      height: 250px;\n      margin: 0 auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .item_recipient {\n      display: flex;\n      flex-direction: column;\n      width: 250px;\n      height: 250px;\n      align-items: center;\n      gap: 5px;\n      position: relative;\n      cursor: pointer;\n    }\n\n    .image-container_recipient {\n      width: 187px;\n      height: 187px;\n      border-radius: 50%;\n      overflow: hidden;\n      position: relative;\n    }\n\n    .image {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      transition: transform 0.3s ease;\n    }\n\n    .image-container_recipient:hover .image {\n      transform: scale(1.1); \n    }\n\n    .text {\n      font-size: 1.25rem;\n      font-weight: 500;\n      position: relative;\n    }\n\n    .text::after {\n      content: '';\n      position: absolute;\n      width: 0;\n      height: 2px;\n      bottom: -2px;\n      left: 50%;\n      background-color: black;\n      transition: width 0.3s ease, left 0.3s ease;\n    }\n\n    .item_recipient:hover .text::after {\n      width: 100%;\n      left: 0;\n    }\n  <\/style>\n<\/head>\n  <div class=\"container_recipient\">\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 1\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 2\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 3\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 4\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 5\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n    <div class=\"item_recipient\">\n      <div class=\"image-container_recipient\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/1305_sbr_dad.png?v=1715618001\" alt=\"Image 6\" class=\"image\">\n      <\/div>\n      <span class=\"text\">For you<\/span>\n    <\/div>\n  <\/div>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Image Hover Zoom with Text Underline<\/title>\n  <style>\n    .container_recipient {\n      display: flex;\n      width: 100%;\n      max-width: 1200px;\n      height: 250px;\n      margin: 0 auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .item_recipient {\n      display: flex;\n      flex-direction: column;\n      width: 250px;\n      height: 250px;\n      align-items: center;\n      gap: 5px;\n      position: relative;\n      cursor: pointer;\n    }\n\n    .image-container_recipient {\n      width: 187px;\n      height: 187px;\n      border-radius: 50%;\n      overflow: hidden;\n      position: relative;\n    }\n\n    .image {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      transition: transform 0.3s ease;\n    }\n\n    .image-container_recipient:hover .image {\n      transform: scale(1.1); \n    }\n\n    .text {\n      font-size: 1.25rem;\n      font-weight: 500;\n      position: relative;\n    }\n\n    .text::after {\n      content: '';\n      position: absolute;\n      width: 0;\n      height: 2px;\n      bottom: -2px;\n      left: 50%;\n      background-color: black;\n      transition: width 0.3s ease, left 0.3s ease;\n    }\n\n    .item_recipient:hover .text::after {\n      width: 100%;\n      left: 0;\n    }\n  <\/style>\n<\/head>\n  <div class=\"container_recipient\">\n    {% for link in linklists.main-recipient.links -%}\n      {% assign linkCollection = link.object %}\n      <div class=\"item_recipient\">\n        <div class=\"image-container_recipient\">\n          <img src=\"{{linkCollection.featured_image.src | product_img_url: '140x'}}\" alt=\"{{linkCollection.title}}\" class=\"image\">\n        <\/div>\n        <span class=\"text\">{{linkCollection.title}}<\/span>\n      <\/div>\n    {%- endfor %}\n  <\/div>\n<\/html>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -379,6 +379,46 @@
         "padding_top": 12,
         "padding_bottom": 0
       }
+    },
+    "collection_list_FTgWKq": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_YHwQew": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dad"
+          }
+        },
+        "featured_collection_Mrkenr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-grandpa"
+          }
+        },
+        "featured_collection_N79HFi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_YHwQew",
+        "featured_collection_Mrkenr",
+        "featured_collection_N79HFi"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -401,6 +441,7 @@
     "featured_collection_irGhQP",
     "custom_liquid_AxxmXF",
     "rich_text_PbP4wP",
-    "custom_liquid_FxV9Y9"
+    "custom_liquid_FxV9Y9",
+    "collection_list_FTgWKq"
   ]
 }
