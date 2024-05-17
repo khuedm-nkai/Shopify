@@ -3,10 +3,10 @@
     "custom_liquid_y8DXbc": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Responsive HTML CSS<\/title>\n    <style>\n        .banner_container {\n            display: flex;\n            flex-wrap: wrap;\n            width: 100%;\n            max-width: 1200px;\n            margin: auto;\n            gap: 20px;\n            align-items: center;\n            padding: 0 20px;\n        }\n\n        .main-banner {\n            flex: 1 1 100%;\n            height: 400px;\n            background-color: yellow;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .main-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .side-banners {\n            display: flex;\n            flex: 1 1 100%;\n            flex-direction: column;\n            height: 400px;\n            gap: 20px;\n        }\n\n        .side-banner {\n            flex: 1;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .side-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .green-banner {\n            background-color: green;\n        }\n\n        .orange-banner {\n            background-color: orange;\n        }\n\n        @media (min-width: 768px) {\n            .banner_container {\n                flex-wrap: nowrap;\n            }\n\n            .main-banner {\n                flex: 2;\n                height: 400px;\n            }\n\n            .side-banners {\n                flex: 1;\n                height: 400px;\n            }\n        }\n    <\/style>\n<\/head>\n<body>\n\n<div class=\"banner_container\">\n    <div class=\"main-banner\">\n        <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\" alt=\"\">\n    <\/div>\n    <div class=\"side-banners\">\n        <div class=\"side-banner green-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\" alt=\"\">\n        <\/div>\n        <div class=\"side-banner orange-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\" alt=\"\">\n        <\/div>\n    <\/div>\n<\/div>\n\n<\/body>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Responsive HTML CSS<\/title>\n    <style>\n        .banner_container {\n            display: flex;\n            flex-wrap: wrap;\n            width: 100%;\n            max-width: 1200px;\n            margin: auto;\n            gap: 20px;\n            align-items: center;\n            \/* padding: 0 20px; *\/\n        }\n\n        .main-banner {\n            flex: 1 1 100%;\n            height: 400px;\n            background-color: yellow;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .main-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .side-banners {\n            display: flex;\n            flex: 1 1 100%;\n            flex-direction: column;\n            height: 400px;\n            gap: 20px;\n        }\n\n        .side-banner {\n            flex: 1;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .side-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .green-banner {\n            background-color: green;\n        }\n\n        .orange-banner {\n            background-color: orange;\n        }\n\n        .mobile-message {\n            display: none;\n            text-align: center;\n            font-size: 24px;\n            color: blue;\n        }\n\n        @media (min-width: 768px) {\n            .banner_container {\n                flex-wrap: nowrap;\n            }\n\n            .main-banner {\n                flex: 2;\n                height: 400px;\n            }\n\n            .side-banners {\n                flex: 1;\n                height: 400px;\n            }\n\n            .slideshow-container {\n                display: none;\n            }\n        }\n\n        @media (max-width: 767px) {\n            .banner_container {\n                display: none;\n            }\n\n            .slideshow-container {\n                height: 100%;\n                display: block;\n                max-width: 1000px;\n                position: relative;\n                margin: 5px 10px 5px 10px;\n            }\n\n            .slides {\n                height: 100%;\n                display: none;\n                overflow: hidden;\n            }\n            .slides img {\n                border-radius: 15px;\n            }\n\n            .fade {\n                animation-name: fade;\n                animation-duration: 1.5s;\n            }\n\n            @keyframes fade {\n                from {\n                    opacity: .4\n                }\n\n                to {\n                    opacity: 1\n                }\n            }\n\n            .prev,\n            .next {\n                cursor: pointer;\n                position: absolute;\n                top: 50%;\n                width: auto;\n                margin-top: -22px;\n                padding: 16px;\n                color: white;\n                font-weight: bold;\n                font-size: 18px;\n                transition: 0.6s ease;\n                border-radius: 0 3px 3px 0;\n                user-select: none;\n            }\n\n            .next {\n                right: 0;\n                border-radius: 3px 0 0 3px;\n            }\n\n            .prev:hover,\n            .next:hover {\n                \/* background-color: rgba(0, 0, 0, 0.8); *\/\n            }\n        }\n    <\/style>\n<\/head>\n\n<body>\n\n    <div class=\"slideshow-container\">\n        <div class=\"slides fade\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\"\n                style=\"height: 100%; width:100%\">\n        <\/div>\n        <div class=\"slides fade\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\"\n                style=\"height: 100%; width:100%\">\n        <\/div>\n        <div class=\"slides fade\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\"\n                style=\"height: 100%; width:100%\">\n        <\/div>\n\n        <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;<\/a>\n        <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;<\/a>\n    <\/div>\n\n    <div class=\"banner_container\">\n        <div class=\"main-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\"\n                alt=\"\">\n        <\/div>\n        <div class=\"side-banners\">\n            <div class=\"side-banner green-banner\">\n                <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\"\n                    alt=\"\">\n            <\/div>\n            <div class=\"side-banner orange-banner\">\n                <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\"\n                    alt=\"\">\n            <\/div>\n        <\/div>\n    <\/div>\n\n    <script>\n        let slideIndex = 1;\n        showSlides(slideIndex);\n\n        function plusSlides(n) {\n            showSlides(slideIndex += n);\n        }\n\n        function currentSlide(n) {\n            showSlides(slideIndex = n);\n        }\n\n        function showSlides(n) {\n            let i;\n            let slides = document.getElementsByClassName(\"slides\");\n            if (n > slides.length) { slideIndex = 1 }\n            if (n < 1) { slideIndex = slides.length }\n            for (i = 0; i < slides.length; i++) {\n                slides[i].style.display = \"none\";\n            }\n            slides[slideIndex - 1].style.display = \"block\";\n        }\n    <\/script>\n\n<\/body>\n\n<\/html>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_WiTxCB": {
@@ -39,37 +39,6 @@
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Image Hover Zoom with Text Underline<\/title>\n  <style>\n    .container_recipient {\n      display: flex;\n      width: 100%;\n      max-width: 1200px;\n      height: 250px;\n      margin: 0 auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .item_recipient {\n      display: flex;\n      flex-direction: column;\n      width: 250px;\n      height: 250px;\n      align-items: center;\n      gap: 5px;\n      position: relative;\n      cursor: pointer;\n    }\n\n    .image-container_recipient {\n      width: 187px;\n      height: 187px;\n      border-radius: 50%;\n      overflow: hidden;\n      position: relative;\n    }\n\n    .image {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      transition: transform 0.3s ease;\n    }\n\n    .image-container_recipient:hover .image {\n      transform: scale(1.1); \n    }\n\n    .text {\n      font-size: 1.25rem;\n      font-weight: 500;\n      position: relative;\n    }\n\n    .text::after {\n      content: '';\n      position: absolute;\n      width: 0;\n      height: 2px;\n      bottom: -2px;\n      left: 50%;\n      background-color: black;\n      transition: width 0.3s ease, left 0.3s ease;\n    }\n\n    .item_recipient:hover .text::after {\n      width: 100%;\n      left: 0;\n    }\n  <\/style>\n<\/head>\n  <div class=\"container_recipient\">\n    {% for link in linklists.main-recipient.links -%}\n      {% assign linkCollection = link.object %}\n      <div class=\"item_recipient\">\n        <div class=\"image-container_recipient\">\n          <img src=\"{{linkCollection.featured_image.src | product_img_url: '140x'}}\" alt=\"{{linkCollection.title}}\" class=\"image\">\n        <\/div>\n        <span class=\"text\">{{linkCollection.title}}<\/span>\n      <\/div>\n    {%- endfor %}\n  <\/div>\n<\/html>",
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_mHnp7Y": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_pmpnbL": {
-          "type": "heading",
-          "settings": {
-            "heading": "WHO IS THE HERO?",
-            "heading_size": "h1"
-          }
-        },
-        "text_hGerdY": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_pmpnbL",
-        "text_hGerdY"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -447,6 +416,9 @@
         "featured_collection_bMgBPP",
         "featured_collection_XiQznt"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "title": "SHOP BY RECIPIENT",
         "heading_size": "h1",
@@ -456,8 +428,39 @@
         "show_view_all": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_mHnp7Y": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pmpnbL": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHO IS THE HERO?",
+            "heading_size": "h1"
+          }
+        },
+        "text_hGerdY": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_pmpnbL",
+        "text_hGerdY"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -465,7 +468,6 @@
     "custom_liquid_y8DXbc",
     "rich_text_WiTxCB",
     "custom_liquid_mXYTMq",
-    "rich_text_mHnp7Y",
     "custom_liquid_dBdN8h",
     "custom_liquid_MBjmg7",
     "featured_collection",
@@ -482,6 +484,7 @@
     "custom_liquid_AxxmXF",
     "rich_text_PbP4wP",
     "custom_liquid_FxV9Y9",
-    "collection_list_FTgWKq"
+    "collection_list_FTgWKq",
+    "rich_text_mHnp7Y"
   ]
 }
