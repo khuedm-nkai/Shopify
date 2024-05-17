@@ -83,7 +83,7 @@
     "custom_liquid_MBjmg7": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Navbar<\/title>\n    <style>\n        .navbar {\nmargin:0 auto;\n            background-color: white;\n            overflow: hidden;\n            padding: 10px 0;\nmax-width:1100px;\n        }\n\n        .navbar-list {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            display: flex;\n            justify-content: space-around;\n            gap: 10px; \/* Khoảng cách giữa các nút *\/\n        }\n\n        .navbar-item {\n            flex-grow: 1;\n        }\n\n        .navbar-link {\n            display: block;\n            text-align: center;\n            padding: 14px 20px;\n            text-decoration: none;\n            color: white;\n            background-color: gray; \/* Màu xám cho nút *\/\n            border-radius: 8px;\n            transition: background-color 0.3s, color 0.3s;\n        }\n\n        .navbar-link:hover {\n            background-color: #575757;\n            color: white;\n        }\n    <\/style>\n<\/head>\n<body>\n    <nav class=\"navbar\">\n        <ul class=\"navbar-list\">\n            {% assign menu_items = \"Home,About,Services,Portfolio,Contact,Blog\" | split: \",\" %}\n            {% for item in menu_items %}\n                <li class=\"navbar-item\"><a href=\"#\" class=\"navbar-link\">{{ item }}<\/a><\/li>\n            {% endfor %}\n        <\/ul>\n    <\/nav>\n<\/body>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Navbar<\/title>\n    <style>\n        .navbar {\nmargin:0 auto;\n            background-color: white;\n            overflow: hidden;\n            padding: 10px 0;\nmax-width:1100px;\n        }\n\n        .navbar-list {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            display: flex;\n            justify-content: space-around;\n            gap: 10px; \/* Khoảng cách giữa các nút *\/\n        }\n\n        .navbar-item {\n            flex-grow: 1;\n        }\n\n        .navbar-link {\n            display: block;\n            text-align: center;\n            padding: 14px 20px;\n            text-decoration: none;\n            color: white;\n            background-color: #bda98e; \/* Màu xám cho nút *\/\n            border-radius: 8px;\n            transition: background-color 0.3s, color 0.3s;\n        }\n\n        .navbar-link:hover {\n            background-color: #575757;\n            color: white;\n        }\n    <\/style>\n<\/head>\n<body>\n    <nav class=\"navbar\">\n        <ul class=\"navbar-list\">\n            {% assign menu_items = \"Home,About,Services,Portfolio,Contact,Blog\" | split: \",\" %}\n            {% for item in menu_items %}\n                <li class=\"navbar-item\"><a href=\"#\" class=\"navbar-link\">{{ item }}<\/a><\/li>\n            {% endfor %}\n        <\/ul>\n    <\/nav>\n<\/body>\n<\/html>",
         "color_scheme": "",
         "padding_top": 4,
         "padding_bottom": 4
@@ -92,11 +92,11 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
-        "description_style": "body",
+        "description_style": "uppercase",
         "collection": "all",
         "products_to_show": 10,
         "columns_desktop": 5,
@@ -113,7 +113,7 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 44,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -146,13 +146,189 @@
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Container chứa hình tròn và tên<\/title>\n    <style>\n        .container_product {\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: space-around;\n            max-width: 1100px;\n            margin: 0 auto;\n        }\n\n        .container_product .info {\n            text-align: center;\n            margin-bottom: 20px;\n            width: calc(20% - 20px);\n        }\n\n        .container_product img {\n            border-radius: 50%;\n            width: 198px;\n            height: 198px;\n            transition: transform 0.3s ease;\n        }\n\n        .container_product p {\n            margin-top: 10px;\n        }\n\n        .container_product img:hover {\n            transform: scale(1.1);\n        }\n    <\/style>\n<\/head>\n\n<body>\n    <div class=\"container_product\">\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
         "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_VpyhgV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PeKDjP": {
+          "type": "heading",
+          "settings": {
+            "heading": "GET TRENDING NOW",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PeKDjP"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_yRTF9D": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_Wametm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iEkC9E": {
+          "type": "heading",
+          "settings": {
+            "heading": "DISCOVER NEW ARRIVALS",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iEkC9E"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_pN3HHR": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_wE9VyG": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.png?v=1691485032\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 28,
         "padding_bottom": 52
+      }
+    },
+    "featured_collection_MDBBBj": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_DLPznh": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.png?v=1689737853\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_irGhQP": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_AxxmXF": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n\n\n        .image-container {\n            display: flex;\n            justify-content: space-between;\n            width: 100%;\n            max-width: 1100px;\n            height: 200px;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .image-container img {\n            width: calc(50% - 5px); \n            height: auto;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"image-container\">\n        {% assign image1_url = \"https:\/\/wallpapercave.com\/wp\/wp13956488.jpg\" %}\n        {% assign image2_url = \"https:\/\/wallpapercave.com\/wp\/wp13956488.jpg\" %}\n        <img src=\"{{ image1_url }}\" alt=\"Image 1\">\n        <img src=\"{{ image2_url }}\" alt=\"Image 2\">\n    <\/div>\n<\/body>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n\n\n        .image-container {\n            display: flex;\n            justify-content: space-between;\n            width: 100%;\n            max-width: 1100px;\n            height: 200px;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .image-container img {\n            width: calc(50% - 5px); \n            height: auto;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"image-container\">\n        {% assign image1_url = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\" %}\n        {% assign image2_url = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\" %}\n        <img src=\"{{ image1_url }}\" alt=\"Image 1\">\n        <img src=\"{{ image2_url }}\" alt=\"Image 2\">\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -215,6 +391,14 @@
     "featured_collection",
     "rich_text_bJdQEp",
     "custom_liquid_mG9GCP",
+    "rich_text_VpyhgV",
+    "featured_collection_yRTF9D",
+    "rich_text_Wametm",
+    "featured_collection_pN3HHR",
+    "custom_liquid_wE9VyG",
+    "featured_collection_MDBBBj",
+    "custom_liquid_DLPznh",
+    "featured_collection_irGhQP",
     "custom_liquid_AxxmXF",
     "rich_text_PbP4wP",
     "custom_liquid_FxV9Y9"
