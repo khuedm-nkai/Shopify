@@ -633,6 +633,9 @@
           },
           "options__2": {
             "label": "2 kolumner"
+          },
+          "options__3": {
+            "label": "3 kolumner"
           }
         }
       },

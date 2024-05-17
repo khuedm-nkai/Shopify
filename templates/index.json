@@ -3,7 +3,7 @@
     "custom_liquid_y8DXbc": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Converted HTML CSS<\/title>\n    <style>\n        .banner_container {\n            display: flex;\n            width: 1200px;\n            height: 400px;\n            margin: auto;\n            gap: 20px;\n            align-items: center;\n            padding: 0 auto;\n        }\n\n        .main-banner {\n            width: 800px;\n            height: 400px;\n            background-color: yellow;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .main-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .side-banners {\n            display: flex;\n            flex-direction: column;\n            width: 400px;\n            height: 400px;\n            gap: 20px;\n        }\n\n        .side-banner {\n            width: 100%;\n            height: 200px;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .side-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .green-banner {\n            background-color: green;\n        }\n\n        .orange-banner {\n            background-color: orange;\n        }\n    <\/style>\n<\/head>\n<body>\n\n<div class=\"banner_container\">\n    <div class=\"main-banner\">\n        <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\" alt=\"\">\n    <\/div>\n    <div class=\"side-banners\">\n        <div class=\"side-banner green-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\" alt=\"\">\n        <\/div>\n        <div class=\"side-banner orange-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\" alt=\"\">\n        <\/div>\n    <\/div>\n<\/div>\n\n<\/body>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Responsive HTML CSS<\/title>\n    <style>\n        .banner_container {\n            display: flex;\n            flex-wrap: wrap;\n            width: 100%;\n            max-width: 1200px;\n            margin: auto;\n            gap: 20px;\n            align-items: center;\n            padding: 0 20px;\n        }\n\n        .main-banner {\n            flex: 1 1 100%;\n            height: 400px;\n            background-color: yellow;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .main-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .side-banners {\n            display: flex;\n            flex: 1 1 100%;\n            flex-direction: column;\n            height: 400px;\n            gap: 20px;\n        }\n\n        .side-banner {\n            flex: 1;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .side-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .green-banner {\n            background-color: green;\n        }\n\n        .orange-banner {\n            background-color: orange;\n        }\n\n        @media (min-width: 768px) {\n            .banner_container {\n                flex-wrap: nowrap;\n            }\n\n            .main-banner {\n                flex: 2;\n                height: 400px;\n            }\n\n            .side-banners {\n                flex: 1;\n                height: 400px;\n            }\n        }\n    <\/style>\n<\/head>\n<body>\n\n<div class=\"banner_container\">\n    <div class=\"main-banner\">\n        <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\" alt=\"\">\n    <\/div>\n    <div class=\"side-banners\">\n        <div class=\"side-banner green-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\" alt=\"\">\n        <\/div>\n        <div class=\"side-banner orange-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\" alt=\"\">\n        <\/div>\n    <\/div>\n<\/div>\n\n<\/body>\n<\/html>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -23,6 +23,7 @@
       "block_order": [
         "heading_YPidVx"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -34,6 +35,7 @@
     },
     "custom_liquid_mXYTMq": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Image Hover Zoom with Text Underline<\/title>\n  <style>\n    .container_recipient {\n      display: flex;\n      width: 100%;\n      max-width: 1200px;\n      height: 250px;\n      margin: 0 auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .item_recipient {\n      display: flex;\n      flex-direction: column;\n      width: 250px;\n      height: 250px;\n      align-items: center;\n      gap: 5px;\n      position: relative;\n      cursor: pointer;\n    }\n\n    .image-container_recipient {\n      width: 187px;\n      height: 187px;\n      border-radius: 50%;\n      overflow: hidden;\n      position: relative;\n    }\n\n    .image {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      transition: transform 0.3s ease;\n    }\n\n    .image-container_recipient:hover .image {\n      transform: scale(1.1); \n    }\n\n    .text {\n      font-size: 1.25rem;\n      font-weight: 500;\n      position: relative;\n    }\n\n    .text::after {\n      content: '';\n      position: absolute;\n      width: 0;\n      height: 2px;\n      bottom: -2px;\n      left: 50%;\n      background-color: black;\n      transition: width 0.3s ease, left 0.3s ease;\n    }\n\n    .item_recipient:hover .text::after {\n      width: 100%;\n      left: 0;\n    }\n  <\/style>\n<\/head>\n  <div class=\"container_recipient\">\n    {% for link in linklists.main-recipient.links -%}\n      {% assign linkCollection = link.object %}\n      <div class=\"item_recipient\">\n        <div class=\"image-container_recipient\">\n          <img src=\"{{linkCollection.featured_image.src | product_img_url: '140x'}}\" alt=\"{{linkCollection.title}}\" class=\"image\">\n        <\/div>\n        <span class=\"text\">{{linkCollection.title}}<\/span>\n      <\/div>\n    {%- endfor %}\n  <\/div>\n<\/html>",
         "color_scheme": "",
@@ -62,6 +64,7 @@
         "heading_pmpnbL",
         "text_hGerdY"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -73,6 +76,7 @@
     },
     "custom_liquid_dBdN8h": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/BKD-Banner.png?v=1715700910\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -82,6 +86,7 @@
     },
     "custom_liquid_MBjmg7": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Navbar<\/title>\n    <style>\n        .navbar {\nmargin:0 auto;\n            background-color: white;\n            overflow: hidden;\n            padding: 10px 0;\nmax-width:1100px;\n        }\n\n        .navbar-list {\n            list-style-type: none;\n            margin: 0;\n            padding: 0;\n            display: flex;\n            justify-content: space-around;\n            gap: 10px; \/* Khoảng cách giữa các nút *\/\n        }\n\n        .navbar-item {\n            flex-grow: 1;\n        }\n\n        .navbar-link {\n            display: block;\n            text-align: center;\n            padding: 14px 20px;\n            text-decoration: none;\n            color: white;\n            background-color: #bda98e; \/* Màu xám cho nút *\/\n            border-radius: 8px;\n            transition: background-color 0.3s, color 0.3s;\n        }\n\n        .navbar-link:hover {\n            background-color: #575757;\n            color: white;\n        }\n    <\/style>\n<\/head>\n<body>\n    <nav class=\"navbar\">\n        <ul class=\"navbar-list\">\n            {% assign menu_items = \"Home,About,Services,Portfolio,Contact,Blog\" | split: \",\" %}\n            {% for item in menu_items %}\n                <li class=\"navbar-item\"><a href=\"#\" class=\"navbar-link\">{{ item }}<\/a><\/li>\n            {% endfor %}\n        <\/ul>\n    <\/nav>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -91,6 +96,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -131,6 +137,7 @@
       "block_order": [
         "heading_8KdzVR"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -142,6 +149,7 @@
     },
     "custom_liquid_mG9GCP": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Container chứa hình tròn và tên<\/title>\n    <style>\n        .container_product {\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: space-around;\n            max-width: 1100px;\n            margin: 0 auto;\n        }\n\n        .container_product .info {\n            text-align: center;\n            margin-bottom: 20px;\n            width: calc(20% - 20px);\n        }\n\n        .container_product img {\n            border-radius: 50%;\n            width: 198px;\n            height: 198px;\n            transition: transform 0.3s ease;\n        }\n\n        .container_product p {\n            margin-top: 10px;\n        }\n\n        .container_product img:hover {\n            transform: scale(1.1);\n        }\n    <\/style>\n<\/head>\n\n<body>\n    <div class=\"container_product\">\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -163,6 +171,7 @@
       "block_order": [
         "heading_PeKDjP"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -174,6 +183,7 @@
     },
     "featured_collection_yRTF9D": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -214,6 +224,7 @@
       "block_order": [
         "heading_iEkC9E"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -225,6 +236,7 @@
     },
     "featured_collection_pN3HHR": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -253,6 +265,7 @@
     },
     "custom_liquid_wE9VyG": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.png?v=1691485032\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -262,6 +275,7 @@
     },
     "featured_collection_MDBBBj": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -290,6 +304,7 @@
     },
     "custom_liquid_DLPznh": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.png?v=1689737853\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -299,6 +314,7 @@
     },
     "featured_collection_irGhQP": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -327,6 +343,7 @@
     },
     "custom_liquid_AxxmXF": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n\n\n        .image-container {\n            display: flex;\n            justify-content: space-between;\n            width: 100%;\n            max-width: 1100px;\n            height: 200px;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .image-container img {\n            width: calc(50% - 5px); \n            height: auto;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"image-container\">\n        {% assign image1_url = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\" %}\n        {% assign image2_url = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\" %}\n        <img src=\"{{ image1_url }}\" alt=\"Image 1\">\n        <img src=\"{{ image2_url }}\" alt=\"Image 2\">\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -362,6 +379,7 @@
         "text_w4gXPK",
         "text_RwkAjt"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -373,6 +391,7 @@
     },
     "custom_liquid_FxV9Y9": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n        .container {\n            margin-left: auto;\n            margin-right: auto;\n            display: grid;\n            grid-template-columns: repeat(4, 293px);\n            gap: 10px;\n            width: 100%;\n            max-width: 1200px;\n        }\n\n        .container img {\n            width: 100%;\n            height: 322px;\n            object-fit: cover;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container\">\n        {% assign image_urls = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688\" | split: \",\" %}\n        {% for image_url in image_urls %}\n            <img src=\"{{ image_url }}\" alt=\"Image\">\n        {% endfor %}\n    <\/div>\n<\/body>\n<\/html>",
         "color_scheme": "",
@@ -398,25 +417,46 @@
         "featured_collection_N79HFi": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "for-family"
+          }
+        },
+        "featured_collection_rpfQiq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pet-lovers"
+          }
+        },
+        "featured_collection_bMgBPP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-couple"
+          }
+        },
+        "featured_collection_XiQznt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "memorial-gifts"
           }
         }
       },
       "block_order": [
         "featured_collection_YHwQew",
         "featured_collection_Mrkenr",
-        "featured_collection_N79HFi"
+        "featured_collection_N79HFi",
+        "featured_collection_rpfQiq",
+        "featured_collection_bMgBPP",
+        "featured_collection_XiQznt"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "SHOP BY RECIPIENT",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 6,
         "color_scheme": "",
         "show_view_all": false,
-        "columns_mobile": "1",
+        "columns_mobile": "3",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 28,
         "padding_bottom": 36
       }
     }

@@ -641,6 +641,9 @@
           },
           "options__2": {
             "label": "2 columns"
+          },
+          "options__3": {
+            "label": "3 columns"
           }
         },
         "swipe_on_mobile": {
