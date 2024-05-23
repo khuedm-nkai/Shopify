@@ -4,7 +4,9 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "disabled": true,
+      "custom_css": [
+
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,

@@ -1,0 +1,220 @@
+<div>
+  <div class="customer-container">
+    <div class="customer-header">
+      <h3 class="customer-title">{{ section.settings.customer_title }}</h3>
+      <span class="customer-description">{{ section.settings.customer_description }}</span>
+      <a href="#" class="customer-link">{{ section.settings.customer_link }}</a>
+    </div>
+    <div class="customer-grid">
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image1 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image2 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image3 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image4 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image5 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image6 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image7 | image_url }}"
+        alt=""
+      >
+      <img
+        class="customer-img"
+        width="100%"
+        height="100%"
+        src="{{ section.settings.image8 | image_url }}"
+        alt=""
+      >
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Happy customer",
+    "settings": [
+        {
+            "type": "text",
+            "id": "customer_title",
+            "label": "Title",
+            "default": "LET CUSTOMERS SPEAK FOR US"
+        },
+        {
+            "type": "text",
+            "id": "customer_description",
+            "label": "description",
+            "default": "Your happiness is our top priority for each and every gift we deliver!"
+        },
+        {
+            "type": "text",
+            "id": "customer_link",
+            "label": "link",
+            "default": "VISIT HAPPY CUSTOMERS"
+        },
+        {
+            "type": "image_picker",
+            "id": "image1",
+            "label": "Image1"
+        },
+        {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Image2"
+        },
+        {
+            "type": "image_picker",
+            "id": "image3",
+            "label": "Image3"
+        },
+        {
+            "type": "image_picker",
+            "id": "image4",
+            "label": "Image4"
+        },
+        {
+            "type": "image_picker",
+            "id": "image5",
+            "label": "Image5"
+        },
+        {
+            "type": "image_picker",
+            "id": "image6",
+            "label": "Image6"
+        },
+        {
+            "type": "image_picker",
+            "id": "image7",
+            "label": "Image7"
+        },
+        {
+            "type": "image_picker",
+            "id": "image8",
+            "label": "Image8"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Happy customer"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .customer-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .customer-container .customer-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        row-gap: 5px;
+    }
+
+    .customer-container .customer-header .customer-title {
+        font-size: 3rem;
+        line-height: 2.75rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    @media (min-width: 768px) {
+        .customer-container .customer-header .customer-title {
+            font-size: 3.5rem;
+            line-height: 2.75rem;
+        }
+    }
+
+    .customer-container .customer-header .customer-description {
+        line-height: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+        .customer-container .customer-header .customer-description {
+            line-height: 2rem;
+            font-size: 2rem;
+        }
+    }
+
+    .customer-container .customer-header .customer-link {
+        color: #3b82f6;
+        text-decoration: none;
+        font-size: 2.125rem;
+        text-decoration: underline;
+    }
+
+    .customer-container .customer-header .customer-link:hover {
+        text-decoration: underline;
+    }
+
+    .customer-container .customer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 1160px;
+    }
+
+    @media (min-width: 768px) {
+        .customer-container .customer-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .customer-container .customer-grid .customer-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+{% endstylesheet %}

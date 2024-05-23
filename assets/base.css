@@ -538,8 +538,19 @@ hr {
 
 .full-unstyled-link {
   text-decoration: none;
-  color: currentColor;
-  display: block;
+  /* color: currentColor;
+  display: block; */
+
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+  display: -webkit-box;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(76 82 88);
+  font-weight: 500;
 }
 
 .placeholder {
@@ -3457,4 +3468,37 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+.title-feature-collection {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.custom-btn-view_all{
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 8px 55px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: rgb(59, 65, 72);
+  font-weight: 600;
+}
+
+.custom-btn-view_all:hover {
+  background: linear-gradient(154deg, #bedbff -244.74%, #2a7fe9 156.35%) !important;
+  box-shadow: 0 2px 4px 0 rgba(71, 111, 212, 0.2), 
+              0 -6px 3px 0 #4984dd inset, 
+              0 4px 4px 0 #74bff4 inset;
+  color: #fff !important;
+  text-shadow: 0 2px 4px rgba(71, 111, 212, 0.25), 
+               0 2px 1px #468ce7;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
+  border: 2px solid #468ce7;
 }

@@ -1472,3 +1472,150 @@ a.product__text {
     border: none;
   }
 }
+
+.tabs {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 600px;
+  border-bottom: 1px solid rgb(184, 183, 183);
+  overflow-y: auto;
+}
+
+.tab-header {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.tab-link {
+  border: none;
+  outline: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tab-link.active {
+  background-color: #fff;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 4px solid #000;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tabs::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(236, 236, 236);
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(10 185 202);
+}
+
+.email-contact{
+  font-weight: 600;
+  color: rgb(255, 77, 0);
+}
+
+.visit-link{
+  color: rgb(255, 77, 0);
+  text-decoration: none;
+}
+
+.accordion {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  margin-bottom: 8px;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  padding: 14px 20px;
+  cursor: pointer;
+  background-color: #c4eef2;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b8494;
+}
+
+.product_tab_icon{
+  color: #0b8494;
+}
+
+.accordion-header-title{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.accordion-header:hover {
+  
+}
+
+.accordion-header.active {
+  
+}
+
+.accordion-content {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.arrow.down {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 480px) {
+  .tabs {
+    display: none;
+  }
+
+  .accordion{
+    display: block;
+  }
+}
+
+.tee-description{
+  display: none;
+}

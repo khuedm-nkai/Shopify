@@ -9,40 +9,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_WiTxCB": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_YPidVx": {
-          "type": "heading",
-          "settings": {
-            "heading": "SHOP BY RECIPIENT",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_YPidVx"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_mXYTMq": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Image Hover Zoom with Text Underline<\/title>\n  <style>\n    .container_recipient {\n      display: flex;\n      width: 100%;\n      max-width: 1200px;\n      height: 250px;\n      margin: 0 auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .item_recipient {\n      display: flex;\n      flex-direction: column;\n      width: 250px;\n      height: 250px;\n      align-items: center;\n      gap: 5px;\n      position: relative;\n      cursor: pointer;\n    }\n\n    .image-container_recipient {\n      width: 187px;\n      height: 187px;\n      border-radius: 50%;\n      overflow: hidden;\n      position: relative;\n    }\n\n    .image {\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      transition: transform 0.3s ease;\n    }\n\n    .image-container_recipient:hover .image {\n      transform: scale(1.1); \n    }\n\n    .text {\n      font-size: 1.25rem;\n      font-weight: 500;\n      position: relative;\n    }\n\n    .text::after {\n      content: '';\n      position: absolute;\n      width: 0;\n      height: 2px;\n      bottom: -2px;\n      left: 50%;\n      background-color: black;\n      transition: width 0.3s ease, left 0.3s ease;\n    }\n\n    .item_recipient:hover .text::after {\n      width: 100%;\n      left: 0;\n    }\n  <\/style>\n<\/head>\n  <div class=\"container_recipient\">\n    {% for link in linklists.main-recipient.links -%}\n      {% assign linkCollection = link.object %}\n      <div class=\"item_recipient\">\n        <div class=\"image-container_recipient\">\n          <img src=\"{{linkCollection.featured_image.src | product_img_url: '140x'}}\" alt=\"{{linkCollection.title}}\" class=\"image\">\n        <\/div>\n        <span class=\"text\">{{linkCollection.title}}<\/span>\n      <\/div>\n    {%- endfor %}\n  <\/div>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_dBdN8h": {
       "type": "custom-liquid",
       "disabled": true,
@@ -61,311 +27,6 @@
         "color_scheme": "",
         "padding_top": 4,
         "padding_bottom": 4
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "all",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_bJdQEp": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_8KdzVR": {
-          "type": "heading",
-          "settings": {
-            "heading": "SHOP BY PRODUCT",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_8KdzVR"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 8
-      }
-    },
-    "custom_liquid_mG9GCP": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Container chứa hình tròn và tên<\/title>\n    <style>\n        .container_product {\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: space-around;\n            max-width: 1100px;\n            margin: 0 auto;\n        }\n\n        .container_product .info {\n            text-align: center;\n            margin-bottom: 20px;\n            width: calc(20% - 20px);\n        }\n\n        .container_product img {\n            border-radius: 50%;\n            width: 198px;\n            height: 198px;\n            transition: transform 0.3s ease;\n        }\n\n        .container_product p {\n            margin-top: 10px;\n        }\n\n        .container_product img:hover {\n            transform: scale(1.1);\n        }\n    <\/style>\n<\/head>\n\n<body>\n    <div class=\"container_product\">\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n        <div class=\"info\">\n            <img src=\"https:\/\/wallpapercave.com\/wp\/wp9826189.jpg\" alt=\"Image 1\">\n            <p>Image 1<\/p>\n        <\/div>\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_VpyhgV": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_PeKDjP": {
-          "type": "heading",
-          "settings": {
-            "heading": "GET TRENDING NOW",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_PeKDjP"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection_yRTF9D": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "all",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_Wametm": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_iEkC9E": {
-          "type": "heading",
-          "settings": {
-            "heading": "DISCOVER NEW ARRIVALS",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_iEkC9E"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection_pN3HHR": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "all",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_wE9VyG": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.png?v=1691485032\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 52
-      }
-    },
-    "featured_collection_MDBBBj": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "all",
-        "products_to_show": 5,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_DLPznh": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.png?v=1689737853\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 52
-      }
-    },
-    "featured_collection_irGhQP": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "all",
-        "products_to_show": 5,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_AxxmXF": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n\n\n        .image-container {\n            display: flex;\n            justify-content: space-between;\n            width: 100%;\n            max-width: 1100px;\n            height: 200px;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .image-container img {\n            width: calc(50% - 5px); \n            height: auto;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"image-container\">\n        {% assign image1_url = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\" %}\n        {% assign image2_url = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\" %}\n        <img src=\"{{ image1_url }}\" alt=\"Image 1\">\n        <img src=\"{{ image2_url }}\" alt=\"Image 2\">\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_PbP4wP": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Nq7GDT": {
-          "type": "heading",
-          "settings": {
-            "heading": "LET CUSTOMERS SPEAK FOR US",
-            "heading_size": "h1"
-          }
-        },
-        "text_w4gXPK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Your happiness is our top priority for each and every gift we deliver!<\/p>"
-          }
-        },
-        "text_RwkAjt": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><strong>VISIT HAPPY CUSTOMER<\/strong><\/h2>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Nq7GDT",
-        "text_w4gXPK",
-        "text_RwkAjt"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_FxV9Y9": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n        .container {\n            margin-left: auto;\n            margin-right: auto;\n            display: grid;\n            grid-template-columns: repeat(4, 293px);\n            gap: 10px;\n            width: 100%;\n            max-width: 1200px;\n        }\n\n        .container img {\n            width: 100%;\n            height: 322px;\n            object-fit: cover;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container\">\n        {% assign image_urls = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688\" | split: \",\" %}\n        {% for image_url in image_urls %}\n            <img src=\"{{ image_url }}\" alt=\"Image\">\n        {% endfor %}\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 0
       }
     },
     "collection_list_FTgWKq": {
@@ -432,6 +93,309 @@
         "padding_bottom": 60
       }
     },
+    "hero_section_Aex9GN": {
+      "type": "hero_section",
+      "settings": {
+        "heading": "WHO IS THE HERO?",
+        "image": "shopify:\/\/shop_images\/BKD-Banner_d6aff2e6-516e-49b8-8168-4cff317841fb.webp"
+      }
+    },
+    "shop_by_product_ddBjJK": {
+      "type": "shop-by-product",
+      "blocks": {
+        "featured_collection_mENtUH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "apparel"
+          }
+        },
+        "featured_collection_88BibH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "classic-cap"
+          }
+        },
+        "featured_collection_V8Ezxi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mug"
+          }
+        },
+        "featured_collection_ER4Tgj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "doormat"
+          }
+        },
+        "featured_collection_g83zN9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "memorial-stone"
+          }
+        },
+        "featured_collection_UW9Vat": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hawaiian-shirt"
+          }
+        },
+        "featured_collection_7My3Md": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "keychain"
+          }
+        },
+        "featured_collection_bai8zb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "poster"
+          }
+        },
+        "featured_collection_JripPN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tumbler"
+          }
+        },
+        "featured_collection_zgcdiL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wooden-plaque"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_mENtUH",
+        "featured_collection_88BibH",
+        "featured_collection_V8Ezxi",
+        "featured_collection_ER4Tgj",
+        "featured_collection_g83zN9",
+        "featured_collection_UW9Vat",
+        "featured_collection_7My3Md",
+        "featured_collection_bai8zb",
+        "featured_collection_JripPN",
+        "featured_collection_zgcdiL"
+      ],
+      "settings": {
+        "title": "SHOP BY PRODUCT",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_tablet": 4,
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_jqztMy": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Custom Form<\/title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n<\/head>\n<body>\n  <div class=\"container_finder\">\n      <div class=\"header_finder\">QUICK GIFT FINDER<\/div>\n      <div class=\"form-container\">\n        <div class=\"form-row\">\n          <div class=\"form-group\">\n            <label class='label-finder' for=\"selectbox1\">Who Is This For?<\/label>\n            <select class='select-finder' id=\"selectbox1\">\n              <option value=\"\">Choose an option<\/option>\n              <option value=\"option1\">Option 1<\/option>\n              <option value=\"option2\">Option 2<\/option>\n              <option value=\"option3\">Option 3<\/option>\n            <\/select>\n          <\/div>\n          <div class=\"form-group\">\n            <label class='label-finder' for=\"selectbox2\">What is the Occasion?<\/label>\n            <select class='select-finder' id=\"selectbox2\">\n              <option value=\"\">Choose an option<\/option>\n              <option value=\"option1\">Option 1<\/option>\n              <option value=\"option2\">Option 2<\/option>\n              <option value=\"option3\">Option 3<\/option>\n            <\/select>\n          <\/div>\n          <div class=\"form-group-button\">\n            <button class='button-finder' type=\"button\">FIND A GIFT NOW<\/button>\n          <\/div>\n        <\/div>\n      <\/div>\n  <\/div>\n<\/body>\n<\/html>\n\n<style>\n.container_finder{\n margin:0 10px;\n}\n .header_finder {\n    text-align: center;\n}\n\n.header_finder {\n    font-size: 4rem;\n    color: #2d3748;\n    font-weight: 600;\n}\n\n.form-container {\n    max-width: 1100px;\n    width: 100%;\n    padding: 0.8rem;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n    border-radius: 24px;\n    background-color: #63b3ed;\n    border: 20px solid #bee3f8;\n    margin: 15px auto;\n}\n\n.form-row {\n    display: flex;\n    flex-direction: column;\n}\n\n@media (min-width: 768px) {\n    .form-row {\n        flex-direction: row;\n        gap: 1rem;\n    }\n}\n\n.form-group {\n    width: 100%;\n    margin-bottom: 1rem;\n}\n\n@media (min-width: 768px) {\n    .form-group {\n        width: 41.666667%;\n        margin-bottom: 0;\n    }\n}\n\n.form-group-button {\n    display: flex;\n    align-items: flex-end;\n    width: 100%;\n}\n\n@media (min-width: 768px) {\n    .form-group-button {\n        width: 25%;\n    }\n}\n\n.label-finder {\n    display: block;\n    color: #4a5568;\n    font-size: 1.5rem;\n    font-weight: bold;\n    margin-bottom: 0.5rem;\n}\n\n.select-finder {\n    height: 4rem;\n    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n    border: 1px solid #cbd5e0;\n    border-radius: 0.5rem;\n    width: 100%;\n    padding: 0.5rem;\n    color: #4a5568;\n    outline: none;\n}\n\n.select-finder:focus {\n    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);\n}\n\n.button-finder {\n    border: 2px solid white;\n    height: 50px;\n    font-size: 1.25rem;\n    background-color: #4299e1;\n    color: white;\n    font-weight: bold;\n    padding: 0.5rem 1rem;\n    border-radius: 0.5rem;\n    cursor: pointer;\n    width: 100%;\n    outline: none;\n}\n\n.button-finder:hover {\n    background-color: #2b6cb0;\n}\n\n.button-finder:focus {\n    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);\n}\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GET TRENDING NOW",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_Wametm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iEkC9E": {
+          "type": "heading",
+          "settings": {
+            "heading": "DISCOVER NEW ARRIVALS",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iEkC9E"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_wE9VyG": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.png?v=1691485032\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_MDBBBj": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "DISCOVER NEW ARRIVALS",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_DLPznh": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.png?v=1689737853\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_irGhQP": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "all",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_AxxmXF": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n<\/head>\n\n<body>\n    <div class=\"double-image-section\">\n        <div class=\"double-image-container\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 1\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 2\">\n        <\/div>\n    <\/div>\n<\/body>\n<style>\n    .double-image-section {\n        display: flex;\n        justify-content: center;\n    }\n\n    .double-image-container {\n        display: flex;\n        justify-content: space-between;\n        width: calc(100% - 20px);\n        max-width: 1100px;\n        padding: 0 10px;\n    }\n\n    .double-image-container .double-banner {\n        width: calc(50% - 5px);\n        height: auto;\n        border-radius: 10px;\n    }\n\n    @media (max-width: 600px) {\n        .double-image-container {\n            flex-direction: column;\n            height: auto;\n        }\n\n        .double-image-container .double-banner {\n            width: 100%;\n            margin-bottom: 10px;\n        }\n\n        .double-image-container .double-banner:last-child {\n            margin-bottom: 0;\n        }\n    }\n<\/style>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_PbP4wP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Nq7GDT": {
+          "type": "heading",
+          "settings": {
+            "heading": "LET CUSTOMERS SPEAK FOR US",
+            "heading_size": "h1"
+          }
+        },
+        "text_w4gXPK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your happiness is our top priority for each and every gift we deliver!<\/p>"
+          }
+        },
+        "text_RwkAjt": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>VISIT HAPPY CUSTOMER<\/strong><\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Nq7GDT",
+        "text_w4gXPK",
+        "text_RwkAjt"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_FxV9Y9": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n        .container {\n            margin-left: auto;\n            margin-right: auto;\n            display: grid;\n            grid-template-columns: repeat(4, 293px);\n            gap: 10px;\n            width: 100%;\n            max-width: 1200px;\n        }\n\n        .container img {\n            width: 100%;\n            height: 322px;\n            object-fit: cover;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container\">\n        {% assign image_urls = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688\" | split: \",\" %}\n        {% for image_url in image_urls %}\n            <img src=\"{{ image_url }}\" alt=\"Image\">\n        {% endfor %}\n    <\/div>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_mG9GCP": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Responsive Image Grid<\/title>\n    <style>\n        .container_shop_product {\n            width: 100%;\n            max-width: 1100px;\n            margin: 0 auto;\n            text-align: center;\n            padding: 20px 30px;\n        }\n\n        .title_shop_product {\n            font-weight: bold;\n            font-size: 4rem;\n            margin-bottom: 20px;\n        }\n\n        .grid-container_shop_product {\n            display: grid;\n            gap: 20px;\n            grid-template-columns: repeat(3, 1fr);\n        }\n\n        @media (min-width: 768px) {\n            .grid-container_shop_product {\n                grid-template-columns: repeat(4, 1fr);\n            }\n        }\n\n        @media (min-width: 1024px) {\n            .grid-container_shop_product {\n                grid-template-columns: repeat(5, 1fr);\n            }\n        }\n\n        .image-container_shop_product {\n            text-align: center;\n            margin-bottom: 20px;\n        }\n\n        .image-wrapper {\n            position: relative;\n            width: 100%;\n            padding-top: 100%; \/* 1:1 Aspect Ratio *\/\n        }\n\n        .image_product {\n            position: absolute;\ncursor:pointer;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n            border-radius: 50%;\n            transition: transform 0.3s ease-in-out;\n        }\n\n        .image_product:hover {\n            transform: scale(1.1);\n        }\n\n        .caption_product {\n            margin-top: 10px;\n            position: relative;\n            font-weight: 400;\n            font-size: 2rem;\n        }\n\n        .underline_product {\n            position: absolute;\n            left: 50%;\n            bottom: -4px;\n            height: 2px;\n            width: 0;\n            background-color: black;\n            transition: all 0.3s ease-in-out;\n        }\n\n        .caption_product:hover .underline_product {\n            width: 50%;\n            left: 25%;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container_shop_product\">\n        <div class=\"title_shop_product\">SHOP BY PRODUCT<\/div>\n        <div class=\"grid-container_shop_product\" id=\"grid-container_shop_product\">\n            <!-- Images will be added by JavaScript -->\n        <\/div>\n    <\/div>\n\n    <script>\n        function updateImagesToShow() {\n            const width = window.innerWidth;\n            const gridContainer = document.getElementById('grid-container_shop_product');\n            let imagesToShow;\n\n            if (width < 768) {\n                imagesToShow = 9;\n            } else if (width < 1024) {\n                imagesToShow = 8;\n            } else {\n                imagesToShow = 10;\n            }\n\n            \/\/ Remove existing images\n            while (gridContainer.firstChild) {\n                gridContainer.removeChild(gridContainer.firstChild);\n            }\n\n            \/\/ Add new images\n            for (let i = 0; i < imagesToShow; i++) {\n                const imageContainer = document.createElement('div');\n                imageContainer.classList.add('image-container_shop_product');\n\n                const imageWrapper = document.createElement('div');\n                imageWrapper.classList.add('image-wrapper');\n\n                const img = document.createElement('img');\n                img.src = 'https:\/\/wallpapercave.com\/wp\/wp9826189.jpg';\n                img.alt = `Image ${i + 1}`;\n                img.classList.add('image_product');\n\n                const caption = document.createElement('p');\n                caption.classList.add('caption_product');\n                caption.innerHTML = `Image ${i + 1}<span class=\"underline_product\"><\/span>`;\n\n                imageWrapper.appendChild(img);\n                imageContainer.appendChild(imageWrapper);\n                imageContainer.appendChild(caption);\n                gridContainer.appendChild(imageContainer);\n            }\n        }\n\n        window.addEventListener('resize', updateImagesToShow);\n        window.addEventListener('load', updateImagesToShow);\n    <\/script>\n<\/body>\n<\/html>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_mHnp7Y": {
       "type": "rich-text",
       "blocks": {
@@ -462,21 +426,34 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "happy_customers_pfCWRC": {
+      "type": "happy-customers",
+      "settings": {
+        "customer_title": "LET CUSTOMERS SPEAK FOR US",
+        "customer_description": "Your happiness is our top priority for each and every gift we deliver!",
+        "customer_link": "VISIT HAPPY CUSTOMERS",
+        "image1": "shopify:\/\/shop_images\/11_67b8ad8e-1804-4949-9f0f-aca81e47b533.webp",
+        "image2": "shopify:\/\/shop_images\/14.webp",
+        "image3": "shopify:\/\/shop_images\/Homepage_Image_Review.webp",
+        "image4": "shopify:\/\/shop_images\/10.webp",
+        "image5": "shopify:\/\/shop_images\/12_d451675c-9093-4042-b581-509f1d1092b7.webp",
+        "image6": "shopify:\/\/shop_images\/13_a3e834d0-bada-4c85-a712-3de6b2439227.webp",
+        "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
+        "image8": "shopify:\/\/shop_images\/16.webp"
+      }
     }
   },
   "order": [
     "custom_liquid_y8DXbc",
-    "rich_text_WiTxCB",
-    "custom_liquid_mXYTMq",
     "custom_liquid_dBdN8h",
     "custom_liquid_MBjmg7",
+    "collection_list_FTgWKq",
+    "hero_section_Aex9GN",
+    "shop_by_product_ddBjJK",
+    "custom_liquid_jqztMy",
     "featured_collection",
-    "rich_text_bJdQEp",
-    "custom_liquid_mG9GCP",
-    "rich_text_VpyhgV",
-    "featured_collection_yRTF9D",
     "rich_text_Wametm",
-    "featured_collection_pN3HHR",
     "custom_liquid_wE9VyG",
     "featured_collection_MDBBBj",
     "custom_liquid_DLPznh",
@@ -484,7 +461,8 @@
     "custom_liquid_AxxmXF",
     "rich_text_PbP4wP",
     "custom_liquid_FxV9Y9",
-    "collection_list_FTgWKq",
-    "rich_text_mHnp7Y"
+    "custom_liquid_mG9GCP",
+    "rich_text_mHnp7Y",
+    "happy_customers_pfCWRC"
   ]
 }
