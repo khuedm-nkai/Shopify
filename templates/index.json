@@ -1,22 +1,11 @@
 {
   "sections": {
-    "custom_liquid_y8DXbc": {
-      "type": "custom-liquid",
+    "banner_gdYmHC": {
+      "type": "Banner",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Responsive HTML CSS<\/title>\n    <style>\n        .banner_container {\n            display: flex;\n            flex-wrap: wrap;\n            width: 100%;\n            max-width: 1200px;\n            margin: auto;\n            gap: 20px;\n            align-items: center;\n            \/* padding: 0 20px; *\/\n        }\n\n        .main-banner {\n            flex: 1 1 100%;\n            height: 400px;\n            background-color: yellow;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .main-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .side-banners {\n            display: flex;\n            flex: 1 1 100%;\n            flex-direction: column;\n            height: 400px;\n            gap: 20px;\n        }\n\n        .side-banner {\n            flex: 1;\n            border-radius: 15px;\n            overflow: hidden;\n        }\n\n        .side-banner img {\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n        }\n\n        .green-banner {\n            background-color: green;\n        }\n\n        .orange-banner {\n            background-color: orange;\n        }\n\n        .mobile-message {\n            display: none;\n            text-align: center;\n            font-size: 24px;\n            color: blue;\n        }\n\n        @media (min-width: 768px) {\n            .banner_container {\n                flex-wrap: nowrap;\n            }\n\n            .main-banner {\n                flex: 2;\n                height: 400px;\n            }\n\n            .side-banners {\n                flex: 1;\n                height: 400px;\n            }\n\n            .slideshow-container {\n                display: none;\n            }\n        }\n\n        @media (max-width: 767px) {\n            .banner_container {\n                display: none;\n            }\n\n            .slideshow-container {\n                height: 100%;\n                display: block;\n                max-width: 1000px;\n                position: relative;\n                margin: 5px 10px 5px 10px;\n            }\n\n            .slides {\n                height: 100%;\n                display: none;\n                overflow: hidden;\n            }\n            .slides img {\n                border-radius: 15px;\n            }\n\n            .fade {\n                animation-name: fade;\n                animation-duration: 1.5s;\n            }\n\n            @keyframes fade {\n                from {\n                    opacity: .4\n                }\n\n                to {\n                    opacity: 1\n                }\n            }\n\n            .prev,\n            .next {\n                cursor: pointer;\n                position: absolute;\n                top: 50%;\n                width: auto;\n                margin-top: -22px;\n                padding: 16px;\n                color: white;\n                font-weight: bold;\n                font-size: 18px;\n                transition: 0.6s ease;\n                border-radius: 0 3px 3px 0;\n                user-select: none;\n            }\n\n            .next {\n                right: 0;\n                border-radius: 3px 0 0 3px;\n            }\n\n            .prev:hover,\n            .next:hover {\n                \/* background-color: rgba(0, 0, 0, 0.8); *\/\n            }\n        }\n    <\/style>\n<\/head>\n\n<body>\n\n    <div class=\"slideshow-container\">\n        <div class=\"slides fade\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\"\n                style=\"height: 100%; width:100%\">\n        <\/div>\n        <div class=\"slides fade\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\"\n                style=\"height: 100%; width:100%\">\n        <\/div>\n        <div class=\"slides fade\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\"\n                style=\"height: 100%; width:100%\">\n        <\/div>\n\n        <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;<\/a>\n        <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;<\/a>\n    <\/div>\n\n    <div class=\"banner_container\">\n        <div class=\"main-banner\">\n            <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/MAIN-FTD-Banner-1-5x_5000x.progressive.png.jpg?v=1715700854\"\n                alt=\"\">\n        <\/div>\n        <div class=\"side-banners\">\n            <div class=\"side-banner green-banner\">\n                <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/Summer_2024_Mini_Banner_5000x.progressive.png.jpg?v=1715590052\"\n                    alt=\"\">\n            <\/div>\n            <div class=\"side-banner orange-banner\">\n                <img src=\"https:\/\/pawfecthouse.com\/cdn\/shop\/files\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x.progressive.png.jpg?v=1704342824\"\n                    alt=\"\">\n            <\/div>\n        <\/div>\n    <\/div>\n\n    <script>\n        let slideIndex = 1;\n        showSlides(slideIndex);\n\n        function plusSlides(n) {\n            showSlides(slideIndex += n);\n        }\n\n        function currentSlide(n) {\n            showSlides(slideIndex = n);\n        }\n\n        function showSlides(n) {\n            let i;\n            let slides = document.getElementsByClassName(\"slides\");\n            if (n > slides.length) { slideIndex = 1 }\n            if (n < 1) { slideIndex = slides.length }\n            for (i = 0; i < slides.length; i++) {\n                slides[i].style.display = \"none\";\n            }\n            slides[slideIndex - 1].style.display = \"block\";\n        }\n    <\/script>\n\n<\/body>\n\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_dBdN8h": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/BKD-Banner.png?v=1715700910\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "image1": "shopify:\/\/shop_images\/MAIN-FTD-Banner-1-5x_5000x_progressive_png.webp",
+        "image2": "shopify:\/\/shop_images\/Summer_2024_Mini_Banner_5000x_progressive_png.webp",
+        "image3": "shopify:\/\/shop_images\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x_progressive_png.webp"
       }
     },
     "custom_liquid_MBjmg7": {
@@ -89,15 +78,33 @@
         "show_view_all": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
-        "padding_top": 24,
+        "padding_top": 36,
         "padding_bottom": 60
       }
     },
-    "hero_section_Aex9GN": {
-      "type": "hero_section",
+    "featured_collection_with_menu_aan6qQ": {
+      "type": "featured-collection-with-menu",
       "settings": {
-        "heading": "WHO IS THE HERO?",
-        "image": "shopify:\/\/shop_images\/BKD-Banner_d6aff2e6-516e-49b8-8168-4cff317841fb.webp"
+        "title": "WHO IS THE HERO?",
+        "heading_size": "h1",
+        "menu": "main-recipient",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "shop_by_product_ddBjJK": {
@@ -190,13 +197,10 @@
         "padding_bottom": 36
       }
     },
-    "custom_liquid_jqztMy": {
-      "type": "custom-liquid",
+    "finder_VPCqaG": {
+      "type": "Finder",
       "settings": {
-        "custom_liquid": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Custom Form<\/title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n<\/head>\n<body>\n  <div class=\"container_finder\">\n      <div class=\"header_finder\">QUICK GIFT FINDER<\/div>\n      <div class=\"form-container\">\n        <div class=\"form-row\">\n          <div class=\"form-group\">\n            <label class='label-finder' for=\"selectbox1\">Who Is This For?<\/label>\n            <select class='select-finder' id=\"selectbox1\">\n              <option value=\"\">Choose an option<\/option>\n              <option value=\"option1\">Option 1<\/option>\n              <option value=\"option2\">Option 2<\/option>\n              <option value=\"option3\">Option 3<\/option>\n            <\/select>\n          <\/div>\n          <div class=\"form-group\">\n            <label class='label-finder' for=\"selectbox2\">What is the Occasion?<\/label>\n            <select class='select-finder' id=\"selectbox2\">\n              <option value=\"\">Choose an option<\/option>\n              <option value=\"option1\">Option 1<\/option>\n              <option value=\"option2\">Option 2<\/option>\n              <option value=\"option3\">Option 3<\/option>\n            <\/select>\n          <\/div>\n          <div class=\"form-group-button\">\n            <button class='button-finder' type=\"button\">FIND A GIFT NOW<\/button>\n          <\/div>\n        <\/div>\n      <\/div>\n  <\/div>\n<\/body>\n<\/html>\n\n<style>\n.container_finder{\n margin:0 10px;\n}\n .header_finder {\n    text-align: center;\n}\n\n.header_finder {\n    font-size: 4rem;\n    color: #2d3748;\n    font-weight: 600;\n}\n\n.form-container {\n    max-width: 1100px;\n    width: 100%;\n    padding: 0.8rem;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n    border-radius: 24px;\n    background-color: #63b3ed;\n    border: 20px solid #bee3f8;\n    margin: 15px auto;\n}\n\n.form-row {\n    display: flex;\n    flex-direction: column;\n}\n\n@media (min-width: 768px) {\n    .form-row {\n        flex-direction: row;\n        gap: 1rem;\n    }\n}\n\n.form-group {\n    width: 100%;\n    margin-bottom: 1rem;\n}\n\n@media (min-width: 768px) {\n    .form-group {\n        width: 41.666667%;\n        margin-bottom: 0;\n    }\n}\n\n.form-group-button {\n    display: flex;\n    align-items: flex-end;\n    width: 100%;\n}\n\n@media (min-width: 768px) {\n    .form-group-button {\n        width: 25%;\n    }\n}\n\n.label-finder {\n    display: block;\n    color: #4a5568;\n    font-size: 1.5rem;\n    font-weight: bold;\n    margin-bottom: 0.5rem;\n}\n\n.select-finder {\n    height: 4rem;\n    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n    border: 1px solid #cbd5e0;\n    border-radius: 0.5rem;\n    width: 100%;\n    padding: 0.5rem;\n    color: #4a5568;\n    outline: none;\n}\n\n.select-finder:focus {\n    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);\n}\n\n.button-finder {\n    border: 2px solid white;\n    height: 50px;\n    font-size: 1.25rem;\n    background-color: #4299e1;\n    color: white;\n    font-weight: bold;\n    padding: 0.5rem 1rem;\n    border-radius: 0.5rem;\n    cursor: pointer;\n    width: 100%;\n    outline: none;\n}\n\n.button-finder:hover {\n    background-color: #2b6cb0;\n}\n\n.button-finder:focus {\n    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);\n}\n<\/style>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "title": "QUICK GIFT FINDER"
       }
     },
     "featured_collection": {
@@ -227,43 +231,8 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_Wametm": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_iEkC9E": {
-          "type": "heading",
-          "settings": {
-            "heading": "DISCOVER NEW ARRIVALS",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_iEkC9E"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_wE9VyG": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.png?v=1691485032\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 52
-      }
-    },
     "featured_collection_MDBBBj": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "DISCOVER NEW ARRIVALS",
         "heading_size": "h0",
@@ -271,7 +240,7 @@
         "show_description": false,
         "description_style": "uppercase",
         "collection": "all",
-        "products_to_show": 5,
+        "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": false,
         "show_view_all": true,
@@ -290,43 +259,62 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_DLPznh": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Thẻ Banner<\/title>\n<style>\n    .banner_hero {\n        max-width: 1100px;\n        margin: 0 auto;\n        overflow: hidden;\n        border-radius: 20px;\n    }\n    .banner_hero img {\n        display: block;\n        width: 100%;\n        height: auto;\n        border-radius: 20px;\n    }\n<\/style>\n<\/head>\n<body>\n    <div class=\"banner_hero\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.png?v=1689737853\" alt=\"Banner Image\">\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 52
-      }
-    },
-    "featured_collection_irGhQP": {
-      "type": "featured-collection",
-      "disabled": true,
+    "banner_featured_collection_aTbXeY": {
+      "type": "banner-featured-collection",
       "settings": {
         "title": "",
-        "heading_size": "h0",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
-        "description_style": "uppercase",
-        "collection": "all",
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 6,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.webp"
+      }
+    },
+    "banner_featured_collection_UgzLCK": {
+      "type": "banner-featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "anniversary",
         "products_to_show": 5,
         "columns_desktop": 5,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
+        "color_scheme": "",
+        "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.webp"
       }
     },
     "custom_liquid_AxxmXF": {
@@ -335,95 +323,6 @@
         "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n<\/head>\n\n<body>\n    <div class=\"double-image-section\">\n        <div class=\"double-image-container\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 1\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 2\">\n        <\/div>\n    <\/div>\n<\/body>\n<style>\n    .double-image-section {\n        display: flex;\n        justify-content: center;\n    }\n\n    .double-image-container {\n        display: flex;\n        justify-content: space-between;\n        width: calc(100% - 20px);\n        max-width: 1100px;\n        padding: 0 10px;\n    }\n\n    .double-image-container .double-banner {\n        width: calc(50% - 5px);\n        height: auto;\n        border-radius: 10px;\n    }\n\n    @media (max-width: 600px) {\n        .double-image-container {\n            flex-direction: column;\n            height: auto;\n        }\n\n        .double-image-container .double-banner {\n            width: 100%;\n            margin-bottom: 10px;\n        }\n\n        .double-image-container .double-banner:last-child {\n            margin-bottom: 0;\n        }\n    }\n<\/style>\n<\/html>",
         "color_scheme": "",
         "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_PbP4wP": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Nq7GDT": {
-          "type": "heading",
-          "settings": {
-            "heading": "LET CUSTOMERS SPEAK FOR US",
-            "heading_size": "h1"
-          }
-        },
-        "text_w4gXPK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Your happiness is our top priority for each and every gift we deliver!<\/p>"
-          }
-        },
-        "text_RwkAjt": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><strong>VISIT HAPPY CUSTOMER<\/strong><\/h2>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Nq7GDT",
-        "text_w4gXPK",
-        "text_RwkAjt"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_FxV9Y9": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n    <style>\n        .container {\n            margin-left: auto;\n            margin-right: auto;\n            display: grid;\n            grid-template-columns: repeat(4, 293px);\n            gap: 10px;\n            width: 100%;\n            max-width: 1200px;\n        }\n\n        .container img {\n            width: 100%;\n            height: 322px;\n            object-fit: cover;\n            border-radius: 10px;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container\">\n        {% assign image_urls = \"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688,https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/14.jpg?v=1715682688\" | split: \",\" %}\n        {% for image_url in image_urls %}\n            <img src=\"{{ image_url }}\" alt=\"Image\">\n        {% endfor %}\n    <\/div>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "custom_liquid_mG9GCP": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Responsive Image Grid<\/title>\n    <style>\n        .container_shop_product {\n            width: 100%;\n            max-width: 1100px;\n            margin: 0 auto;\n            text-align: center;\n            padding: 20px 30px;\n        }\n\n        .title_shop_product {\n            font-weight: bold;\n            font-size: 4rem;\n            margin-bottom: 20px;\n        }\n\n        .grid-container_shop_product {\n            display: grid;\n            gap: 20px;\n            grid-template-columns: repeat(3, 1fr);\n        }\n\n        @media (min-width: 768px) {\n            .grid-container_shop_product {\n                grid-template-columns: repeat(4, 1fr);\n            }\n        }\n\n        @media (min-width: 1024px) {\n            .grid-container_shop_product {\n                grid-template-columns: repeat(5, 1fr);\n            }\n        }\n\n        .image-container_shop_product {\n            text-align: center;\n            margin-bottom: 20px;\n        }\n\n        .image-wrapper {\n            position: relative;\n            width: 100%;\n            padding-top: 100%; \/* 1:1 Aspect Ratio *\/\n        }\n\n        .image_product {\n            position: absolute;\ncursor:pointer;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            object-fit: cover;\n            border-radius: 50%;\n            transition: transform 0.3s ease-in-out;\n        }\n\n        .image_product:hover {\n            transform: scale(1.1);\n        }\n\n        .caption_product {\n            margin-top: 10px;\n            position: relative;\n            font-weight: 400;\n            font-size: 2rem;\n        }\n\n        .underline_product {\n            position: absolute;\n            left: 50%;\n            bottom: -4px;\n            height: 2px;\n            width: 0;\n            background-color: black;\n            transition: all 0.3s ease-in-out;\n        }\n\n        .caption_product:hover .underline_product {\n            width: 50%;\n            left: 25%;\n        }\n    <\/style>\n<\/head>\n<body>\n    <div class=\"container_shop_product\">\n        <div class=\"title_shop_product\">SHOP BY PRODUCT<\/div>\n        <div class=\"grid-container_shop_product\" id=\"grid-container_shop_product\">\n            <!-- Images will be added by JavaScript -->\n        <\/div>\n    <\/div>\n\n    <script>\n        function updateImagesToShow() {\n            const width = window.innerWidth;\n            const gridContainer = document.getElementById('grid-container_shop_product');\n            let imagesToShow;\n\n            if (width < 768) {\n                imagesToShow = 9;\n            } else if (width < 1024) {\n                imagesToShow = 8;\n            } else {\n                imagesToShow = 10;\n            }\n\n            \/\/ Remove existing images\n            while (gridContainer.firstChild) {\n                gridContainer.removeChild(gridContainer.firstChild);\n            }\n\n            \/\/ Add new images\n            for (let i = 0; i < imagesToShow; i++) {\n                const imageContainer = document.createElement('div');\n                imageContainer.classList.add('image-container_shop_product');\n\n                const imageWrapper = document.createElement('div');\n                imageWrapper.classList.add('image-wrapper');\n\n                const img = document.createElement('img');\n                img.src = 'https:\/\/wallpapercave.com\/wp\/wp9826189.jpg';\n                img.alt = `Image ${i + 1}`;\n                img.classList.add('image_product');\n\n                const caption = document.createElement('p');\n                caption.classList.add('caption_product');\n                caption.innerHTML = `Image ${i + 1}<span class=\"underline_product\"><\/span>`;\n\n                imageWrapper.appendChild(img);\n                imageContainer.appendChild(imageWrapper);\n                imageContainer.appendChild(caption);\n                gridContainer.appendChild(imageContainer);\n            }\n        }\n\n        window.addEventListener('resize', updateImagesToShow);\n        window.addEventListener('load', updateImagesToShow);\n    <\/script>\n<\/body>\n<\/html>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_mHnp7Y": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_pmpnbL": {
-          "type": "heading",
-          "settings": {
-            "heading": "WHO IS THE HERO?",
-            "heading_size": "h1"
-          }
-        },
-        "text_hGerdY": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_pmpnbL",
-        "text_hGerdY"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -445,24 +344,17 @@
     }
   },
   "order": [
-    "custom_liquid_y8DXbc",
-    "custom_liquid_dBdN8h",
+    "banner_gdYmHC",
     "custom_liquid_MBjmg7",
     "collection_list_FTgWKq",
-    "hero_section_Aex9GN",
+    "featured_collection_with_menu_aan6qQ",
     "shop_by_product_ddBjJK",
-    "custom_liquid_jqztMy",
+    "finder_VPCqaG",
     "featured_collection",
-    "rich_text_Wametm",
-    "custom_liquid_wE9VyG",
     "featured_collection_MDBBBj",
-    "custom_liquid_DLPznh",
-    "featured_collection_irGhQP",
+    "banner_featured_collection_aTbXeY",
+    "banner_featured_collection_UgzLCK",
     "custom_liquid_AxxmXF",
-    "rich_text_PbP4wP",
-    "custom_liquid_FxV9Y9",
-    "custom_liquid_mG9GCP",
-    "rich_text_mHnp7Y",
     "happy_customers_pfCWRC"
   ]
 }

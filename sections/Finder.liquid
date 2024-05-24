@@ -1,0 +1,171 @@
+<div>
+  <div class="container_finder">
+    <div class="header_finder">{{section.settings.title}}
+    </div>
+    <div class="form-border">
+        <div class="form-container">
+            <div class="form-row">
+                <div class="form-group">
+                <label class='label-finder' for="selectbox1">Who Is This For?</label>
+                <select class='select-finder' id="selectbox1">
+                    <option value="">Choose an option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <label class='label-finder' for="selectbox2">What is the Occasion?</label>
+                <select class='select-finder' id="selectbox2">
+                    <option value="">Choose an option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                </div>
+                <div class="form-group-button">
+                    <button class='button-finder' type="button" onclick="redirectToPage()">FIND A GIFT NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function redirectToPage() {
+    window.location.href = "https://duconspace.com/collections/all";
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Finder",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "QUICK GIFT FINDER"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Finder"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  .container_finder {
+    margin: 0 10px;
+  }
+  .header_finder {
+    text-align: center;
+  }
+
+  .header_finder {
+    font-size: 4rem;
+    color: #2d3748;
+    font-weight: 500;
+  }
+
+  .form-border{
+    max-width: 1150px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 16px 14px;
+    background-color: rgb(179 214 255);
+    margin: 15px auto;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 24px 20px;
+    border-radius: 16px;
+    background: #b3d6ff;
+    box-shadow: rgba(6, 74, 158, .12) 0 -6px 10px 0 inset, rgba(12, 114, 232, .2) 0 6px 10px 0 inset;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media(min-width: 768px) {
+    .form-row {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  @media(min-width: 768px) {
+    .form-group {
+      width: 41.666667%;
+      margin-bottom: 0;
+    }
+  }
+
+  .form-group-button {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  @media(min-width: 768px) {
+    .form-group-button {
+      width: 25%;
+    }
+  }
+
+  .label-finder {
+    display: block;
+    color: #4a5568;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .select-finder {
+    font-weight: 600;
+    font-size: 1.6rem;
+    height: 4rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cbd5e0;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    color: #4a5568;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .select-finder:focus {
+    border:solid black 0.5px;
+  }
+
+  .button-finder {
+    border: 2px solid white;
+    height: 50px;
+    font-size: 1.75rem;
+    background-color: #4299e1;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+  }
+
+  .button-finder:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+{% endstyle %}

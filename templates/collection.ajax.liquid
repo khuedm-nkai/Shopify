@@ -1,0 +1,70 @@
+{% layout none %}
+<!-- templates/collection.ajax.liquid -->
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+-%}
+{% assign section_id = blank %}
+{% assign columns_desktop = blank %}
+{% assign columns_mobile = blank %}
+{% assign products_to_show = blank %}
+{% assign image_ratio = blank %}
+{% assign image_shape = blank %}
+{% assign show_secondary_image = blank %}
+{% assign show_vendor = blank %}
+{% assign quick_add = blank %}
+
+{%- for i in (1..1) -%}
+
+  {%- unless pageUrl contains "?" -%}{% break %}{%- endunless -%}
+  {%- assign query_string = pageUrl | split:'?' | last -%}
+  {%- assign qry_parts = query_string | split:'&' -%}
+
+  {%- for part in qry_parts -%}
+    {%- assign key_and_value = part | split:'=' -%}
+
+    {% if key_and_value[0] == "sectionId" %}
+      {% assign section_id = key_and_value[1] %}
+    {% endif %}
+  
+    {% if key_and_value[0] == "columnDesktop" %}
+      {% assign columns_desktop = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "columnMobile" %}
+      {% assign columns_mobile = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "productsToShow" %}
+      {% assign products_to_show = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "imageRatio" %}
+      {% assign image_ratio = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "imageShape" %}
+      {% assign image_shape = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "showSecondaryImage" %}
+      {% assign show_secondary_image = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "showVendor" %}
+      {% assign show_vendor = key_and_value[1] | url_decode %}
+    {% endif %}
+    {% if key_and_value[0] == "quickAdd" %}
+      {% assign quick_add = key_and_value[1] | url_decode %}
+    {% endif %}
+  {%- endfor -%}
+{%- endfor -%}
+
+{% render 'collection-products',
+    collection_handle: collection.handle,
+    section_id: section_id,
+    columns_desktop: columns_desktop,
+    columns_mobile: columns_mobile,
+    products_to_show: products_to_show,
+    image_ratio: image_ratio,
+    image_shape: image_shape,
+    show_secondary_image: show_secondary_image,
+    show_vendor: show_vendor,
+    quick_add: quick_add
+%}
