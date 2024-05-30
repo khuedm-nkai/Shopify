@@ -60,7 +60,7 @@
 -%}
 
 <div
-  class="color-{{ section.settings.color_scheme }} isolate gradient"
+  class="color-{{ section.settings.color_scheme }} isolate gradient hero-container"
 >
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
@@ -69,41 +69,49 @@
   >
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
-        <h2 class="title inline-richtext title-feature-collection {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2 class="custom-header {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
     </div>
-    <div
-      class="media media--transparent ratio"
-      {% if section.settings.image != blank %}
-        style="--ratio-percent: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%"
-      {% else %}
-        style="--ratio-percent: 100%"
-      {% endif %}
-    >
-      {%- if section.settings.image != blank -%}
-        {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-          {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-          {%- capture sizes -%}
-        (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-        (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-      {%- endcapture -%}
-        {%- else -%}
-          {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-          {%- capture sizes -%}
-        (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-        (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-      {%- endcapture -%}
+    <div class='hero-banner-container'>
+      <div
+        class="media media--transparent ratio hero-banner"
+        {% if section.settings.image != blank %}
+          style="--ratio-percent: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%"
+        {% else %}
+          style="--ratio-percent: 100%"
+        {% endif %}
+      >
+        {%- if section.settings.image != blank -%}
+          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+            {%- capture sizes -%}
+          (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+          (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+        {%- endcapture -%}
+          {%- else -%}
+            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+            {%- capture sizes -%}
+          (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+          (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+        {%- endcapture -%}
+          {%- endif -%}
+          {{
+            section.settings.image
+            | image_url: width: 1500
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
         {%- endif -%}
-        {{
-          section.settings.image
-          | image_url: width: 1500
-          | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-        }}
-      {%- endif -%}
+      </div>
     </div>
+    
     <div class="featured-collection-with-menu-ajax">
+      <button class="pf_tabmenu_arrow" id="pf_arrow-prev"> 
+        <div class="pf_tabmenu_image_cover">
+          <img width='35px' height='35px' src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/arrow_right.png" alt="tab menu left" class=" ls-is-cached lazyloaded" loading="lazy">
+        </div>
+      </button>
       <nav>
         <ul>
           {% assign initial_collection_handle = linklists[section.settings.menu].links.first.url | split: '/' | last %}
@@ -115,6 +123,11 @@
           {% endfor %}
         </ul>
       </nav>
+      <button class="pf_tabmenu_arrow" id="pf_arrow-next">
+        <div class="pf_tabmenu_image_cover">
+          <img width='35px' height='35px' src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/arrow_right.png" alt="tab menu right" class=" ls-is-cached lazyloaded" loading="lazy">
+        </div>
+      </button>
     </div>
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
@@ -188,23 +201,64 @@
 
 <style>
 /* Add your custom styles here */
+.featured-collection-with-menu-ajax {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top:10px;
+}
+
+.featured-collection-with-menu-ajax nav {
+  overflow-x: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 .featured-collection-with-menu-ajax nav ul {
+  max-width: 1110px;
+  width: 100%;
+  display: flex;
   list-style: none;
+  gap: 20px;
   padding: 0;
+  margin: 0; 
 }
 
 .featured-collection-with-menu-ajax nav ul li {
-  display: inline;
-  margin-right: 10px;
+  flex: 0 0 auto;
+  width: 168px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #f2f2f2;
 }
 
 .featured-collection-with-menu-ajax nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+.featured-collection-with-menu-ajax nav ul li.active {
+  background-color:#b88d7f;
 }
 
 .featured-collection-with-menu-ajax nav ul li.active a {
   font-weight: bold;
+  color:#ffffff;
+}
+
+.featured-collection-with-menu-ajax nav ul li:hover{
+  text-decoration:underline;
+  text-decoration-color: #b88d7f;
+}
+
+.featured-collection-with-menu-ajax nav::-webkit-scrollbar {
+  display: none;
 }
 
 .collection-products {
@@ -228,61 +282,131 @@
 .collection-products .product p {
   margin: 5px 0;
 }
+
+.pf_tabmenu_arrow {
+  position: absolute;
+  border-radius:8px;
+  padding:5px 10px;
+  border:none;
+  background-color:#fff;
+  cursor:pointer;
+  display:none;
+}
+
+@media (max-width: 767px) {
+  .pf_tabmenu_arrow {
+    display: block;
+  }
+
+  .hero-banner-container .hero-banner{
+    width: 100%;
+    height: 100%;
+    height:350px;
+    max-width: 1110px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+}
+
+#pf_arrow-prev{
+  top:0;
+  left:0;
+  transform: rotate(180deg);
+}
+
+#pf_arrow-next{
+  top:0;
+  right:0;
+}
+
+.hero-banner-container {
+  padding: 0 10px;
+}
+
+.hero-banner-container .hero-banner{
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.hero-container {
+  display:block;
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  .hero-container {
+    display: none;
+  }
+}
 </style>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const menuItems = document.querySelectorAll('.featured-collection-with-menu-ajax nav ul li');
-  const container = document.getElementById('Slider-{{ section.id }}');
-  const settings = {{ section.settings | json }};
-  const columns_desktop = {{ section.settings.columns_desktop }};
-  const columns_mobile = {{ section.settings.columns_mobile }};
-  const products_to_show = {{ section.settings.products_to_show }};
-  const image_ratio = `{{ section.settings.image_ratio }}`;
-  const image_shape = `{{ section.settings.image_shape }}`;
-  const show_secondary_image = `{{ section.settings.show_secondary_image }}`;
-  const show_vendor = `{{ section.settings.show_vendor }}`;
-  const quick_add = `{{ section.settings.quick_add }}`;
-  const section_id = `{{ section.id }}`;
+      document.addEventListener('DOMContentLoaded', function() {
+      const menuItems = document.querySelectorAll('.featured-collection-with-menu-ajax nav ul li');
+      const container = document.getElementById('Slider-{{ section.id }}');
+      const settings = {{ section.settings | json }};
+      const { columns_desktop, columns_mobile, products_to_show, image_ratio, image_shape, show_secondary_image, show_vendor, quick_add } = settings;
+      const section_id = `{{ section.id }}`;
+      const prevButton = document.getElementById('pf_arrow-prev');
+      const nextButton = document.getElementById('pf_arrow-next');
 
-  menuItems.forEach(item => {
-    item.addEventListener('click', function(event) {
-      event.preventDefault();
-      const handle = this.getAttribute('data-collection-handle');
-      const queryParams = {
-        view: 'ajax',
-        sectionId: section_id,
-        columnDesktop: columns_desktop,
-        columnMobile: columns_mobile,
-        productsToShow: products_to_show,
-        imageRatio: image_ratio,
-        imageShape: image_shape,
-        showSecondaryImage: show_secondary_image,
-        showVendor: show_vendor,
-        quickAdd: quick_add
+      const updateActiveItem = (newItem) => {
+        const handle = newItem.getAttribute('data-collection-handle');
+        const queryParams = {
+          view: 'ajax',
+          sectionId: section_id,
+          columnDesktop: columns_desktop,
+          columnMobile: columns_mobile,
+          productsToShow: products_to_show,
+          imageRatio: image_ratio,
+          imageShape: image_shape,
+          showSecondaryImage: show_secondary_image,
+          showVendor: show_vendor,
+          quickAdd: quick_add
+        };
+
+        const queryString = new URLSearchParams(queryParams).toString();
+        const fullUrl = `/collections/${handle}?${queryString}`;
+
+        fetch(fullUrl)
+          .then(response => response.text())
+          .then(html => {
+            container.innerHTML = html;
+          });
+
+        menuItems.forEach(item => item.classList.remove('active'));
+        newItem.classList.add('active');
       };
-      
-      // Convert query parameters to a string
-      const queryString = new URLSearchParams(queryParams).toString();
-      
-      // Combine API endpoint with query parameters
-      const fullUrl = `/collections/${handle}?${queryString}`;
-      
-      fetch(fullUrl)
-        .then(response => response.text())
-        .then(html => {
-          container.innerHTML = html;
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+          event.preventDefault();
+          updateActiveItem(this);
         });
+      });
 
-      menuItems.forEach(i => i.classList.remove('active'));
-      this.classList.add('active');
+      if (menuItems.length > 0) {
+        menuItems[0].classList.add('active');
+      }
+
+      const moveActiveItem = (direction) => {
+        const activeItem = document.querySelector('.featured-collection-with-menu-ajax nav ul li.active');
+        if (activeItem) {
+          const newItem = direction === 'prev' ? activeItem.previousElementSibling : activeItem.nextElementSibling;
+          if (newItem) {
+            updateActiveItem(newItem);
+          }
+        }
+      };
+
+      if (prevButton) {
+        prevButton.addEventListener('click', () => moveActiveItem('prev'));
+      }
+
+      if (nextButton) {
+        nextButton.addEventListener('click', () => moveActiveItem('next'));
+      }
     });
-  });
-
-  // Set the first menu item as active by default
-  if (menuItems.length > 0) {
-    menuItems[0].classList.add('active');
-  }
-});
 </script>
 
 {% schema %}

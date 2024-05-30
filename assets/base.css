@@ -33,6 +33,38 @@
   --text-alignment: var(--collection-card-text-alignment);
 }
 
+.card__heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.card__heading::before,
+.card__heading::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: currentColor;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.card__heading::before {
+  left: 50%;
+  bottom: 0;
+}
+
+.card__heading::after {
+  right: 50%;
+  bottom: 0;
+}
+
+.collection-card-wrapper:hover .card__heading::before,
+.collection-card-wrapper:hover .card__heading::after {
+  width: 30%; 
+}
+
+
 .article-card-wrapper .card,
 .contains-card--article {
   --border-radius: var(--blog-card-corner-radius);
@@ -135,6 +167,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   .page-width-desktop {
     max-width: var(--page-width);
     padding: 0 5rem;
+    margin-bottom: 15px;
   }
 }
 
@@ -700,9 +733,9 @@ summary::-webkit-details-marker {
 }
 
 *:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  /* outline: 0.2rem solid rgba(var(--color-foreground), 0.5); */
+  /* outline-offset: 0.3rem; */
+  /* box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3); */
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
@@ -1257,9 +1290,9 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+  /* box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background)); */
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -1267,10 +1300,10 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button:hover::after,
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
-  --border-offset: 1.3px;
+  /* --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background)); */
 }
 
 .button--secondary:after {
@@ -1515,9 +1548,9 @@ details[open] > .share-button__fallback {
 
 .share-button__fallback .field__input:focus,
 .share-button__fallback .field__input:-webkit-autofill {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  /* outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.1rem;
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3); */
 }
 
 .share-button__fallback .field__input {
@@ -1639,9 +1672,9 @@ details[open] > .share-button__fallback {
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
   outline: 0;
-  border-radius: var(--inputs-radius);
+  border-radius: var(--inputs-radius); */
 }
 
 .field__input:focus,
@@ -1649,9 +1682,9 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
   outline: 0;
-  border-radius: var(--inputs-radius);
+  border-radius: var(--inputs-radius); */
 }
 
 .localization-form__select:focus {
@@ -3090,7 +3123,7 @@ details-disclosure > details {
   .customer .field input:focus,
   .customer select:focus,
   .localization-form__select:focus.localization-form__select:after {
-    outline: transparent solid 1px;
+    /* outline: transparent solid 1px; */
   }
 
   .localization-form__select:focus {
@@ -3481,6 +3514,7 @@ details-disclosure > details {
 }
 
 .custom-btn-view_all{
+  position: relative;
   text-decoration: none;
   border: 2px solid black;
   padding: 8px 55px;
@@ -3488,6 +3522,31 @@ details-disclosure > details {
   font-size: 20px;
   color: rgb(59, 65, 72);
   font-weight: 600;
+}
+
+.hat{
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: -13px;
+  width: 36px;
+  height: auto;
+}
+
+.btn-balloon{
+  display: none;
+  position: absolute;
+  height: auto;
+  width: 30px;
+  right: -16px;
+  bottom: 6px;
+}
+
+.custom-btn-view_all:hover .hat {
+  display: block;
+}
+.custom-btn-view_all:hover .btn-balloon {
+  display: block;
 }
 
 .custom-btn-view_all:hover {
@@ -3514,6 +3573,7 @@ details-disclosure > details {
   max-height: 252px;
   object-fit: cover;
   border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 1019px) {
@@ -3534,7 +3594,7 @@ details-disclosure > details {
     font-size: 29px !important;
     font-weight: 500 !important;
     line-height: 32px !important;
-    color: #bfb299 !important;
+    color: #6a656a !important;
     margin:0 0 30px 0;
 }
 
@@ -3595,4 +3655,40 @@ details-disclosure > details {
     font-size: 45px;
     font-weight: bold;
     text-align: center;
+}
+
+.custom-header {
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: .04em;
+  color: #545454;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: .5%;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .custom-header {
+    font-size: 21px;
+    line-height: 32px;
+    letter-spacing: .04em;
+    color: #545454;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: .5%;
+    font-weight: 600;
+  }
+}
+
+.email-bg {
+  padding: 27px;
+  width: 100%;
+  height: 280px;
+  background-image: url('https://d3k81ch9hvuctc.cloudfront.net/company/XTsnqn/images/332b8fc9-d9f0-46e7-b8c2-ac33fb247aaa.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

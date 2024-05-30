@@ -68,7 +68,7 @@
   >
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
-        <h2 class="title inline-richtext title-feature-collection {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2 class="custom-header {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
@@ -182,6 +182,8 @@
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
         >
           {{ 'sections.featured_collection.view_all' | t }}
+        <img class="hat" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
+        <img class="btn-balloon" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
         </a>
       </div>
     {%- endif -%}

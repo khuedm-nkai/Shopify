@@ -1,33 +1,35 @@
 <div>
   <div class="container_finder">
-    <div class="header_finder">{{section.settings.title}}
+    <div class="custom-header">{{section.settings.title}}
     </div>
     <div class="form-border">
-        <div class="form-container">
-            <div class="form-row">
-                <div class="form-group">
-                <label class='label-finder' for="selectbox1">Who Is This For?</label>
-                <select class='select-finder' id="selectbox1">
-                    <option value="">Choose an option</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                </select>
-                </div>
-                <div class="form-group">
-                <label class='label-finder' for="selectbox2">What is the Occasion?</label>
-                <select class='select-finder' id="selectbox2">
-                    <option value="">Choose an option</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                </select>
-                </div>
-                <div class="form-group-button">
-                    <button class='button-finder' type="button" onclick="redirectToPage()">FIND A GIFT NOW</button>
-                </div>
-            </div>
+      <img class="img-sakura" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/0401_light_string_decor.png?v=1704705419" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/0401_light_string_decor.png?v=1704705419 1536w" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
+      <img class="balloon" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-gift_finder_decor_1.png?v=1715765827" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-gift_finder_decor_1.png?v=1715765827 1536w" width="240" height="280" alt="ftd24_home-gift_finder_decor_1.png__PID:54b77e12-cf96-4f8c-bb93-9263662760ec" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-310_ pf-image-1 pf_gift_decor ls-is-cached lazyloaded" loading="lazy">
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-group">
+            <label class='label-finder' for="selectbox1">Who Is This For?</label>
+            <select class='select-finder' id="selectbox1">
+              <option value="">Choose an option</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class='label-finder' for="selectbox2">What is the Occasion?</label>
+            <select class='select-finder' id="selectbox2">
+              <option value="">Choose an option</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <div class="form-group-button">
+            <button class='button-finder' type="button" onclick="redirectToPage()">FIND A GIFT NOW</button>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
@@ -61,17 +63,21 @@
   .container_finder {
     margin: 0 10px;
   }
+
   .header_finder {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: .04em;
+    color: #000;
+    margin: 0;
+    text-transform: uppercase;
     text-align: center;
+    padding-top: .5%;
+    font-weight: 600;
   }
 
-  .header_finder {
-    font-size: 4rem;
-    color: #2d3748;
-    font-weight: 500;
-  }
-
-  .form-border{
+  .form-border {
+    position: relative;
     max-width: 1150px;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -86,7 +92,7 @@
     padding: 24px 20px;
     border-radius: 16px;
     background: #b3d6ff;
-    box-shadow: rgba(6, 74, 158, .12) 0 -6px 10px 0 inset, rgba(12, 114, 232, .2) 0 6px 10px 0 inset;
+    box-shadow: rgba(6, 74, 158, 0.12) 0 -6px 10px 0 inset, rgba(12, 114, 232, 0.2) 0 6px 10px 0 inset;
   }
 
   .form-row {
@@ -108,7 +114,7 @@
 
   @media(min-width: 768px) {
     .form-group {
-      width: 41.666667%;
+      width: 46%;
       margin-bottom: 0;
     }
   }
@@ -136,10 +142,10 @@
   .select-finder {
     font-weight: 600;
     font-size: 1.6rem;
-    height: 4rem;
+    height: 4.6rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid #cbd5e0;
-    border-radius: 0.5rem;
+    border-radius: 9px;
     width: 100%;
     padding: 0.5rem;
     color: #4a5568;
@@ -148,13 +154,13 @@
   }
 
   .select-finder:focus {
-    border:solid black 0.5px;
+    border: solid black 0.5px;
   }
 
   .button-finder {
     border: 2px solid white;
-    height: 50px;
-    font-size: 1.75rem;
+    height: 55px;
+    font-size: 1.9rem;
     background-color: #4299e1;
     color: white;
     font-weight: 600;
@@ -167,5 +173,21 @@
 
   .button-finder:focus {
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+
+  .form-border .img-sakura {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 191px;
+    height: auto;
+  }
+
+  .form-border .balloon {
+    position: absolute;
+    bottom: -10px;
+    left: -36px;
+    width: 90px;
+    height: auto;
   }
 {% endstyle %}

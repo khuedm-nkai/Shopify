@@ -19,8 +19,13 @@
 }
 
 .price .price-item {
-  display: inline-block;
-  margin: 0 1rem 0 0;
+  /* display: inline-block;
+  margin: 0 1rem 0 0; */
+  margin-right: 0;
+  line-height: 22px;
+  font-weight: 800;
+  font-size: 18px;
+  color:rgb(231 133 52);
 }
 
 .price__regular .price-item--regular {
@@ -59,7 +64,20 @@
 
 .price--sold-out .price__availability,
 .price__regular {
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__container{
+  display:block!important;
+}
+
+.product-type {
+  color:rgb(111 117 120);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
 }
 
 .price__sale,
@@ -82,9 +100,16 @@
 }
 
 .price--on-sale .price__sale {
-  display: initial;
+  /* display: initial;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+}
+
+.last-price-container{
+  display: flex;
+  justify-content: space-between;
 }
 
 .price--center {

@@ -1,7 +1,7 @@
 <div>
   <div class="customer-container">
     <div class="customer-header">
-      <h3 class="customer-title">{{ section.settings.customer_title }}</h3>
+      <h3 class="custom-header">{{ section.settings.customer_title }}</h3>
       <span class="customer-description">{{ section.settings.customer_description }}</span>
       <a href="#" class="customer-link">{{ section.settings.customer_link }}</a>
     </div>
@@ -146,6 +146,7 @@
       align-items: center;
       padding-left: 10px;
       padding-right: 10px;
+      margin-bottom: 20px;
   }
 
   .customer-container .customer-header {
@@ -175,7 +176,7 @@
 
     .customer-container .customer-header .customer-description {
         line-height: 2rem;
-        font-size: 1.75rem;
+        font-size: 16px;
         margin-bottom: 16px;
     }
 
@@ -189,11 +190,12 @@
     .customer-container .customer-header .customer-link {
         color: #3b4148;
         text-decoration: none;
-        font-size: 2.5rem;
+        font-size: 24px;
         padding: 8px 0;
         border-radius: 0;
         border: none;
         border-bottom: 2px solid #3b4148;
+        font-weight: 600;
     }
 
     .customer-container .customer-header .customer-link:hover {
@@ -210,6 +212,12 @@
     @media (min-width: 768px) {
         .customer-container .customer-grid {
             grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .customer-container .customer-header .customer-link {
+            font-size: 18px;
         }
     }
 

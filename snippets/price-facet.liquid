@@ -1,4 +1,4 @@
-<span class="field-currency">{{ cart.currency.symbol }}</span>
+{%- comment -%} <span class="field-currency">{{ cart.currency.symbol }}</span>
 
 <div class="field">
   <input
@@ -42,4 +42,66 @@
   <label class="field__label" for="{{ id_prefix }}{{ filter.label | escape }}-LTE">
     {{- 'products.facets.to' | t -}}
   </label>
+</div> {%- endcomment -%}
+
+<div class="price-form-container">
+  <div class="price-input-container">
+    <input
+      class="price__input"
+      name="{{ filter.min_value.param_name }}"
+      id="{{ id_prefix }}{{ filter.label | escape }}-GTE"
+      {%- if filter.min_value.value -%}
+        value="{{ filter.min_value.value | money_without_currency }}"
+      {%- endif -%}
+      type="text"
+      inputmode="decimal"
+      {%- comment -%} placeholder="0" {%- endcomment -%}
+      placeholder="Min"
+      data-pattern="\d| |,|\."
+      data-min="0"
+      data-max="{{ filter.range_max | money_without_currency }}"
+    >
+      <span>–</span>
+    <input
+      class="price__input"
+      name="{{ filter.max_value.param_name }}"
+      id="{{ id_prefix }}{{ filter.label | escape }}-LTE"
+      {%- if filter.max_value.value -%}
+        value="{{ filter.max_value.value | money_without_currency }}"
+      {%- endif -%}
+      type="text"
+      inputmode="decimal"
+      {%- comment -%} placeholder="{{ filter.range_max | money_without_currency }}" {%- endcomment -%}
+      placeholder="Max"
+      data-pattern="\d| |,|\."
+      data-min="0"
+      data-max="{{ filter.range_max | money_without_currency }}"
+    >
+  </div>
+
+  <div class="price-slider-container">
+    
+  </div>
 </div>
+
+{%- style -%}
+  .price-form-container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+  }
+
+  .price-input-container{
+    display:flex;
+    justify-content:space-between;
+    width:100%; 
+  }
+
+  .price-input-container .price__input{
+    width:45%; 
+  }
+
+  .price-slider-container{
+
+  }
+{%- endstyle -%}

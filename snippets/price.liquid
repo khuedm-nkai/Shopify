@@ -24,6 +24,7 @@
   assign price_max = product.price_max
   assign available = target.available | default: false
   assign money_price = price | money
+  assign product_type = product.type
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
   if settings.currency_code_enabled
@@ -81,6 +82,9 @@
         <span class="price-item price-item--regular">
           {{ money_price }}
         </span>
+        <span class="product-type">
+          {{ product_type }}
+        </span>
       {%- endif -%}
     </div>
     <div class="price__sale">
@@ -97,9 +101,14 @@
         </span>
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
-      </span>
+      <div class="last-price-container">
+        <span class="price-item price-item--sale price-item--last">
+          {{ money_price }}
+        </span>
+        <span class="product-type">
+            {{ product_type }}
+        </span>
+      </div>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>

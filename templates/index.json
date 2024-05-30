@@ -79,7 +79,7 @@
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 60
+        "padding_bottom": 0
       }
     },
     "featured_collection_with_menu_aan6qQ": {
@@ -87,10 +87,11 @@
       "settings": {
         "title": "WHO IS THE HERO?",
         "heading_size": "h1",
+        "image": "shopify:\/\/shop_images\/BKD-Banner_d6aff2e6-516e-49b8-8168-4cff317841fb.webp",
         "menu": "main-recipient",
         "products_to_show": 10,
         "columns_desktop": 5,
-        "full_width": true,
+        "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -256,7 +257,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 28
       }
     },
     "banner_featured_collection_aTbXeY": {
@@ -283,8 +284,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 40,
+        "padding_bottom": 44,
         "banner": "shopify:\/\/shop_images\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.webp"
       }
     },
@@ -341,6 +342,91 @@
         "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
         "image8": "shopify:\/\/shop_images\/16.webp"
       }
+    },
+    "slideshow_ektUAk": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_aCfhVc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Summer_2024_Mini_Banner_5000x_progressive_png.webp",
+            "heading": "Image slide",
+            "heading_size": "h2",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Can94K": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MAIN-FTD-Banner-1-5x_5000x_progressive_png.webp",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_VmgfcE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x_progressive_png.webp",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_aCfhVc",
+        "slide_Can94K",
+        "slide_VmgfcE"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "scroll_to_top_btn_zEn6Dn": {
+      "type": "scroll-to-top-btn",
+      "settings": {
+      }
+    },
+    "help_form_qrdWJd": {
+      "type": "help-form",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -355,6 +441,9 @@
     "banner_featured_collection_aTbXeY",
     "banner_featured_collection_UgzLCK",
     "custom_liquid_AxxmXF",
-    "happy_customers_pfCWRC"
+    "happy_customers_pfCWRC",
+    "slideshow_ektUAk",
+    "scroll_to_top_btn_zEn6Dn",
+    "help_form_qrdWJd"
   ]
 }
