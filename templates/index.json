@@ -229,7 +229,8 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "btn_name": "SHOP TRENDING NOW"
       }
     },
     "featured_collection_MDBBBj": {
@@ -257,7 +258,8 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "btn_name": "SHOP NEW ARRIVALS"
       }
     },
     "banner_featured_collection_aTbXeY": {
@@ -321,7 +323,7 @@
     "custom_liquid_AxxmXF": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n<\/head>\n\n<body>\n    <div class=\"double-image-section\">\n        <div class=\"double-image-container\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 1\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 2\">\n        <\/div>\n    <\/div>\n<\/body>\n<style>\n    .double-image-section {\n        display: flex;\n        justify-content: center;\n    }\n\n    .double-image-container {\n        display: flex;\n        justify-content: space-between;\n        width: calc(100% - 20px);\n        max-width: 1100px;\n        padding: 0 10px;\n    }\n\n    .double-image-container .double-banner {\n        width: calc(50% - 5px);\n        height: auto;\n        border-radius: 10px;\n    }\n\n    @media (max-width: 600px) {\n        .double-image-container {\n            flex-direction: column;\n            height: auto;\n        }\n\n        .double-image-container .double-banner {\n            width: 100%;\n            margin-bottom: 10px;\n        }\n\n        .double-image-container .double-banner:last-child {\n            margin-bottom: 0;\n        }\n    }\n<\/style>\n<\/html>",
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n<\/head>\n\n<body>\n    <div class=\"double-image-section\">\n        <div class=\"double-image-container\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 1\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 2\">\n        <\/div>\n    <\/div>\n<\/body>\n<style>\n    .double-image-section {\n        display: flex;\n        justify-content: center;\n   margin-bottom: 30px;\n}\n\n    .double-image-container {\n        display: flex;\n        justify-content: space-between;\n        width: calc(100% - 20px);\n        max-width: 1100px;\n        padding: 0 10px;\n    }\n\n    .double-image-container .double-banner {\n        width: calc(50% - 5px);\n        height: auto;\n        border-radius: 10px;\n    }\n\n    @media (max-width: 600px) {\n        .double-image-container {\n            flex-direction: column;\n            height: auto;\n        }\n\n        .double-image-container .double-banner {\n            width: 100%;\n            margin-bottom: 10px;\n        }\n\n        .double-image-container .double-banner:last-child {\n            margin-bottom: 0;\n        }\n    }\n<\/style>\n<\/html>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 0

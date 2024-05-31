@@ -661,6 +661,10 @@ span.active-facets__button-inner:after {
 
 .active-facets__button--light .active-facets__button-inner {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 9px;
+  background-color: rgb(242 242 242);
 }
 
 .active-facets__button--light:hover .active-facets__button-inner {
@@ -702,6 +706,9 @@ a.active-facets__button.focused .active-facets__button-inner {
   margin-right: -0.2rem;
   pointer-events: none;
   width: 1.2rem;
+  background-color: #a3a3a3;
+  border-radius: 30px;
+  color: #fff;
 }
 
 @media all and (min-width: 990px) {
@@ -751,6 +758,13 @@ a.active-facets__button.focused .active-facets__button-inner {
   margin-left: 0 !important;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+.mobile-facets__clear-wrapper a{
+  text-decoration: none;
+  color: #85888d;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .mobile-facets {
@@ -869,8 +883,12 @@ a.active-facets__button.focused .active-facets__button-inner {
 }
 
 .mobile-facets__open:hover .mobile-facets__open-label {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-underline-offset: 0.3rem;
+}
+
+.mobile-facets__open .mobile-facets__open-label {
+  font-weight: 600;
 }
 
 .mobile-facets__open > * + * {
@@ -1306,11 +1324,13 @@ input.mobile-facets__checkbox {
 }
 
 .select__select-custom {
-  padding: 10px 20px;
+  padding: 6px 6px;
+  width: 100%;
+  height: 40px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   border-radius: 10px;
-  margin-top: 18px;
+  margin-top: 21px;
   border: 1px solid #00000036;
 }
 
