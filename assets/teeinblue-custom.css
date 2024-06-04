@@ -1,0 +1,20 @@
+.teeinblue-enabled:not(.teeinblue-platform-product-enabled) product-info .price.price--large,
+.teeinblue-enabled:not(.teeinblue-platform-product-enabled) product-info variant-radios,
+.teeinblue-enabled:not(.teeinblue-platform-product-enabled) product-info variant-selects,
+.teeinblue-enabled:not(.teeinblue-platform-product-enabled) product-info .price-per-item__container{
+  display: none !important;
+}
+
+.teeinblue-enabled:not(.teeinblue-platform-product-enabled) product-info .product-form__quantity {
+  display: block !important;
+}
+
+.vm--block-scroll .section-header {
+  z-index: -1;
+}
+
+.vm--block-scroll #main-cart-footer,
+.vm--block-scroll .shopify-section-group-footer-group{
+  position: relative;
+  z-index: -1;
+}

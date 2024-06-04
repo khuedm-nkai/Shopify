@@ -1,0 +1,447 @@
+    <div class="father-day-layout-container">
+        <div class="father-day-container">
+            <div class="block block1">
+                <h3 class="father-heading1">TO BEST DADS IN THE WORLD</h3>
+                <h3 class="father-heading2">HAPPY FATHER’S DAY</h3>
+                <p class="father-description">Father's Day is an important occasion to express words of love and give
+                    thoughtful gifts.</p>
+            </div>
+            <div class="block block2">
+                <div class="banner-father-day">
+                    <img src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_hero_banner_2_500x.png?v=1716353753"
+                        srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_hero_banner_2.png?v=1716353753 1536w, https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_hero_banner_2_500x.png?v=1716353753 320w"
+                        width="890" height="1080"
+                        sizes="(min-width: 1536px) 1536px, (min-width: 1024px) 1280px, (min-width: 640px) 768px, calc(100vw/3)"
+                        loading="lazy" alt="ftd24_hero_banner_2.png__PID:87b3b5a4-e934-4974-a978-de920947422d"
+                        data-pf-type="Image3"
+                        class="sc-gsNilK efdcmA pf-313_ pf-image-1 pf_main_banner ls-is-cached lazyloaded">
+                </div>
+            </div>
+            <div class="block block3">
+                <h3 class="father-heading1">DAD’S DAY IS COMING IN</h3>
+                <div class="count-down-timer">
+                    <div class="count-down-section">
+                        <span class="count-down-number" id="days">16</span>
+                        <label class="count-down-label">Days</label>
+                    </div>
+                    <div class="countdown__colon">
+                        <span>:</span>
+                    </div>
+                    <div class="count-down-section">
+                        <span class="count-down-number" id="hours">05</span>
+                        <label class="count-down-label">Hours</label>
+                    </div>
+                    <div class="countdown__colon">
+                        <span>:</span>
+                    </div>
+                    <div class="count-down-section">
+                        <span class="count-down-number" id="minutes">56</span>
+                        <label class="count-down-label">Mins</label>
+                    </div>
+                    <div class="countdown__colon">
+                        <span>:</span>
+                    </div>
+                    <div class="count-down-section">
+                        <span class="count-down-number" id="seconds">30</span>
+                        <label class="count-down-label">Secs</label>
+                    </div>
+                </div>
+                <p class="father-description">Shop early for Father's Day gifts to enjoy a wider selection and a
+                    stress-free, no-rush experience</p>
+                <h3 class="father-heading1">SHOP BY PRODUCT</h3>
+
+                <div class="mini-products-list">
+                    <div class="column">
+                        <p class="link-product">T-SHIRT</p>
+                        <p class="link-product">CAP</p>
+                        <p class="link-product">MUG</p>
+                        <p class="link-product">POSTER</p>
+                    </div>
+                    <div class="column">
+                        <p class="link-product">HAWAIIAN SHIRT</p>
+                        <p class="link-product">TUMBLER</p>
+                        <p class="link-product">WOODEN PLAQUE</p>
+                        <p class="link-product">PLATTER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% schema %}
+{
+    "name": "Countdown special day",
+    "settings": [
+
+    ],
+    "presets": [
+        {
+            "name": "Countdown special day"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+   .father-day-layout-container {
+        padding: 0 15px;
+        width: 100%;
+        margin: auto;
+        max-width: 1280px;
+    }
+
+    .father-day-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .block {
+        flex: 1;
+        padding: 20px;
+    }
+
+    /* Different background colors for each block */
+    .block1 {
+        padding-right: 40px;
+        border: none;
+    }
+
+    .block1 .father-heading1 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 20px 0;
+    }
+  
+    .block3 .father-heading1 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 20px 0;
+    }
+
+    .block1 .father-heading2 {
+        font-size: 66px;
+        color: #4393F3;
+        font-weight: 800;
+        line-height: 74px;
+        padding-right: 20px;
+        margin: 8px 0;
+        font-family: Poppins;
+        letter-spacing: .02em;
+    }
+
+    .block1 .father-description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: .02em;
+        word-break: break-word;
+    }
+
+    .block2 {
+        border: none;
+    }
+
+    .block2 .banner-father-day {
+        width: 100%;
+        max-width: 430px;
+        position: relative;
+    }
+
+    .block2 .banner-father-day img {
+        width: 430px;
+        height: a;
+        object-fit: cover;
+        object-position: center center;
+        height: auto;
+        max-width: 100%;
+        border: 0;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .block3 {
+        /* background-color: #2196f3; */
+        border: none;
+    }
+
+    .block3 .count-down-timer {
+        display: flex;
+        border-radius: 10px;
+        background-color: #5b94ff;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        /* width: fit-content; */
+        width: 400px;
+        height: 90px;
+    }
+
+    .block3 .father-heading2 {
+        font-size: 72px;
+        color: #4393F3;
+        font-weight: 800;
+        line-height: 74px;
+        padding-right: 20px;
+        margin: 8px 0;
+        font-family: Poppins;
+        letter-spacing: .02em;
+    }
+
+    .block3 .father-description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: .02em;
+        word-break: break-word;
+    }
+
+    .count-down-timer .count-down-section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .count-down-timer .count-down-section .count-down-number{
+        color: #fff;
+        padding: 0 5px;
+        font-size: 38px;
+        line-height: .75em;
+        letter-spacing: .02em;
+        font-weight: 600;
+        min-width: 78px;
+        margin: 20px 8px 0;
+        text-align: center;
+    }
+
+    .count-down-timer .count-down-section .count-down-label{
+        color: #fff;
+        padding: 0 15px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        line-height: 24px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .countdown__colon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .countdown__colon span {
+        height: 50%;
+        background: #fff;
+        color: #fff;
+        width: 2.5px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .count-down-timer .count-down-section .count-down-number{
+            padding: 0;
+            font-size: 19px!important;
+            margin: 19px 1px 0;
+            min-width: 0px!important;
+        }
+
+        .count-down-timer .count-down-section .count-down-label{
+            font-size: 16px!important;
+            font-weight: bold!important;
+            margin-top: 0px!important;
+        }
+        
+
+        .block1 .father-heading1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .block1 .father-heading2 {
+            width: 80%!important;
+            font-size: 36px!important;
+            line-height: 32px!important;
+        }
+
+        .block3 .count-down-timer {
+            width: 280px!important;
+            height: 60px!important;
+        }
+
+        .block3 .father-description {
+            display: inline-block!important;
+            margin: 0;
+        }
+
+        .block3 {
+            display:flex!important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .block1 .father-description {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .count-down-timer .count-down-section .count-down-number{
+            font-size: 30px;
+            margin: 19px 1px 0;
+        }
+
+        .count-down-timer .count-down-section .count-down-label{
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .block1 {
+            padding-right: 20px;
+            border: none;
+        }
+
+        .block1 .father-heading2 {
+            font-size: 55px;
+            line-height: 50px;
+        }
+
+        .block3 .father-description {
+            display: none;
+        }
+
+        .block3 .count-down-timer {
+            display: flex;
+            border-radius: 10px;
+            background-color: #5b94ff;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            /* width: fit-content; */
+            width: 350px;
+            height: 90px;
+        }
+
+        .block {
+            padding: 10px;
+        }
+
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+        .count-down-timer .count-down-section .count-down-number{
+            font-size: 30px;
+        }
+
+        .count-down-timer .count-down-section .count-down-label{
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .father-day-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .block1 {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0;
+        }
+
+        .block1 .father-heading2 {
+            width: 66%;
+            align-items: center;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        .block1 .father-description {
+            width: 80%;
+            align-items: center;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        .block2 {
+            order: 1;
+        }
+
+        .block3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            order: 3;
+            width: 100%;
+        }
+
+        .block3 .father-heading1 {
+            display: none;
+        }
+
+        .block3 .father-description {
+            display: none;
+        }
+
+        .block3 .mini-products-list {
+            display: none !important;
+        }
+
+        .block3 .count-down-timer {
+            width: 350px;
+        }
+    }
+
+    .mini-products-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .column {
+        flex: 1;
+    }
+
+    .column .link-product {
+        margin: 10px 0;
+        color: #60656A;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        margin: 0 0 15px;
+    }
+{% endstyle %}
+
+<script>
+    var countDownDate = new Date("2024-06-30T00:00:00").getTime();
+
+    var x = setInterval(function() {
+
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".count-down-timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+</script>

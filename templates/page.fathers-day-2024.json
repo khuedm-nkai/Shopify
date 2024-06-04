@@ -14,6 +14,9 @@
     },
     "featured_collection_kHx4qQ": {
       "type": "featured-collection",
+      "custom_css": [
+
+      ],
       "settings": {
         "title": "GET TRENDING NOW",
         "heading_size": "h1",
@@ -47,37 +50,31 @@
         "featured_collection_iaVDtC": {
           "type": "featured_collection",
           "settings": {
-            "collection": "for-grandpa"
+            "collection": "t-shirt"
           }
         },
         "featured_collection_jYhdLM": {
           "type": "featured_collection",
           "settings": {
-            "collection": "memorial-gifts"
+            "collection": "cap"
           }
         },
         "featured_collection_xPLgVp": {
           "type": "featured_collection",
           "settings": {
-            "collection": "for-dad"
+            "collection": "mug"
           }
         },
         "featured_collection_kAaFFH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "for-dad"
+            "collection": "hawaiian-shirt"
           }
         },
         "featured_collection_QyKcEW": {
           "type": "featured_collection",
           "settings": {
-            "collection": "for-dad"
-          }
-        },
-        "featured_collection_iNBBNh": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-couple"
+            "collection": "tumbler"
           }
         }
       },
@@ -86,20 +83,19 @@
         "featured_collection_jYhdLM",
         "featured_collection_xPLgVp",
         "featured_collection_kAaFFH",
-        "featured_collection_QyKcEW",
-        "featured_collection_iNBBNh"
+        "featured_collection_QyKcEW"
       ],
       "custom_css": [
-        ".collection-list {margin-top: 0; margin-bottom: 0; display: flex; justify-content: center;}",
-        "@media (min-width: 1024px) {.collection-list li:last-child {display: none; }}"
+
       ],
       "settings": {
         "title": "SHOP BY PRODUCT",
         "heading_size": "h2",
         "image_ratio": "adapt",
-        "columns_desktop": 6,
+        "columns_desktop": 5,
         "color_scheme": "",
         "show_view_all": false,
+        "show_border": true,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -196,6 +192,16 @@
         "reverse": false
       }
     },
+    "scroll_to_top_btn_JfmgEJ": {
+      "type": "scroll-to-top-btn",
+      "settings": {
+      }
+    },
+    "help_form_8g8aNm": {
+      "type": "help-form",
+      "settings": {
+      }
+    },
     "banner_special_day_collection_HQpUaU": {
       "type": "banner-special-day-collection",
       "settings": {
@@ -251,6 +257,8 @@
     "banner_special_day_collection_HPt4tF",
     "banner_special_day_collection_9VHG3g",
     "banner_special_day_collection_ciG4yY",
+    "scroll_to_top_btn_JfmgEJ",
+    "help_form_8g8aNm",
     "banner_special_day_collection_HQpUaU",
     "happy_customers_XetBF6"
   ]

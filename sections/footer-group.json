@@ -4,10 +4,12 @@
   "sections": {
     "custom_email_AR4hEA": {
       "type": "custom-email",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "newsletter_enable": true,
         "newsletter_heading": "<strong>Sign up & enjoy 10% OFF<\/strong>",
+        "newsletter_sub_heading": "Give us a chance to personalize your stories",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
@@ -21,7 +23,6 @@
     },
     "footer": {
       "type": "footer",
-      "disabled": true,
       "custom_css": [
 
       ],

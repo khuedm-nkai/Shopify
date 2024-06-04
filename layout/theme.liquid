@@ -283,6 +283,17 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    {{ 'teeinblue-custom.css' | asset_url | stylesheet_tag }}
+    <script type="text/javascript">
+      teeinblue = {
+    	formSelector: 'product-form.product-form form.form',
+    	gallerySelector: '.grid__item.product__media-wrapper media-gallery',
+    	cartContainerSelectors: ['.cart-items tbody'],
+        cartItemWrapperSelectors: ['.cart-items .cart-item'],
+        atcSubmitSelector: '.product-form__buttons .product-form__submit'
+      };
+    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
