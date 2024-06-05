@@ -79,7 +79,7 @@
 }
 
 .mega-menu .mega-menu__list--condensed {
-  display: block;
+  /* display: block; */
 }
 
 .mega-menu__list--condensed .mega-menu__link {
