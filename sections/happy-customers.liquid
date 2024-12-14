@@ -1,66 +1,76 @@
+{{ 'happy-customers.css' | asset_url | stylesheet_tag }}
+
 <div>
   <div class="customer-container">
     <div class="customer-header">
       <h3 class="custom-header">{{ section.settings.customer_title }}</h3>
       <span class="customer-description">{{ section.settings.customer_description }}</span>
-      <a href="#" class="customer-link">{{ section.settings.customer_link }}</a>
+      <a href="{{ section.settings.happy_customers_url}}" class="customer-link">{{ section.settings.customer_link }}</a>
     </div>
     <div class="customer-grid">
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image1 | image_url }}"
-        alt=""
+        alt="customer 1"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image2 | image_url }}"
-        alt=""
+        alt="customer 2"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image3 | image_url }}"
-        alt=""
+        alt="customer 3"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image4 | image_url }}"
-        alt=""
+        alt="customer 4"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image5 | image_url }}"
-        alt=""
+        alt="customer 5"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image6 | image_url }}"
-        alt=""
+        alt="customer 6"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image7 | image_url }}"
-        alt=""
+        alt="customer 7"
+        loading="lazy"
       >
       <img
         class="customer-img"
         width="100%"
-        height="100%"
+        height="350px"
         src="{{ section.settings.image8 | image_url }}"
-        alt=""
+        alt="customer 8"
+        loading="lazy"
       >
     </div>
   </div>
@@ -127,6 +137,11 @@
             "type": "image_picker",
             "id": "image8",
             "label": "Image8"
+        },
+        {
+            "type": "url",
+            "id": "happy_customers_url",
+            "label": "Url"
         }
     ],
     "presets": [
@@ -136,94 +151,3 @@
     ]
 }
 {% endschema %}
-
-{% style %}
-  .customer-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-bottom: 20px;
-  }
-
-  .customer-container .customer-header {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        row-gap: 5px;
-    }
-
-    .customer-container .customer-header .customer-title {
-        font-size: 3rem;
-        line-height: 2.75rem;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    @media (min-width: 768px) {
-        .customer-container .customer-header .customer-title {
-            font-size: 3.5rem;
-            line-height: 2.75rem;
-        }
-    }
-
-    .customer-container .customer-header .customer-description {
-        line-height: 2rem;
-        font-size: 16px;
-    }
-
-    @media (min-width: 768px) {
-        .customer-container .customer-header .customer-description {
-            line-height: 2rem;
-            font-size: 2rem;
-        }
-    }
-
-    .customer-container .customer-header .customer-link {
-        color: #3b4148;
-        text-decoration: none;
-        font-size: 24px;
-        padding: 8px 0;
-        border-radius: 0;
-        border: none;
-        border-bottom: 2px solid #3b4148;
-        font-weight: 600;
-    }
-
-    .customer-container .customer-header .customer-link:hover {
-    }
-
-    .customer-container .customer-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        width: 100%;
-        max-width: 1160px;
-    }
-
-    @media (min-width: 768px) {
-        .customer-container .customer-grid {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .customer-container .customer-header .customer-link {
-            font-size: 18px;
-        }
-    }
-
-    .customer-container .customer-grid .customer-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-{% endstyle %}

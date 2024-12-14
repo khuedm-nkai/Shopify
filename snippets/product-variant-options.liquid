@@ -105,10 +105,10 @@
         class="disabled"
       {% endif %}
     >
-    <label for="{{ input_id }}">
-      {{ value -}}
-      {{ label_unavailable }}
-    </label>
+      <label for="{{ input_id }}" class="{% if value == 'E' %}bg-red{% endif %}">
+        {{ value -}}
+        {{ label_unavailable }}
+      </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       value="{{ value | escape }}"

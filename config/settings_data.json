@@ -1,8 +1,8 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/20240513-143508.jpg",
+    "logo": "shopify:\/\/shop_images\/Duconspace_Logo_Landscape_-_shop_1920x1080_fa7b098b-4e10-47ff-ba63-3116b71cdc26.png",
     "logo_width": 90,
-    "favicon": "shopify:\/\/shop_images\/20240513-143508.jpg",
+    "favicon": "shopify:\/\/shop_images\/favicon-32x32.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -133,15 +133,58 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "421424240597080315": {
         "type": "shopify:\/\/apps\/teeinblue-product-personalizer\/blocks\/product-personalizer\/67212f31-32b0-450c-97dd-7e182a5fac7b",
         "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "3678330922655817062": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd-ssr\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
         "settings": {
+          "templateId": "q5Uavyr6CD"
         }
+      },
+      "16422382648059844097": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/instant-search-app-embedded\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {}
+      },
+      "13768625480086291342": {
+        "type": "shopify:\/\/apps\/forms\/blocks\/forms\/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "button_color": "#40baa0",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
+          "button_icon": "chat_bubble",
+          "button_text": "message_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
+      },
+      "2808636506467069950": {
+        "type": "shopify:\/\/apps\/mademine-easy-dropshipping\/blocks\/index\/909290f6-4394-4f71-a03d-98accf411faf",
+        "disabled": false,
+        "settings": {}
+      },
+      "1407438314023995498": {
+        "type": "shopify:\/\/apps\/avada-seo-suite\/blocks\/avada-seo\/15507c6e-1aa3-45d3-b698-7e175e033440",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {

@@ -6,7 +6,55 @@
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-    .footer-wrapper,
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons .icon {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+  }
+
+  .icon svg {
+    fill: #555;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s;
+  }
+
+  .icon:hover svg {
+    fill: #000;
+  }
+
+  .footer-contain-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-info {
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 400;
+    line-height: 18px;
+    gap: 10px;
+  }
+
+  .footer-wrapper,
   .footer-wrapper *,
   .footer-wrapper *::after,
   .footer-wrapper *::before {
@@ -30,7 +78,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     -moz-column-gap: 30px;
-         column-gap: 30px;
+    column-gap: 30px;
     row-gap: 36px;
     padding-left: 40px;
     padding-right: 40px;
@@ -56,6 +104,10 @@
     color: #eaeaeb;
     font-size: 13px;
   }
+  .footer-wrapper .footer-content__col__content .content__item a {
+    text-decoration: none;
+    color: #e1e1e2;
+  }
   .footer-wrapper .footer-content__col__paragraph {
     color: #aeaaaa;
     font-size: 13px;
@@ -64,10 +116,10 @@
     line-height: 24px;
   }
   .footer-wrapper .footer-content__logo {
-    width: 240px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    filter: invert(1);
+    width: 150px;
+    object-fit: contain;
+    margin-bottom: 29px;
+    height: auto;
   }
   .footer-wrapper .bottom-footer {
     display: flex;
@@ -79,7 +131,7 @@
     margin-right: auto;
     display: flex;
     -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
   }
   .footer-wrapper .credit {
     color: #a9acaf;
@@ -95,7 +147,7 @@
       padding-right: 30px;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     .footer-wrapper .footer-content {
       grid-template-columns: repeat(2, 1fr);
       padding-left: 20px;
@@ -114,43 +166,77 @@
 <footer class="footer-wrapper">
   <div class="footer-content">
     <div class="footer-content__col">
-      <img
-        src="https://img.cloudimgs.net/rx/256x256/s2/s/4111/72f96d222b5babdd.png"
-        class="footer-content__logo"
-        alt=""
-      >
+      {% if section.settings.footer_logo %}
+        <div class="footer-contain-info">
+          <img
+            width="100%"
+            height="100%"
+            class="footer-content__logo"
+            src="{{ section.settings.footer_logo | image_url }}"
+            alt="{{ section.settings.collection.image.alt | escape }}"
+            loading="lazy"
+          >
+          <div class="shop-info">
+            <span class="fIcon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4599 9.68008C20.3273 8.21469 19.8166 6.80881 18.9777 5.59999C18.1388 4.39117 17.0005 3.4208 15.6742 2.78383C14.3478 2.14685 12.8788 1.86509 11.4109 1.9661C9.94303 2.06711 8.52649 2.54743 7.29988 3.36008C6.24908 4.06273 5.36693 4.98938 4.71682 6.07347C4.06672 7.15757 3.66478 8.37219 3.53988 9.63008C3.41736 10.8797 3.57455 12.141 4.00005 13.3224C4.42555 14.5037 5.10868 15.5755 5.99988 16.4601L11.2999 21.7701C11.3928 21.8638 11.5034 21.9382 11.6253 21.989C11.7472 22.0397 11.8779 22.0659 12.0099 22.0659C12.1419 22.0659 12.2726 22.0397 12.3945 21.989C12.5163 21.9382 12.6269 21.8638 12.7199 21.7701L17.9999 16.4601C18.8911 15.5755 19.5742 14.5037 19.9997 13.3224C20.4252 12.141 20.5824 10.8797 20.4599 9.63008V9.68008ZM16.5999 15.0501L11.9999 19.6501L7.39988 15.0501C6.72197 14.3721 6.20268 13.5524 5.87935 12.6498C5.55601 11.7473 5.43667 10.7843 5.52988 9.83008C5.6237 8.86119 5.93164 7.92524 6.43145 7.08992C6.93126 6.25461 7.61044 5.54079 8.41988 5.00008C9.48083 4.29532 10.7262 3.91938 11.9999 3.91938C13.2736 3.91938 14.5189 4.29532 15.5799 5.00008C16.3869 5.5387 17.0646 6.24936 17.5642 7.08102C18.0639 7.91268 18.3732 8.84468 18.4699 9.81008C18.5661 10.7675 18.4483 11.7344 18.1249 12.6406C17.8014 13.5469 17.2805 14.3699 16.5999 15.0501Z" fill="black" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #fffede;"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0814 7.32962C11.5274 7.04257 10.8965 6.93921 10.2799 7.03448C9.66325 7.12976 9.09293 7.41875 8.65143 7.85962C8.10611 8.40854 7.80005 9.15088 7.80005 9.92462C7.80005 10.6984 8.10611 11.4407 8.65143 11.9896L11.3714 14.7096C11.4644 14.8033 11.575 14.8777 11.6968 14.9285C11.8187 14.9793 11.9494 15.0054 12.0814 15.0054C12.2134 15.0054 12.3441 14.9793 12.466 14.9285C12.5879 14.8777 12.6985 14.8033 12.7914 14.7096L15.5114 11.9896C16.0567 11.4407 16.3628 10.6984 16.3628 9.92462C16.3628 9.15088 16.0567 8.40854 15.5114 7.85962C15.0699 7.41875 14.4996 7.12976 13.883 7.03448C13.2664 6.93921 12.6354 7.04257 12.0814 7.32962ZM12.0814 12.5696L14.0814 10.5696C14.1724 10.4874 14.2451 10.3872 14.2951 10.2753C14.345 10.1633 14.371 10.0422 14.3714 9.91962C14.373 9.79861 14.3498 9.67856 14.3034 9.5668C14.257 9.45504 14.1883 9.35392 14.1014 9.26962C13.9265 9.10215 13.6936 9.00867 13.4514 9.00867C13.2092 9.00867 12.9764 9.10215 12.8014 9.26962C12.7085 9.36335 12.5979 9.43775 12.476 9.48851C12.3541 9.53928 12.2234 9.56542 12.0914 9.56542C11.9594 9.56542 11.8287 9.53928 11.7068 9.48851C11.585 9.43775 11.4744 9.36335 11.3814 9.26962C11.2089 9.09742 10.9752 9.0007 10.7314 9.0007C10.4877 9.0007 10.2539 9.09742 10.0814 9.26962C9.99459 9.35392 9.92586 9.45504 9.87944 9.5668C9.83302 9.67856 9.80987 9.79861 9.81143 9.91962C9.80928 10.0407 9.83215 10.1609 9.87861 10.2728C9.92507 10.3846 9.99412 10.4857 10.0814 10.5696L12.0814 12.5696Z" fill="black" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #fffede;"></path>
+              </svg>
+            </span>
+            <span>{{ section.settings.address }}</span>
+          </div>
+        </div>
+      {% endif %}
     </div>
     <div class="footer-content__col">
       <div class="footer-content__col__title">INFORMATION</div>
       <ul class="footer-content__col__content">
-        <li class="content__item">Contact Us</li>
-        <li class="content__item">About Us</li>
-        <li class="content__item">Terms of Service</li>
-        <li class="content__item">Privacy Policy</li>
+        {% for link in section.settings.information.links %}
+          <li class="content__item">
+            <a href="{{ link.url }}" title="Visit Example" target="_blank" rel="noopener noreferrer">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
     <div class="footer-content__col">
       <div class="footer-content__col__title">HELP CENTER</div>
       <ul class="footer-content__col__content">
-        <li class="content__item">Beware Of Scam/Fake Websites</li>
-        <li class="content__item">2024 Mother's Day Cut-off Dates</li>
-        <li class="content__item">FAQs</li>
-        <li class="content__item">Replacement & Refund Policy</li>
-        <li class="content__item">Payment Methods</li>
-        <li class="content__item">Size Charts</li>
-        <li class="content__item">Shipping and Delivery</li>
-        <li class="content__item">Track Order</li>
-        <li class="content__item">DMCA Report</li>
+        {% for link in section.settings.helplink.links %}
+          <li class="content__item">
+            <a href="{{ link.url }}" title="Visit Example" target="_blank" rel="noopener noreferrer">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
-    <div class="footer-content__col">
-      <div class="footer-content__col__title">NEVER MISS OUT ON A MOMENT</div>
-      <span class="footer-content__col__paragraph">
-        Stay updated with our latest designs, special events and much more from PawfectHouse.
-      </span>
+    <div class='footer-content__col'>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/duconspace" target="_blank" class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.876v-6.987h-2.54v-2.89h2.54V9.794c0-2.506 1.493-3.89 3.778-3.89 1.094 0 2.238.196 2.238.196v2.465h-1.26c-1.243 0-1.63.771-1.63 1.562v1.867h2.773l-.443 2.89h-2.33V21.876C18.343 21.128 22 16.991 22 12z" />
+          </svg>
+        </a>
+        <a href="https://x.com/duconspace" target="_blank" class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M22.46 6.011c-.793.352-1.644.588-2.538.694a4.462 4.462 0 0 0 1.956-2.467 8.92 8.92 0 0 1-2.824 1.084 4.462 4.462 0 0 0-7.597 4.067 12.646 12.646 0 0 1-9.192-4.659 4.443 4.443 0 0 0-.605 2.243 4.462 4.462 0 0 0 1.984 3.717 4.422 4.422 0 0 1-2.019-.558v.057a4.462 4.462 0 0 0 3.574 4.37 4.478 4.478 0 0 1-2.011.077 4.462 4.462 0 0 0 4.167 3.1A8.947 8.947 0 0 1 2 19.539a12.615 12.615 0 0 0 6.832 2.001c8.19 0 12.675-6.79 12.675-12.675 0-.193-.005-.386-.014-.578A9.048 9.048 0 0 0 22.46 6.011z" />
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@duconspace" target="_blank" class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.005 3.005 0 0 0-2.116-2.126C19.354 3.5 12 3.5 12 3.5s-7.354 0-9.382.56a3.005 3.005 0 0 0-2.116 2.126C.5 8.5.5 12 .5 12s0 3.5.502 5.814a3.005 3.005 0 0 0 2.116 2.126c2.028.56 9.382.56 9.382.56s7.354 0 9.382-.56a3.005 3.005 0 0 0 2.116-2.126C23.5 15.5 23.5 12 23.5 12s0-3.5-.002-5.814zM9.75 15.568V8.432l6.75 3.568-6.75 3.568z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/duconspace/" target="_blank" class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm9 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-5 1a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+          </svg>
+        </a>      
+      </div>
     </div>
   </div>
-
   <div class="bottom-footer">
     <div class="payment-methods">
       <svg
@@ -322,248 +408,73 @@
 
 {% schema %}
 {
-  "name": "t:sections.footer.name",
-  "blocks": [
+  "name": "Footer",
+  "settings": [
     {
-      "type": "@app"
+      "id": "copyright",
+      "label": "Copyright text",
+      "type": "text"
+    },
+    {
+      "id": "address",
+      "label": "Address",
+      "type": "text"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer logo"
     },
     {
       "type": "link_list",
-      "name": "t:sections.footer.blocks.link_list.name",
-      "settings": [
-        {
-          "type": "inline_richtext",
-          "id": "heading",
-          "default": "Quick links",
-          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
-        },
-        {
-          "type": "link_list",
-          "id": "menu",
-          "default": "footer",
-          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
-          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
-        }
-      ]
+      "id": "information",
+      "label": "Information"
     },
     {
-      "type": "brand_information",
-      "name": "t:sections.footer.blocks.brand_information.name",
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
-        },
-        {
-          "type": "header",
-          "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_social",
-          "default": true,
-          "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
-          "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
-        }
-      ]
-    },
+      "type": "link_list",
+      "id": "helplink",
+      "label": "Help links"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
     {
-      "type": "text",
-      "name": "t:sections.footer.blocks.text.name",
+      "type": "newsletter",
+      "name": "Newsletter",
       "settings": [
         {
-          "type": "inline_richtext",
           "id": "heading",
-          "default": "Heading",
-          "label": "t:sections.footer.blocks.text.settings.heading.label"
+          "type": "text",
+          "label": "Heading text"
         },
         {
+          "id": "text",
           "type": "richtext",
-          "id": "subtext",
-          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
-          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+          "label": "Body text"
         }
       ]
     },
     {
-      "type": "image",
-      "name": "Image",
+      "name": "Text",
+      "type": "text",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "id": "heading",
+          "type": "text",
+          "label": "Heading text"
         },
         {
-          "type": "range",
-          "id": "image_width",
-          "min": 50,
-          "max": 550,
-          "step": 5,
-          "unit": "px",
-          "label": "Image width",
-          "default": 100
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": "Image alignment on large screen",
-          "options": [
-            {
-              "value": "",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ],
-          "default": "center"
+          "id": "text",
+          "type": "richtext",
+          "label": "Body text"
         }
       ]
+    },
+    {
+      "name": "Navigation column",
+      "type": "navigation",
+      "settings": []
     }
-  ],
-  "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__1.content",
-      "info": "t:sections.footer.settings.header__1.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "newsletter_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.newsletter_enable.label"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "newsletter_heading",
-      "default": "Subscribe to our emails",
-      "label": "t:sections.footer.settings.newsletter_heading.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__9.content",
-      "info": "t:sections.footer.settings.header__9.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_follow_on_shop",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_follow_on_shop.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__2.content",
-      "info": "t:sections.footer.settings.header__2.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_social",
-      "default": true,
-      "label": "t:sections.footer.settings.show_social.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__3.content",
-      "info": "t:sections.footer.settings.header__4.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_country_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_country_selector.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__5.content",
-      "info": "t:sections.footer.settings.header__6.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_language_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_language_selector.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__7.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__8.content",
-      "info": "t:sections.footer.settings.header__8.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_policy",
-      "default": false,
-      "label": "t:sections.footer.settings.show_policy.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.spacing"
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.footer.settings.margin_top.label",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "link_list"
-      },
-      {
-        "type": "text"
-      }
-    ]
-  }
+  ]
 }
 {% endschema %}

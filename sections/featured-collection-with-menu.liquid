@@ -74,7 +74,7 @@
         </h2>
       {%- endif -%}
     </div>
-    <div class='hero-banner-container'>
+    {% comment %} <div class='hero-banner-container'>
       <div
         class="media media--transparent ratio hero-banner"
         {% if section.settings.image != blank %}
@@ -104,7 +104,19 @@
           }}
         {%- endif -%}
       </div>
-    </div>
+    </div> {% endcomment %}
+
+    {% if section.settings.banner_desktop %}
+      <div class="banner_desktop banner-collection-container">
+          <img width='100%' height='100%' class="banner-collection" src="{{ section.settings.banner_desktop | image_url }}" alt="{{ section.settings.collection.image.alt | escape }}" loading="lazy">
+      </div>
+    {% endif %}
+
+    {% if section.settings.banner_mobile %}
+      <div class="banner_mobile banner-collection-container">
+          <img width='100%' height='100%' class="banner-collection" src="{{ section.settings.banner_mobile | image_url }}" alt="{{ section.settings.collection.image.alt | escape }}" loading="lazy">
+      </div>
+    {% endif %}
     
     <div class="featured-collection-with-menu-ajax">
       <button class="pf_tabmenu_arrow" id="pf_arrow-prev"> 
@@ -180,19 +192,22 @@
         </div>
       {%- endif -%}
     </slider-component>
-
-    {%- if section.settings.show_view_all and more_in_collection -%}
+    {%- comment -%} {%- if section.settings.show_view_all and more_in_collection -%} {%- endcomment -%}
       <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <a
-          href="{{ section.settings.collection.url }}"
+          id="loadmore_home_menu"
+          href="{{ collections[initial_collection_handle].url }}"
           {%- comment -%} class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}" {%- endcomment -%}
-          class="custom-btn-view_all"
+          class="custom-btn-view_all custom-btn-special-day"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
         >
-          {{ 'sections.featured_collection.view_all' | t }}
+          {%- comment -%} {{ 'sections.featured_collection.view_all' | t }} {%- endcomment -%}
+          BROWSE MORE
+          <img class="hat" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
+          <img class="btn-balloon" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
         </a>
       </div>
-    {%- endif -%}
+    {%- comment -%} {%- endif -%} {%- endcomment -%}
     {% if section.settings.image_shape == 'arch' %}
       {% render 'mask-arch' %}
     {%- endif -%}
@@ -339,6 +354,27 @@
     display: none;
   }
 }
+
+.banner_desktop {
+  display: none;
+}
+
+.banner_mobile {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .banner_desktop {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner_mobile {
+    display: flex;
+  }
+}
+
 </style>
 <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -382,6 +418,8 @@
         item.addEventListener('click', function(event) {
           event.preventDefault();
           updateActiveItem(this);
+            const handle = this.getAttribute('data-collection-handle');
+            document.getElementById("loadmore_home_menu").href="/collections/" + handle; 
         });
       });
 
@@ -443,11 +481,6 @@
     {
       "type": "header",
       "content": "Image Banner"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Banner"
     },
     {
       "type": "header",
@@ -679,7 +712,17 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_desktop",
+      "label": "banner desktop"//1200
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_mobile",
+      "label": "banner mobile"//767
+    },
   ],
   "presets": [
     {

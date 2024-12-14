@@ -8,6 +8,18 @@
           "settings": {
           }
         },
+        "judge_me_reviews_preview_badge_EBgXcM": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "kiwi_size_chart_recommender_kiwi_sizing_xEQ6Ay": {
+          "type": "shopify:\/\/apps\/kiwi-size-chart-recommender\/blocks\/kiwiSizing\/b7369922-bf15-44ce-a121-a22a8fcbc4b0",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -46,6 +58,8 @@
       },
       "block_order": [
         "title",
+        "judge_me_reviews_preview_badge_EBgXcM",
+        "kiwi_size_chart_recommender_kiwi_sizing_xEQ6Ay",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -69,6 +83,11 @@
         "padding_bottom": 12
       }
     },
+    "scroll_to_top_btn_zpkAJL": {
+      "type": "scroll-to-top-btn",
+      "settings": {
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -86,10 +105,35 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product_customer_reviews_zeiAn6": {
+      "type": "Product-customer-reviews",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "171772466551dcf09a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_yqPz4U": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_yqPz4U"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "scroll_to_top_btn_zpkAJL",
+    "related-products",
+    "product_customer_reviews_zeiAn6",
+    "171772466551dcf09a"
   ]
 }

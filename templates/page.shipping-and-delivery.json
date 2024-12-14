@@ -1,0 +1,257 @@
+{
+  "sections": {
+    "countdown_special_day_RKymTt": {
+      "type": "countdown-special-day",
+      "settings": {
+      }
+    },
+    "special_day_collection_4GU3Lp": {
+      "type": "Special-day-collection",
+      "settings": {
+        "special_day_title": "WHO’S YOUR FATHER’S DAY HERO ?",
+        "special_day_description": "Show appreciation with a heartfelt token. Who will you delight with a gift of thanks?"
+      }
+    },
+    "featured_collection_kHx4qQ": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GET TRENDING NOW",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "anniversary",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "btn_name": "SHOP BEST SELLERS"
+      }
+    },
+    "collection_list_g6HLcp": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_iaVDtC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-grandpa"
+          }
+        },
+        "featured_collection_jYhdLM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "memorial-gifts"
+          }
+        },
+        "featured_collection_xPLgVp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dad"
+          }
+        },
+        "featured_collection_kAaFFH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dad"
+          }
+        },
+        "featured_collection_QyKcEW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dad"
+          }
+        },
+        "featured_collection_iNBBNh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-couple"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_iaVDtC",
+        "featured_collection_jYhdLM",
+        "featured_collection_xPLgVp",
+        "featured_collection_kAaFFH",
+        "featured_collection_QyKcEW",
+        "featured_collection_iNBBNh"
+      ],
+      "custom_css": [
+        ".collection-list {margin-top: 0; margin-bottom: 0; display: flex; justify-content: center;}",
+        "@media (min-width: 1024px) {.collection-list li:last-child {display: none; }}"
+      ],
+      "settings": {
+        "title": "SHOP BY PRODUCT",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "banner_special_day_collection_HPt4tF": {
+      "type": "banner-special-day-collection",
+      "settings": {
+        "title": "GIFTS FOR BEST DAD",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/ftd24_recipient-dad.webp",
+        "reverse": false
+      }
+    },
+    "banner_special_day_collection_9VHG3g": {
+      "type": "banner-special-day-collection",
+      "settings": {
+        "title": "GIFTS FOR GRANDPA",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/ftd24_recipient-grandpa.webp",
+        "reverse": true
+      }
+    },
+    "banner_special_day_collection_ciG4yY": {
+      "type": "banner-special-day-collection",
+      "settings": {
+        "title": "GIFTS FOR PET DAD",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/ftd24_recipient-petdad.webp",
+        "reverse": false
+      }
+    },
+    "banner_special_day_collection_HQpUaU": {
+      "type": "banner-special-day-collection",
+      "settings": {
+        "title": "GIFTS FOR FIRST DAD",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/ftd24_recipient-firstdad.webp",
+        "reverse": true
+      }
+    },
+    "happy_customers_XetBF6": {
+      "type": "happy-customers",
+      "settings": {
+        "customer_title": "HAPPY MOMENTS CAPTURED",
+        "customer_description": "Discover the happiness fathers feel with our special gifts",
+        "customer_link": "",
+        "image1": "shopify:\/\/shop_images\/11_67b8ad8e-1804-4949-9f0f-aca81e47b533.webp",
+        "image2": "shopify:\/\/shop_images\/14.webp",
+        "image3": "shopify:\/\/shop_images\/Homepage_Image_Review.webp",
+        "image4": "shopify:\/\/shop_images\/10.webp",
+        "image5": "shopify:\/\/shop_images\/12_d451675c-9093-4042-b581-509f1d1092b7.webp",
+        "image6": "shopify:\/\/shop_images\/13_a3e834d0-bada-4c85-a712-3de6b2439227.webp",
+        "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
+        "image8": "shopify:\/\/shop_images\/16.webp"
+      }
+    }
+  },
+  "order": [
+    "countdown_special_day_RKymTt",
+    "special_day_collection_4GU3Lp",
+    "featured_collection_kHx4qQ",
+    "collection_list_g6HLcp",
+    "banner_special_day_collection_HPt4tF",
+    "banner_special_day_collection_9VHG3g",
+    "banner_special_day_collection_ciG4yY",
+    "banner_special_day_collection_HQpUaU",
+    "happy_customers_XetBF6"
+  ]
+}

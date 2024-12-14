@@ -177,6 +177,7 @@
           class="button button--primary"
           {% if section.settings.button_link == blank %}
             role="link" aria-disabled="true"
+            href="#"
           {% else %}
             href="{{ section.settings.button_link }}"
           {% endif %}

@@ -134,7 +134,8 @@
 
 .shopify-payment-button__button--unbranded:hover,
 .shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  /* background-color: rgba(var(--color-button), var(--alpha-button-background)); */
+  background-color: #f4993d;
   border-radius: 10px
 }
 
@@ -183,6 +184,7 @@
   min-width: fit-content;
   border: none;
   display: flex;
+  gap: 10px;
 }
 
 .product-form__input .form__label {
@@ -233,7 +235,7 @@
 .product__info-container .product-form,
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
-  margin: 2.5rem 0;
+  /* margin: 2.5rem 0; */
 }
 
 .product__text {
@@ -1490,7 +1492,7 @@ a.product__text {
   font-family: Arial, sans-serif;
   width: 100%;
   margin: 0 auto;
-  height: 100%;
+  /* height: 100%; */
   max-height: 600px;
   border-bottom: 1px solid rgb(184, 183, 183);
   overflow-y: auto;
@@ -1526,6 +1528,10 @@ a.product__text {
 
 .tab-content {
   display: none;
+}
+
+.tab-content img {
+  width: 100%;
 }
 
 .tab-content.active {
@@ -1605,6 +1611,10 @@ a.product__text {
   padding: 20px;
   border-top: 1px solid #ccc;
   background-color: #fff;
+}
+
+.accordion-content img{
+  width: 100%;
 }
 
 .accordion-content.active {

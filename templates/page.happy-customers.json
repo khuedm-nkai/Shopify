@@ -1,5 +1,11 @@
 {
   "sections": {
+    "banner_page_jjtmKN": {
+      "type": "Banner-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
     "happy_customers_XetBF6": {
       "type": "happy-customers",
       "disabled": true,
@@ -14,11 +20,38 @@
         "image5": "shopify:\/\/shop_images\/12_d451675c-9093-4042-b581-509f1d1092b7.webp",
         "image6": "shopify:\/\/shop_images\/13_a3e834d0-bada-4c85-a712-3de6b2439227.webp",
         "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
-        "image8": "shopify:\/\/shop_images\/16.webp"
+        "image8": "shopify:\/\/shop_images\/16.webp",
+        "happy_customers_url": ""
+      }
+    },
+    "1717742272376e168d": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1717743165bb081092": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_H4ddEJ": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_H4ddEJ"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
-    "happy_customers_XetBF6"
+    "banner_page_jjtmKN",
+    "happy_customers_XetBF6",
+    "1717742272376e168d",
+    "1717743165bb081092"
   ]
 }

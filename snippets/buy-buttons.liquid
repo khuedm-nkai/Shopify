@@ -60,6 +60,12 @@
           {% endif %}
           class="product-variant-id"
         >
+          <input
+            type="hidden"
+            name="Babc"
+            value="test"
+            class="product-variant-id"
+          >
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}

@@ -1,0 +1,17 @@
+  .banner_desktop_v2 {
+    display: none;
+  }
+
+  .banner_mobile_v2 {
+    display: flex;
+  }
+
+  @media (min-width: 768px) {
+    .banner_desktop_v2 {
+      display: flex;
+    }
+
+    .banner_mobile_v2 {
+      display: none;
+    }
+  }

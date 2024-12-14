@@ -1,0 +1,96 @@
+
+<div class="double-image-section">
+    <div class="double-image-container">
+      <a href="{{ section.settings.btn_link_1}}">
+        <img
+          width="100%"
+          height="100%"
+          src="{{ section.settings.image1 | image_url }}"
+          class="double-banner" 
+          alt="Image 1"
+          loading="lazy"
+        >
+      </a>
+      <a href="{{ section.settings.btn_link_2}}">
+        <img
+          width="100%"
+          height="100%"
+          src="{{ section.settings.image2 | image_url }}"
+          class="double-banner" 
+          alt="Image 2"
+          loading="lazy"
+        >
+      </a>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Multiple banner ads ",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image1",
+            "label": "Image1"
+        },
+        {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Image2"
+        },
+        {
+            "type": "url",
+            "id": "btn_link_1",
+            "label": "link1"
+        },
+        {
+            "type": "url",
+            "id": "btn_link_2",
+            "label": "link2"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Multiple banner ads "
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+    .double-image-section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .double-image-container {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 20px);
+        max-width: 1100px;
+        padding: 0 10px;
+    }
+
+    .double-image-container .double-banner {
+        width: calc(100% - 5px);
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .double-image-container {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .double-image-container .double-banner {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .double-image-container .double-banner:last-child {
+            margin-bottom: 0;
+        }
+    }
+{% endstyle %}

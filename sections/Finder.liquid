@@ -10,19 +10,11 @@
           <div class="form-group">
             <label class='label-finder' for="selectbox1">Who Is This For?</label>
             <select class='select-finder' id="selectbox1">
-              <option value="">Choose an option</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
             </select>
           </div>
           <div class="form-group">
             <label class='label-finder' for="selectbox2">What is the Occasion?</label>
             <select class='select-finder' id="selectbox2">
-              <option value="">Choose an option</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
             </select>
           </div>
           <div class="form-group-button">
@@ -35,8 +27,46 @@
 </div>
 
 <script>
+  const options1 = [
+    { value: "For Family", text: "Family" },
+    { value: "For Dad", text: "Dad" },
+    { value: "For Mom", text: "Mom" },
+    { value: "For Grandma", text: "Grandma" },
+    { value: "For Grandpa", text: "Grandpa" },
+    { value: "For Dog Lover", text: "Dog Lover" },
+    { value: "For Cat Lover", text: "Cat Lover" },
+    { value: "For Couple", text: "Couple" },
+    { value: "For Besties", text: "Besties" }
+  ];
+
+  const options2 = [
+    { value: "Summer Collection", text: "Summer" },
+    { value: "Father's Day", text: "Father's Day" },
+    { value: "Mother's Day", text: "Mother's Day" },
+    { value: "Anniversary", text: "Anniversary" },
+    { value: "Memorial Gìts", text: "Memorial" }
+  ];
+
+  function populateSelectBox(selectBoxId, options) {
+    const selectBox = document.getElementById(selectBoxId);
+    options.forEach(option => {
+      const opt = document.createElement('option');
+      opt.value = option.value;
+      opt.textContent = option.text;
+      selectBox.appendChild(opt);
+    });
+  }
+
+  populateSelectBox("selectbox1", options1);
+  populateSelectBox("selectbox2", options2);
+
   function redirectToPage() {
-    window.location.href = "https://duconspace.com/collections/all";
+    var selectbox1 = document.getElementById("selectbox1").value;
+    var selectbox2 = document.getElementById("selectbox2").value;
+
+    var url = "https://duconspace.com/collections/all?page=1&rb_snize_facet1=" + encodeURIComponent(selectbox2) + "&rb_snize_facet2=" + encodeURIComponent(selectbox1);
+
+    window.location.href = url;
   }
 </script>
 

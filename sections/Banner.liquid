@@ -1,28 +1,43 @@
+{{ 'banner.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'banner.js' | asset_url }}" defer="defer"></script>
+
  <div class="slideshow-container">
     <div class="slideshow-banner">
       <div class="slides fade">
-        <img
-          width="100%"
-          height="100%"
-          src="{{ section.settings.image1 | image_url }}"
-          style="height: 100%; width:100%"
-        >
+        <a href="{{ section.settings.btn_link_1}}">
+            <img
+            width="100%"
+            height="100%"
+            src="{{ section.settings.image1 | image_url }}"
+            style="height: 100%; width:100%"
+            alt='image1'
+            loading='lazy'
+            >
+        </a>
       </div>
       <div class="slides fade">
-        <img
-          width="100%"
-          height="100%"
-          src="{{ section.settings.image2 | image_url }}"
-          style="height: 100%; width:100%"
-        >
+        <a href="{{ section.settings.btn_link_2}}">
+            <img
+            width="100%"
+            height="100%"
+            src="{{ section.settings.image2 | image_url }}"
+            style="height: 100%; width:100%"
+            alt='image2'
+            loading="lazy"
+            >
+        </a>
       </div>
       <div class="slides fade">
-        <img
-          width="100%"
-          height="100%"
-          src="{{ section.settings.image3 | image_url }}"
-          style="height: 100%; width:100%"
-        >
+        <a href="{{ section.settings.btn_link_3}}">
+            <img
+            width="100%"
+            height="100%"
+            src="{{ section.settings.image3 | image_url }}"
+            style="height: 100%; width:100%"
+            alt='image3'
+            loading="lazy"
+            >
+        </a>
       </div>
     </div>
     <div class="slideshow-index">
@@ -34,29 +49,39 @@
 
   <div class="banner_container">
     <div class="main-banner">
-      <img
-        width="100%"
-        height="100%"
-        src="{{ section.settings.image1 | image_url }}"
-        alt=""
-      >
+        <a href="{{ section.settings.btn_link_1}}">
+            <img
+                width="100%"
+                height="100%"
+                src="{{ section.settings.image1 | image_url }}"
+                alt="image1"
+                loading="lazy"
+            >
+        </a>
     </div>
     <div class="side-banners">
       <div class="side-banner green-banner">
-        <img
-          width="100%"
-          height="100%"
-          src="{{ section.settings.image2 | image_url }}"
-          alt=""
-        >
+        <a href="{{ section.settings.btn_link_2}}">
+            <img
+            width="100%"
+            height="100%"
+            src="{{ section.settings.image2 | image_url }}"
+            alt="image2"
+            loading="lazy"
+            >
+        </a>
       </div>
       <div class="side-banner orange-banner">
-        <img
-          width="100%"
-          height="100%"
-          src="{{ section.settings.image3 | image_url }}"
-          style="height: 100%; width:100%"
-        >
+        <a href="{{ section.settings.btn_link_3}}">
+            <img
+            width="100%"
+            height="100%"
+            src="{{ section.settings.image3 | image_url }}"
+            style="height: 100%; width:100%"
+            alt="image3"
+            loading="lazy"
+            >
+        </a>
       </div>
     </div>
   </div>
@@ -79,6 +104,21 @@
             "type": "image_picker",
             "id": "image3",
             "label": "Image3"
+        },
+        {
+            "type": "url",
+            "id": "btn_link_1",
+            "label": "link1"
+        },
+        {
+            "type": "url",
+            "id": "btn_link_2",
+            "label": "link2"
+        },
+        {
+            "type": "url",
+            "id": "btn_link_3",
+            "label": "link3"
         }
     ],
     "presets": [
@@ -88,202 +128,3 @@
     ]
 }
 {% endschema %}
-
-{% style %}
-  .banner_container {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 15px;
-      gap: 20px;
-      align-items: center;
-  }
-
-  .main-banner {
-      flex: 1 1 100%;
-      height: 400px;
-      background-color: yellow;
-      border-radius: 15px;
-      overflow: hidden;
-  }
-
-  .main-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .side-banners {
-      display: flex;
-      flex: 1 1 100%;
-      flex-direction: column;
-      height: 400px;
-      gap: 20px;
-  }
-
-  .side-banner {
-      flex: 1;
-      border-radius: 15px;
-      overflow: hidden;
-  }
-
-  .side-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .green-banner {
-      background-color: green;
-  }
-
-  .orange-banner {
-      background-color: orange;
-  }
-
-  .mobile-message {
-      display: none;
-      text-align: center;
-      font-size: 24px;
-      color: blue;
-  }
-
-  @media (min-width: 768px) {
-      .banner_container {
-          flex-wrap: nowrap;
-      }
-
-      .main-banner {
-          flex: 2;
-          height: 400px;
-      }
-
-      .side-banners {
-          flex: 1;
-          height: 400px;
-      }
-
-      .slideshow-container {
-          display: none;
-      }
-  }
-
-  @media (max-width: 767px) {
-      .banner_container {
-          display: none;
-      }
-
-      .slideshow-container {
-          display: flex;
-          flex-direction: column;
-      }
-
-      .slides {
-          height: 100%;
-          display: none;
-          overflow: hidden;
-      }
-
-      .slides img {
-          border-radius: 15px;
-      }
-
-      .fade {
-          animation-name: fade;
-          animation-duration: 1.5s;
-      }
-
-      @keyframes fade {
-          from {
-              opacity: .4
-          }
-
-          to {
-              opacity: 1
-          }
-      }
-
-      .prev,
-      .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          margin-top: -22px;
-          padding: 16px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-      }
-
-      .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-      }
-
-      .prev:hover,
-      .next:hover {}
-  }
-
-  .slideshow-banner {
-      height: 100%;
-      display: block;
-      max-width: 1000px;
-      position: relative;
-      margin: 5px 10px 5px 10px;
-  }
-
-  .slideshow-index {
-      text-align: center;
-      position: relative;
-      top: -10px;
-  }
-
-  .index {
-      display: inline-block;
-      width: 30px;
-      height: 2px;
-      margin: 0 5px;
-      border-radius: 10px;
-      background-color: #bbb;
-      cursor: pointer;
-  }
-
-  .active,
-  .index:hover {
-      background-color: #07a5d2;
-  }
-{% endstyle %}
-
-<script>
-  let slideIndex = 0;
-
-  function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("slides");
-      let dots = document.getElementsByClassName("index");
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 5000); // Thay đổi slide sau mỗi 5 giây
-  }
-
-  function currentSlide(n) {
-      slideIndex = n;
-      showSlides();
-  }
-
-  showSlides();
-</script>

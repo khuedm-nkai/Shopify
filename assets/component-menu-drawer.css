@@ -239,3 +239,54 @@ details[open].menu-opening > .menu-drawer__submenu {
     transition: none !important;
   }
 }
+
+.btns-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 12px;
+}
+
+.preview {
+    flex-basis: calc(50% - 5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration:none;
+}
+
+.trending-link{
+    background: #F4993D;
+    border-color: #F4993D;
+    color: #fff !important;
+}
+
+.arrivals{
+    background: #0AB9CA;
+    border-color: #0AB9CA;
+    color: #fff !important;
+}
+
+.border-preview{
+    border: 1.2px solid #60656A;
+}
+
+.preview-text {
+    font-size: 16px;
+}
+
+.preview-icon {
+    font-size: 20px;
+}
+
+@media (max-width: 360px) {
+    .preview {
+        flex-basis: 100%; /* Mỗi nút chiếm 100% chiều rộng */
+    }
+}

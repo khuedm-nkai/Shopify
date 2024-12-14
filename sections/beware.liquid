@@ -1,0 +1,111 @@
+    <div class="beware-container">
+        <div class="one-whole column">
+            <h1 class="mobile_title mg_bottom--zero text-align-center desktop_secondary_button">BEWARE OF SCAM/FAKE
+                WEBSITES</h1>
+        </div>
+        <div class="one-whole column rte">
+            <p class="">Dear valued
+                customers,<br><br>We want to alert you to a serious issue that has come to our attention. There are
+                fraudulent websites impersonating us, using our email address in their fraudulent receipts and
+                confirmation emails. <strong>Please note that our only official website is</strong> <a
+                    href="https://duconspace.com" target="_self">https://duconspace.com/</a>.<br><br>If you
+                mistakenly reply to these fake emails, your message goes to our customer service, who have no
+                information about these unauthorized transactions. If you find yourself in this situation, please
+                immediately contact your bank or credit card company to dispute the charges and help prevent further
+                scams.<br><br>Shopping online offers great convenience, but it's important to remain vigilant about
+                potential scams. Always confirm the credibility of a website through customer testimonials and ensure it
+                is secure before sharing any personal information or making a purchase. Exercise caution if a website
+                asks for personal details without a valid reason.<br><br>Should you encounter any suspicious activity or
+                communications that seem to be from us but have questionable web addresses or details, do not engage.
+                Instead, verify the site's legitimacy by checking safe browsing tools or contacting our official
+                customer support.<br><br>We prioritize your safety and urge you to always protect your personal
+                information when shopping online.<br><br>Thank you for your attention to this matter.<br>Best
+                regards,<br>Duconspace.com<b></b></p>
+            <p class=""><br><br></p>
+        </div>
+    </div>
+
+{% schema %}
+{
+    "name": "Beware",
+    "settings": [
+        
+    ],
+    "presets": [
+        {
+            "name": "Beware"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+  .beware-container {
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .beware-container .one-whole .column .rte{
+        font-family: Poppins, sans-serif;
+    }
+
+    .one-whole {
+        width: calc(100% - 20px);
+    }
+
+    .colunn {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .rte {
+        word-break: break-word;
+    }
+
+    .mobile_title {
+        font-size: 20px !important;
+        font-family: Nunito, sans-serif;
+        font-weight: 700 !important;
+        line-height: 28px !important;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }
+
+    .heading-content {
+        font-family: Nunito, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: none;
+        line-height: 1.5;
+        color: #333;
+        display: block;
+        letter-spacing: 0px;
+        text-rendering: optimizeLegibility;
+        font-size: 35px;
+        margin: 0 auto 15px 0;
+    }
+
+    .desktop_secondary_button {
+        font-size: 28px !important;
+        line-height: 40px !important;
+        font-weight: 700 !important;
+    }
+
+    .custom-ul {
+        list-style-image: initial;
+        list-style: disc outside;
+        margin-bottom: 20px;
+    }
+
+    .custom-ul .custom-li {
+        margin-bottom: 12px;
+    }
+
+    .beware-container p {
+        font-size: 18px;
+    }
+{% endstyle %}

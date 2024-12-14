@@ -1,6 +1,27 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
-  <head>
+  <!-- Twitter conversion tracking base code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','od434');
+twq('config','on8zx');
+</script>
+<!-- End Twitter conversion tracking base code --><head>
+  <!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T3K52992');
+</script>
+<!-- End Google Tag Manager -->
+
+	<!-- Added by AVADA SEO Suite -->
+	{% include 'avada-seo' %}
+	<!-- /Added by AVADA SEO Suite -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,6 +46,15 @@
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
+    {% if template == 'product' %}
+      {% assign page_description = product.description %}
+    {% elsif template == 'page' %}
+      {% assign page_description = page.description %}
+    {% else %}
+      {% assign page_description = shop.meta_description %}
+    {% endif %}
+    
+    <meta name="description" content="{{ page_description | escape }}">
 
     {% render 'meta-tags' %}
 
@@ -294,6 +324,7 @@
         atcSubmitSelector: '.product-form__buttons .product-form__submit'
       };
     </script>
+    {{ 'teeinblue-custom.js' | asset_url | script_tag }}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

@@ -1,0 +1,143 @@
+<div class="order-accordion-container">
+    <h3>Tracking FAQ</h3>
+    <div class="order-accordion">
+        <button class="order-btn">When will I receive my order?</button>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+                <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="panel">
+      <p>Pawfect House team always works around the clock to make sure your order is delivered as soon as possible</p>
+      <p>The total processing and shipping time is normally 10-20 business days for orders from the US and 15-25 business days for international orders if there are no unexpected postal problems. For more detailed information, please refer to our timeframe: Shipping and Delivery page</p>
+      <p>The shipping notice with tracking information will be sent to your order email from which you can easily track its route. Please kindly check the spam/junk folder as well in case it isn’t in your inbox.</p>
+    </div>
+    
+    <div class="order-accordion">
+        <button class="order-btn">My tracking number doesn’t work</button>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+                <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+            </svg>
+        </div>
+    </div>
+    <div class="panel">
+      <p>You should see tracking events within 48-96 hours after you have received the tracking number/ID. The reason for this time lag is that in most cases the first tracking events only show up once the shipment was handed over to the local facility.</p>
+      <p>Note: Some carriers take a longer time for the next information to appear. (Might apply for t-shirts, posters, canvas or mugs orders).</p>
+    </div>
+    
+    <div class="order-accordion">
+        <button class="order-btn">Why is my order tracking not moving</button>
+        <div class="arrow-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+                <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+            </svg>
+        </div>
+    </div>
+    <div class="panel">
+      <p>We understand that it might be frustrating to not get real-time updates on your order's current location. During peak season, it is normal if your package is shipped without tracking information, but you can be assured that your package will be delivered within our committed timeframe. This can be due to (but not limited to) weather incidents, customs clearance, or carrier backlogs.</p>
+      <p>In case your order is stuck for 10-15 days, please email us via: Contact Us ,so that the problem can be sorted out as quickly as possible.</p>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "order FAQ",
+    "settings": [
+      
+    ],
+    "presets": [
+        {
+            "name": "order FAQ"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+        .order-accordion-container{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .order-accordion-container .order-accordion {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            background-color: #dcf5f8;
+            color: #444;
+            cursor: pointer;
+            padding: 4px 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            color: #0b8494;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .order-accordion .order-btn {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            background-color: #dcf5f8;
+            color: #444;
+            cursor: pointer;
+            padding: 4px 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+        }
+
+        .order-accordion .arrow-icon {
+            display: block !important;
+        }
+
+        .order-accordion.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .panel p {
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            text-transform: none;
+            color: #333;
+            line-height: 1.6em;
+            font-size: 16px;
+        }
+{% endstyle %}
+
+<script>
+    var acc = document.getElementsByClassName("order-accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>

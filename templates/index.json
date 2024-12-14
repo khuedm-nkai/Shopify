@@ -3,9 +3,12 @@
     "banner_gdYmHC": {
       "type": "Banner",
       "settings": {
-        "image1": "shopify:\/\/shop_images\/MAIN-FTD-Banner-1-5x_5000x_progressive_png.webp",
-        "image2": "shopify:\/\/shop_images\/Summer_2024_Mini_Banner_5000x_progressive_png.webp",
-        "image3": "shopify:\/\/shop_images\/0301_photo_gift_collection_41d7e169-c2d0-4e44-9b23-3a9c8a10908a_5000x_progressive_png.webp"
+        "image1": "shopify:\/\/shop_images\/Ducon_Space_Christmas_banner_01_852e2ae8-d430-4c53-8bd8-005e534dac6c.webp",
+        "image2": "shopify:\/\/shop_images\/Ducon_Space_Christmas_banner_01_852e2ae8-d430-4c53-8bd8-005e534dac6c_2.webp",
+        "image3": "shopify:\/\/shop_images\/Ducon_Space_Christmas_banner_01_2_33_2234f8c1-a9ba-4e97-88f1-ffee9dabf8f7.webp",
+        "btn_link_1": "shopify:\/\/collections\/christmas",
+        "btn_link_2": "shopify:\/\/collections\/for-family",
+        "btn_link_3": "shopify:\/\/collections\/pet-lovers"
       }
     },
     "custom_liquid_MBjmg7": {
@@ -48,7 +51,7 @@
         "featured_collection_bMgBPP": {
           "type": "featured_collection",
           "settings": {
-            "collection": "for-couple"
+            "collection": "gifts-for-mom"
           }
         },
         "featured_collection_XiQznt": {
@@ -66,9 +69,7 @@
         "featured_collection_bMgBPP",
         "featured_collection_XiQznt"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "title": "SHOP BY RECIPIENT",
         "heading_size": "h1",
@@ -76,6 +77,7 @@
         "columns_desktop": 6,
         "color_scheme": "",
         "show_view_all": false,
+        "show_border": false,
         "columns_mobile": "3",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -85,9 +87,8 @@
     "featured_collection_with_menu_aan6qQ": {
       "type": "featured-collection-with-menu",
       "settings": {
-        "title": "WHO IS THE HERO?",
+        "title": "Ready To Be Enchanted This Christmas?",
         "heading_size": "h1",
-        "image": "shopify:\/\/shop_images\/BKD-Banner_d6aff2e6-516e-49b8-8168-4cff317841fb.webp",
         "menu": "main-recipient",
         "products_to_show": 10,
         "columns_desktop": 5,
@@ -105,7 +106,38 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "banner_mobile": "shopify:\/\/shop_images\/Ducon_Space_Family_Collection_For_Christmas_Occasion.jpg"
+      }
+    },
+    "banner_featured_collection_v2_temeCp": {
+      "type": "banner-featured-collection-v2",
+      "settings": {
+        "title": "CHRISTMAS IS COMING!",
+        "heading_size": "h1",
+        "description": "",
+        "slogan": "<p>This season, the true magic of gifting isn’t hiding under the tree – it’s alive in our Christmas collection, ready to wrap your holidays in warmth, joy, and a sprinkle of wonder!<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "christmas",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner": "shopify:\/\/shop_images\/image_7.webp"
       }
     },
     "shop_by_product_ddBjJK": {
@@ -184,6 +216,7 @@
         "featured_collection_JripPN",
         "featured_collection_zgcdiL"
       ],
+      "disabled": true,
       "settings": {
         "title": "SHOP BY PRODUCT",
         "heading_size": "h1",
@@ -212,7 +245,7 @@
         "description": "",
         "show_description": false,
         "description_style": "uppercase",
-        "collection": "all",
+        "collection": "classic-cap",
         "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": false,
@@ -270,35 +303,6 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "frontpage",
-        "products_to_show": 6,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 44,
-        "banner": "shopify:\/\/shop_images\/Anniversary_Collection_Banner_a381ee9d-0271-415b-b075-983030a1cbb5.webp"
-      }
-    },
-    "banner_featured_collection_UgzLCK": {
-      "type": "banner-featured-collection",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
         "collection": "anniversary",
         "products_to_show": 5,
         "columns_desktop": 5,
@@ -315,18 +319,50 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "banner": "shopify:\/\/shop_images\/Pet_Collection_Banner_9d5bda98-14d5-4055-9d3e-4e97e32de97f.webp"
+        "padding_top": 40,
+        "padding_bottom": 44,
+        "banner_desktop": "shopify:\/\/shop_images\/image_9.webp",
+        "banner_mobile": "shopify:\/\/shop_images\/Ducon_Space_Anniversary_Collection_For_Christmas_Occasion_2.webp"
       }
     },
-    "custom_liquid_AxxmXF": {
-      "type": "custom-liquid",
+    "banner_featured_collection_UgzLCK": {
+      "type": "banner-featured-collection",
       "settings": {
-        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Image Container<\/title>\n<\/head>\n\n<body>\n    <div class=\"double-image-section\">\n        <div class=\"double-image-container\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173044.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 1\">\n            <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0563\/9988\/8539\/files\/20240116-173036.png?v=1705401078\"\n                class=\"double-banner\" alt=\"Image 2\">\n        <\/div>\n    <\/div>\n<\/body>\n<style>\n    .double-image-section {\n        display: flex;\n        justify-content: center;\n   margin-bottom: 30px;\n}\n\n    .double-image-container {\n        display: flex;\n        justify-content: space-between;\n        width: calc(100% - 20px);\n        max-width: 1100px;\n        padding: 0 10px;\n    }\n\n    .double-image-container .double-banner {\n        width: calc(50% - 5px);\n        height: auto;\n        border-radius: 10px;\n    }\n\n    @media (max-width: 600px) {\n        .double-image-container {\n            flex-direction: column;\n            height: auto;\n        }\n\n        .double-image-container .double-banner {\n            width: 100%;\n            margin-bottom: 10px;\n        }\n\n        .double-image-container .double-banner:last-child {\n            margin-bottom: 0;\n        }\n    }\n<\/style>\n<\/html>",
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "pet-gifts-collection",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "banner_desktop": "shopify:\/\/shop_images\/Ducon_Space_Pets_Gift_Collection_Christmas_2.webp",
+        "banner_mobile": "shopify:\/\/shop_images\/Ducon_Space_Pet_Gifts_Collection_For_Christmas_1.webp"
+      }
+    },
+    "multiple_banner_ads_zQHNNU": {
+      "type": "multiple_banner_ads",
+      "disabled": true,
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/Indoor_Ducon_Space.jpg",
+        "image2": "shopify:\/\/shop_images\/Pet_Gifts_Outdoor_2024_Collection_Ducon_Space.jpg",
+        "btn_link_1": "shopify:\/\/collections\/indoor-decor",
+        "btn_link_2": "shopify:\/\/collections\/outdoor-decor"
       }
     },
     "happy_customers_pfCWRC": {
@@ -335,14 +371,15 @@
         "customer_title": "LET CUSTOMERS SPEAK FOR US",
         "customer_description": "Your happiness is our top priority for each and every gift we deliver!",
         "customer_link": "VISIT HAPPY CUSTOMERS",
-        "image1": "shopify:\/\/shop_images\/11_67b8ad8e-1804-4949-9f0f-aca81e47b533.webp",
-        "image2": "shopify:\/\/shop_images\/14.webp",
-        "image3": "shopify:\/\/shop_images\/Homepage_Image_Review.webp",
-        "image4": "shopify:\/\/shop_images\/10.webp",
-        "image5": "shopify:\/\/shop_images\/12_d451675c-9093-4042-b581-509f1d1092b7.webp",
-        "image6": "shopify:\/\/shop_images\/13_a3e834d0-bada-4c85-a712-3de6b2439227.webp",
-        "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
-        "image8": "shopify:\/\/shop_images\/16.webp"
+        "image1": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_2.webp",
+        "image2": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_3.webp",
+        "image3": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_4.webp",
+        "image4": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_6.webp",
+        "image5": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_10.webp",
+        "image6": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_8.webp",
+        "image7": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_9.webp",
+        "image8": "shopify:\/\/shop_images\/Ducon_Space_Review_T-shirt_7.webp",
+        "happy_customers_url": "shopify:\/\/pages\/happy-customers"
       }
     },
     "slideshow_ektUAk": {
@@ -422,13 +459,12 @@
     },
     "scroll_to_top_btn_zEn6Dn": {
       "type": "scroll-to-top-btn",
-      "settings": {
-      }
+      "settings": {}
     },
     "help_form_qrdWJd": {
       "type": "help-form",
-      "settings": {
-      }
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
@@ -436,13 +472,14 @@
     "custom_liquid_MBjmg7",
     "collection_list_FTgWKq",
     "featured_collection_with_menu_aan6qQ",
+    "banner_featured_collection_v2_temeCp",
     "shop_by_product_ddBjJK",
     "finder_VPCqaG",
     "featured_collection",
     "featured_collection_MDBBBj",
     "banner_featured_collection_aTbXeY",
     "banner_featured_collection_UgzLCK",
-    "custom_liquid_AxxmXF",
+    "multiple_banner_ads_zQHNNU",
     "happy_customers_pfCWRC",
     "slideshow_ektUAk",
     "scroll_to_top_btn_zEn6Dn",

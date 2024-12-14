@@ -1,0 +1,148 @@
+    <div class="payment-method-wrapper">
+        <div class="
+              dino-container
+              dino-content
+              dino-page ">
+            <div class="dino-one-whole dino-column">
+                <h1 class="mobile_title mg_bottom--zero text-align-center desktop_secondary_button">Payment Methods</h1>
+            </div>
+            <div class="dino-one-whole dino-column rte">
+                <meta charset="utf-8">
+                <p><strong>PawfectHouse</strong><span>&nbsp;</span>is an international company, whose customers come
+                    from all
+                    over the world (the US, the UK, Australia, etc.). You may get a notice from your bank that you are
+                    trading
+                    with an international company, and you may need to verify with your bank that this transaction is
+                    safe.</p>
+                <div>
+                    <p>For the said reason, depending on your bank setting, you might be charged a small amount of
+                        international
+                        transaction fee.</p>
+                    <p><strong>All prices are listed and payments are processed in US dollars.</strong></p>
+                    <ul>
+                        <li>If your credit card company or bank uses a different currency, the final transaction price
+                            may
+                            differ due to currency exchange rates. Please contact your payment provider for further
+                            information.
+                        </li>
+                        <li>Payment/cash on delivery (purchased order) isn’t available at DuconSpace.</li>
+                    </ul>
+                    <p>We accept the following payment methods:</p>
+                    <ul>
+                        <li>
+                            <strong> Credit/Debit Card</strong> will automatically be charged by our financial service
+                            providers. Your order will begin processing after all necessary verifications have been
+                            completed.
+                        </li>
+                        <li>
+                            <strong> PayPal:</strong> The transaction will be processed by PayPal, an external financial
+                            service
+                            provider. During the checkout process, you will be redirected to PayPal and complete your
+                            purchase
+                            with your account there. Your data will not be transfered to DuconSpace. After PayPal has
+                            completed verification, your order will then be processed.
+                        </li>
+                    </ul>
+                    <p>Please feel free to reach out to us via <a
+                            href="https://duconspace.com/pages/contact" target="_blank"
+                            rel="noopener noreferrer"><span style="text-decoration: underline;"><strong>this contact
+                                    form</strong></span></a> for further assistance.&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% schema %}
+{
+    "name": "Payment method",
+    "settings": [
+        
+    ],
+    "presets": [
+        {
+            "name": "Payment method"
+        }
+    ]
+}
+{% endschema %}
+
+{% style %}
+.payment-method-wrapper {
+  max-width: 1280px !important;
+  margin-top: 96px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.content {
+  padding: 30px 0 15px;
+}
+
+.dino-container {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Whole */
+.dino-one-whole {
+  width: calc(100% - 20px);
+}
+
+.rte {
+  word-break: break-word;
+}
+
+h2,
+.h2,
+h2.title {
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: none;
+
+  line-height: 48px;
+  color: #0c6574;
+  display: block;
+  letter-spacing: 0px;
+  text-rendering: optimizeLegibility;
+
+  font-size: 40px;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1.5;
+  color: #333;
+  display: block;
+  letter-spacing: 0px;
+  text-rendering: optimizeLegibility;
+  font-size: 44px;
+  margin: 0 auto 15px;
+  clear: both;
+  font-weight: 700;
+  padding-top: 4px;
+}
+
+a,
+a:visited,
+a span {
+  color: #df6518;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.1s linear;
+}
+
+a {
+  touch-action: manipulation;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+{% endstyle %}

@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "1717732049a032ffd1": {
+      "type": "apps",
+      "blocks": {
+        "parcel_panel_app_TXBwVC": {
+          "type": "shopify:\/\/apps\/parcel-panel\/blocks\/app\/fc785c3f-90e0-4c98-a20c-7cde9ba5e4b5",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "parcel_panel_app_TXBwVC"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "1717732049a032ffd1"
+  ]
+}

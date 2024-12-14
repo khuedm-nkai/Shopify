@@ -52,16 +52,16 @@
 
                 <div class="mini-products-list">
                     <div class="column">
-                        <p class="link-product">T-SHIRT</p>
-                        <p class="link-product">CAP</p>
-                        <p class="link-product">MUG</p>
-                        <p class="link-product">POSTER</p>
+                        <p class="link-product"><a href="{{section.settings.link1}}">T-SHIRT</a></p>
+                        <p class="link-product"><a href="{{section.settings.link2}}">CAP</a></p>
+                        <p class="link-product"><a href="{{section.settings.link3}}">MUG</a></p>
+                        <p class="link-product"><a href="{{section.settings.link4}}">POSTER</a></p>
                     </div>
                     <div class="column">
-                        <p class="link-product">HAWAIIAN SHIRT</p>
-                        <p class="link-product">TUMBLER</p>
-                        <p class="link-product">WOODEN PLAQUE</p>
-                        <p class="link-product">PLATTER</p>
+                        <p class="link-product"><a href="{{section.settings.link5}}">HAWAIIAN SHIRT</a></p>
+                        <p class="link-product"><a href="{{section.settings.link6}}">HTUMBLER</a></p>
+                        <p class="link-product"><a href="{{section.settings.link7}}">WOODEN PLAQUE</a></p>
+                        <p class="link-product"><a href="{{section.settings.link8}}">PLATTER</a></p>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,46 @@
 {
     "name": "Countdown special day",
     "settings": [
-
+        {
+            "type": "url",
+            "id": "link1",
+            "label": "url1"
+        },
+        {
+            "type": "url",
+            "id": "link2",
+            "label": "url2"
+        },
+        {
+            "type": "url",
+            "id": "link3",
+            "label": "url3"
+        },
+        {
+            "type": "url",
+            "id": "link4",
+            "label": "url4"
+        },
+        {
+            "type": "url",
+            "id": "link5",
+            "label": "url5"
+        },
+        {
+            "type": "url",
+            "id": "link6",
+            "label": "url6"
+        },
+        {
+            "type": "url",
+            "id": "link7",
+            "label": "url7"
+        },
+        {
+            "type": "url",
+            "id": "link8",
+            "label": "url8"
+        }
     ],
     "presets": [
         {
@@ -100,6 +139,10 @@
     .block {
         flex: 1;
         padding: 20px;
+    }
+
+    .link-product a {
+        text-decoration:none;
     }
 
     /* Different background colors for each block */
@@ -421,7 +464,7 @@
 {% endstyle %}
 
 <script>
-    var countDownDate = new Date("2024-06-30T00:00:00").getTime();
+    var countDownDate = new Date("2025-06-30T00:00:00").getTime();
 
     var x = setInterval(function() {
 

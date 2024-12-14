@@ -1359,3 +1359,173 @@ class AccountIcon extends HTMLElement {
 }
 
 customElements.define('account-icon', AccountIcon);
+
+//rewrite css for picture
+document.addEventListener("DOMContentLoaded", function() {
+  const pics = document.querySelectorAll('.jdgm-rev__pics');
+  
+  pics.forEach(pic => {
+      const parent = pic.parentElement;
+      const currentIndex = Array.from(parent.children).indexOf(pic);
+      const newIndex = Math.max(0, currentIndex - 2);
+      parent.insertBefore(pic, parent.children[newIndex]);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const items = document.querySelectorAll('.jdgm-carousel__item-wrapper');
+  items.forEach(item => {
+      item.classList.remove('jdgm-carousel__item-wrapper');
+      item.classList.add('jdgm-custom');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Find the element with the class 'pp_enter_submit1'
+  var shopifyAppBlock = document.querySelector('.pp_tracking_form_in');
+  
+  // Define the HTML content to be inserted
+  var newContent = `
+  <div class="order-accordion-container">
+      <h3>Tracking FAQ</h3>
+      <div class="order-accordion">
+          <button class="order-btn">When will I receive my order?</button>
+          <div class="arrow-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+              </svg>
+          </div>
+      </div>
+      
+      <div class="panel" style="display: none;">
+        <p>DuconSpace team always works around the clock to make sure your order is delivered as soon as possible</p>
+        <p>The total processing and shipping time is normally 10-20 business days for orders from the US and 15-25 business days for international orders if there are no unexpected postal problems. For more detailed information, please refer to our timeframe: Shipping and Delivery page</p>
+        <p>The shipping notice with tracking information will be sent to your order email from which you can easily track its route. Please kindly check the spam/junk folder as well in case it isn’t in your inbox.</p>
+      </div>
+      
+      <div class="order-accordion">
+          <button class="order-btn">My tracking number doesn’t work</button>
+          <div class="arrow-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+              </svg>
+          </div>
+      </div>
+      <div class="panel" style="display: none;">
+        <p>You should see tracking events within 48-96 hours after you have received the tracking number/ID. The reason for this time lag is that in most cases the first tracking events only show up once the shipment was handed over to the local facility.</p>
+        <p>Note: Some carriers take a longer time for the next information to appear. (Might apply for t-shirts, posters, canvas or mugs orders).</p>
+      </div>
+      
+      <div class="order-accordion">
+          <button class="order-btn">Why is my order tracking not moving</button>
+          <div class="arrow-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve">
+                  <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+              </svg>
+          </div>
+      </div>
+      <div class="panel" style="display: none;">
+        <p>We understand that it might be frustrating to not get real-time updates on your order's current location. During peak season, it is normal if your package is shipped without tracking information, but you can be assured that your package will be delivered within our committed timeframe. This can be due to (but not limited to) weather incidents, customs clearance, or carrier backlogs.</p>
+        <p>In case your order is stuck for 10-15 days, please email us via: Contact Us ,so that the problem can be sorted out as quickly as possible.</p>
+      </div>
+  </div>
+  `;
+
+  // Create a new div element and set its innerHTML to the new content
+  var tempDiv = document.createElement('div');
+  tempDiv.innerHTML = newContent;
+
+  // Insert the new content after the 'shopify-app-block' element
+  if (shopifyAppBlock) {
+      shopifyAppBlock.insertAdjacentHTML('afterend', tempDiv.innerHTML);
+  }
+
+  // Add accordion functionality
+  var acc = document.getElementsByClassName("order-accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
+});
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   var trackingForms = document.querySelectorAll('.pp_tracking_form_in');
+  
+//   trackingForms.forEach(function(form) {
+//       var nextElement = form.nextElementSibling;
+//       if (nextElement && nextElement.tagName.toLowerCase() === 'div') {
+//           nextElement.remove();
+//       }
+//   });
+// });
+
+// window.addEventListener('load', () => {
+//             let attempts = 0;
+//             const maxAttempts = 3;
+
+//             const checkElement = () => {
+//                 const teeFormDiv = document.getElementById('teeFormInputs');
+//                 if (teeFormDiv) {
+//                     console.log('Thẻ div với id "teeFormInputs" tồn tại.');
+//                     const newDiv = document.createElement('p');
+//                     newDiv.className = 'photo-upload-guidelines';
+//                     newDiv.id = 'open-guidelines-modal'; 
+//                     newDiv.innerHTML = `
+//                         <img style="width: 20px;" class="photo-upload-guidelines__icon"
+//                             src="//cdn.shopify.com/s/files/1/0563/9988/8539/files/question-circle.svg?v=1705562742"
+//                             alt="question--icon"> 
+//                         <span class="photo-upload-guidelines__text">View photo upload guidelines here</span>
+//                     `;
+//                     teeFormDiv.appendChild(newDiv);
+
+//                     // Thêm modal vào trong thẻ div
+//                     // const modalDiv = document.createElement('div');
+//                     // modalDiv.id = 'modal-guidelines';
+//                     // modalDiv.className = 'modal-guidelines';
+//                     // modalDiv.innerHTML = `
+                        
+//                     // `;
+//                     // teeFormDiv.appendChild(modalDiv);
+
+//                     const modalGuidelines = document.getElementById("modal-guidelines");
+//                     const btnGuidelines = document.getElementById("open-guidelines-modal");
+//                     const spanClose = document.getElementById("close-guidelines");
+                
+//                     btnGuidelines.onclick = function () {
+//                         document.body.classList.add('no-scroll');
+//                         modalGuidelines.style.display = "block";
+//                     }
+                
+//                     spanClose.onclick = function () {
+//                         document.body.classList.remove('no-scroll');
+//                         modalGuidelines.style.display = "none";
+//                     }
+                
+//                     window.onclick = function (event) {
+//                         if (event.target == modalGuidelines) {
+//                             modalGuidelines.style.display = "none";
+//                         }
+//                     }
+//                 } else {
+//                     attempts++;
+//                     console.log(`Thẻ div với id "teeFormInputs" không tồn tại. Thử lại lần ${attempts}`);
+//                     if (attempts < maxAttempts) {
+//                         setTimeout(checkElement, 3000);
+//                     } else {
+//                         console.log('Đã thử kiểm tra 3 lần và không tìm thấy thẻ div với id "teeFormInputs".');
+//                     }
+//                 }
+//             };
+
+//             checkElement();
+//         });
+

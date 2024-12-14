@@ -167,6 +167,10 @@
         >
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
+             <div class="msg-success-container">
+                <span class="msg-success">THANKS FOR SUBSCRIBING</span>
+                <span class="msg-success">Check your email for a confirmation message.</span>
+            </div>
               {%- if section.settings.newsletter_heading != blank -%}
                 <h2 class="heading-footer inline-richtext">{{ section.settings.newsletter_heading }}</h2>
               {%- endif -%}
@@ -256,10 +260,25 @@
                     {% render 'icon-success' -%}
                     {{- 'newsletter.success' | t }}
                   </h3> -->
-                  <div class="msg-success-container">
+                  {% comment %} <div class="msg-success-container">
                       <span class="msg-success">THANKS FOR SUBSCRIBING</span>
                       <span class="msg-success">Check your email for a confirmation message.</span>
-                  </div>
+                  </div> {% endcomment %}
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      // Change the display style of the .msg-success-container to flex
+                      var msgSuccessContainer = document.querySelector('.msg-success-container');
+                      if (msgSuccessContainer) {
+                        msgSuccessContainer.style.display = 'flex';
+                      }
+                
+                      // Change the display style of .heading-footer, .sub_heading-footer, and .newsletter-form__field-wrapper to none
+                      var elementsToHide = document.querySelectorAll('.heading-footer, .sub_heading-footer, .newsletter-form__field-wrapper');
+                      elementsToHide.forEach(function(element) {
+                        element.style.display = 'none';
+                      });
+                    });
+                  </script>
                 {%- endif -%}
               {%- endform -%}
             </div>
@@ -282,7 +301,7 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <div
+  {% comment %} <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
@@ -350,7 +369,7 @@
         {%- endif -%}
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </footer>
 
 {% schema %}

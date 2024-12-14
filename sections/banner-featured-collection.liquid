@@ -3,7 +3,9 @@
 
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'featured-collection-v2.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'featured-collection-v2.js' | asset_url }}" defer="defer"></script>
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
@@ -86,9 +88,41 @@
       {%- endif -%}
     </div>
 
-    {% if section.settings.collection.image.src %}
-      <div class="banner-collection-container">
-          <img class="banner-collection" src="{{ section.settings.banner | image_url }}" alt="{{ section.settings.collection.image.alt | escape }}">
+    {% comment %}
+      {% if section.settings.collection.image.src %}
+        <div class="banner-collection-container">
+          <a href="{{ section.settings.collection.url }}">
+            <img class="banner-collection" src="{{ section.settings.banner | image_url }}" alt="{{ section.settings.collection.image.alt | escape }}">
+          </a>
+        </div>
+      {% endif %}
+    {% endcomment %}
+    {% if section.settings.banner_desktop %}
+      <div class="banner_desktop_v2 banner-collection-container">
+        <a href="{{ section.settings.collection.url }}">
+          <img
+            width="100%"
+            height="100%"
+            class="banner-collection"
+            src="{{ section.settings.banner_desktop | image_url }}"
+            alt="{{ section.settings.collection.image.alt | escape }}"
+            loading="lazy"
+          >
+        </a>
+      </div>
+    {% endif %}
+    {% if section.settings.banner_mobile %}
+      <div class="banner_mobile_v2 banner-collection-container">
+        <a href="{{ section.settings.collection.url }}">
+          <img
+            width="100%"
+            height="100%"
+            class="banner-collection"
+            src="{{ section.settings.banner_mobile | image_url }}"
+            alt="{{ section.settings.collection.image.alt | escape }}"
+            loading="lazy"
+          >
+        </a>
       </div>
     {% endif %}
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -311,8 +345,28 @@
         >
           {%- comment -%} {{ 'sections.featured_collection.view_all' | t }} {%- endcomment -%}
           BROWSE MORE
-          <img class="hat" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
-          <img class="btn-balloon" src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png" srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png" width="300" height="100" alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895" data-pf-type="Image3" class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded" loading="lazy">
+          <img
+            class="hat"
+            src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png"
+            srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_2.png"
+            width="300"
+            height="100"
+            alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895"
+            data-pf-type="Image3"
+            class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded"
+            loading="lazy"
+          >
+          <img
+            class="btn-balloon"
+            src="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png"
+            srcset="https://cdn.shopify.com/s/files/1/0563/9988/8539/files/ftd24_home-button_1.png"
+            width="300"
+            height="100"
+            alt="0401_light string_decor.png__PID:d651e23b-2080-4bc3-b822-fade8773b895"
+            data-pf-type="Image3"
+            class="sc-gsNilK efdcmA pf-50a2faeaedcf-314_ pf-image-1 ls-is-cached lazyloaded"
+            loading="lazy"
+          >
         </a>
       </div>
     {%- endif -%}
@@ -615,6 +669,16 @@
       "type": "image_picker",
       "id": "banner",
       "label": "banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_desktop",
+      "label": "banner desktop" //1200
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_mobile",
+      "label": "banner mobile" //767
     }
   ],
   "presets": [
@@ -625,82 +689,87 @@
 }
 {% endschema %}
 
-<script>
+{% comment %} <script>
   function checkScreenSize() {
     var width = window.innerWidth;
-    console.log("Screen width: " + width);
 
     var mobileElements = document.querySelectorAll('.max-product-mobile');
     var otherElements = document.querySelectorAll('.max-product-other');
     var tabletElements = document.querySelectorAll('.max-product-tablet');
 
     if (width < 576) {
-      // Hiển thị các phần tử 'max-product-mobile'
-      mobileElements.forEach(function(element) {
+      mobileElements.forEach(function (element) {
         element.style.display = 'block';
       });
-      // Ẩn các phần tử 'max-product-other' và 'max-product-tablet'
-      otherElements.forEach(function(element) {
+      otherElements.forEach(function (element) {
         element.style.display = 'none';
       });
-      tabletElements.forEach(function(element) {
+      tabletElements.forEach(function (element) {
         element.style.display = 'none';
       });
     } else if (width >= 576 && width < 768) {
-      // Hiển thị các phần tử 'max-product-mobile'
-      mobileElements.forEach(function(element) {
+      mobileElements.forEach(function (element) {
         element.style.display = 'block';
       });
-      // Ẩn các phần tử 'max-product-other' và 'max-product-tablet'
-      otherElements.forEach(function(element) {
+      otherElements.forEach(function (element) {
         element.style.display = 'none';
       });
-      tabletElements.forEach(function(element) {
+      tabletElements.forEach(function (element) {
         element.style.display = 'none';
       });
     } else if (width >= 768 && width < 1020) {
-      // Hiển thị các phần tử 'max-product-tablet'
-      tabletElements.forEach(function(element) {
+      tabletElements.forEach(function (element) {
         element.style.display = 'block';
       });
-      // Ẩn các phần tử 'max-product-mobile' và 'max-product-other'
-      mobileElements.forEach(function(element) {
+      mobileElements.forEach(function (element) {
         element.style.display = 'none';
       });
-      otherElements.forEach(function(element) {
+      otherElements.forEach(function (element) {
         element.style.display = 'none';
       });
     } else if (width >= 1020 && width < 1200) {
-      // Hiển thị các phần tử 'max-product-other'
-      otherElements.forEach(function(element) {
+      otherElements.forEach(function (element) {
         element.style.display = 'block';
       });
-      // Ẩn các phần tử 'max-product-mobile' và 'max-product-tablet'
-      mobileElements.forEach(function(element) {
+      mobileElements.forEach(function (element) {
         element.style.display = 'none';
       });
-      tabletElements.forEach(function(element) {
+      tabletElements.forEach(function (element) {
         element.style.display = 'none';
       });
     } else {
-      // Hiển thị các phần tử 'max-product-other'
-      otherElements.forEach(function(element) {
+      otherElements.forEach(function (element) {
         element.style.display = 'block';
       });
-      // Ẩn các phần tử 'max-product-mobile' và 'max-product-tablet'
-      mobileElements.forEach(function(element) {
+      mobileElements.forEach(function (element) {
         element.style.display = 'none';
       });
-      tabletElements.forEach(function(element) {
+      tabletElements.forEach(function (element) {
         element.style.display = 'none';
       });
     }
   }
 
-  // Gọi hàm khi trang được tải
   window.onload = checkScreenSize;
-
-  // Gọi hàm khi kích thước cửa sổ thay đổi
   window.onresize = checkScreenSize;
 </script>
 
+<style>
+  .banner_desktop_v2 {
+    display: none;
+  }
+
+  .banner_mobile_v2 {
+    display: flex;
+  }
+
+  @media (min-width: 768px) {
+    .banner_desktop_v2 {
+      display: flex;
+    }
+
+    .banner_mobile_v2 {
+      display: none;
+    }
+  }
+</style> {% endcomment %}

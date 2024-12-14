@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "happy_customers_XetBF6": {
+      "type": "happy-customers",
+      "disabled": true,
+      "settings": {
+        "customer_title": "HAPPY MOMENTS CAPTURED",
+        "customer_description": "Discover the happiness fathers feel with our special gifts",
+        "customer_link": "",
+        "image1": "shopify:\/\/shop_images\/11_67b8ad8e-1804-4949-9f0f-aca81e47b533.webp",
+        "image2": "shopify:\/\/shop_images\/14.webp",
+        "image3": "shopify:\/\/shop_images\/Homepage_Image_Review.webp",
+        "image4": "shopify:\/\/shop_images\/10.webp",
+        "image5": "shopify:\/\/shop_images\/12_d451675c-9093-4042-b581-509f1d1092b7.webp",
+        "image6": "shopify:\/\/shop_images\/13_a3e834d0-bada-4c85-a712-3de6b2439227.webp",
+        "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
+        "image8": "shopify:\/\/shop_images\/16.webp",
+        "happy_customers_url": ""
+      }
+    },
+    "size_charts_WaMNri": {
+      "type": "size-charts",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "happy_customers_XetBF6",
+    "size_charts_WaMNri"
+  ]
+}

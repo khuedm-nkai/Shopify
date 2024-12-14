@@ -47,7 +47,7 @@
   {% endif %}
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
   <div class="media-container">
-    <slider-component class="scroll-galley" id="GalleryViewer-{{ section.id }}">
+    <slider-component class="scroll-galley" id="GalleryThumbnails-{{ section.id }}">
       <ul id="Slider-Thumbnails-{{ section.id }}" class="scroll-image-conatiner">
         {%- capture sizes -%}
           (min-width:

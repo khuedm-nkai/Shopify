@@ -3,6 +3,14 @@
     "countdown_special_day_RKymTt": {
       "type": "countdown-special-day",
       "settings": {
+        "link1": "shopify:\/\/collections\/t-shirt",
+        "link2": "shopify:\/\/collections\/cap",
+        "link3": "shopify:\/\/collections\/mug",
+        "link4": "shopify:\/\/collections\/poster",
+        "link5": "shopify:\/\/collections\/hawaiian-shirt",
+        "link6": "",
+        "link7": "shopify:\/\/collections\/wooden-plaque",
+        "link8": "shopify:\/\/collections\/platter"
       }
     },
     "special_day_collection_4GU3Lp": {
@@ -245,7 +253,8 @@
         "image5": "shopify:\/\/shop_images\/12_d451675c-9093-4042-b581-509f1d1092b7.webp",
         "image6": "shopify:\/\/shop_images\/13_a3e834d0-bada-4c85-a712-3de6b2439227.webp",
         "image7": "shopify:\/\/shop_images\/Snapinsta.app_356423465_1410306206480417_8955081225749562535_n_1080.webp",
-        "image8": "shopify:\/\/shop_images\/16.webp"
+        "image8": "shopify:\/\/shop_images\/16.webp",
+        "happy_customers_url": ""
       }
     }
   },
