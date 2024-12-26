@@ -22,6 +22,27 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
   summary.parentElement.addEventListener('keyup', onKeyUpEscape);
 });
 
+let lastScrollY = 0;
+let scheduledAnimationFrame = false;
+
+function readAndUpdatePage() {
+    scheduledAnimationFrame = false;
+}
+function onScroll (evt) {
+
+    // Store the scroll value for laterz.
+    lastScrollY = window.scrollY;
+
+    // Prevent multiple rAF callbacks.
+    if (scheduledAnimationFrame)
+    return;
+
+    scheduledAnimationFrame = true;
+    requestAnimationFrame(readAndUpdatePage);
+}
+
+window.addEventListener('scroll', onScroll);
+
 const trapFocusHandlers = {};
 
 function trapFocus(container, elementToFocus = container) {

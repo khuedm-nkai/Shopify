@@ -177,6 +177,7 @@
 
 /* Form Elements */
 .product-form__input {
+  margin-top: 10px;
   flex: 0 0 100%;
   padding: 0;
   /* margin: 0 0 1.2rem 0; */

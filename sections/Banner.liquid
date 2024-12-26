@@ -5,10 +5,10 @@
     <div class="slideshow-banner">
       <div class="slides fade">
         <a href="{{ section.settings.btn_link_1}}">
-            <img
-            width="100%"
-            height="100%"
-            src="{{ section.settings.image1 | image_url }}"
+          <img
+            width="177"
+            height="100"
+            src="{{ section.settings.image1 | image_url: width: 533}}"
             style="height: 100%; width:100%"
             alt='image1'
             loading='lazy'
@@ -18,9 +18,9 @@
       <div class="slides fade">
         <a href="{{ section.settings.btn_link_2}}">
             <img
-            width="100%"
-            height="100%"
-            src="{{ section.settings.image2 | image_url }}"
+            width="177"
+            height="100"
+            src="{{ section.settings.image2 | image_url: width: 533 }}"
             style="height: 100%; width:100%"
             alt='image2'
             loading="lazy"
@@ -30,9 +30,9 @@
       <div class="slides fade">
         <a href="{{ section.settings.btn_link_3}}">
             <img
-            width="100%"
-            height="100%"
-            src="{{ section.settings.image3 | image_url }}"
+            width="177"
+            height="100"
+            src="{{ section.settings.image3 | image_url: width: 533 }}"
             style="height: 100%; width:100%"
             alt='image3'
             loading="lazy"
@@ -51,9 +51,9 @@
     <div class="main-banner">
         <a href="{{ section.settings.btn_link_1}}">
             <img
-                width="100%"
-                height="100%"
-                src="{{ section.settings.image1 | image_url }}"
+                width="177"
+                height="100"
+                src="{{ section.settings.image1 | image_url: width: 533, format: 'webp'  }}"
                 alt="image1"
                 loading="lazy"
             >
@@ -63,9 +63,9 @@
       <div class="side-banner green-banner">
         <a href="{{ section.settings.btn_link_2}}">
             <img
-            width="100%"
-            height="100%"
-            src="{{ section.settings.image2 | image_url }}"
+            width="177"
+            height="100"
+            src="{{ section.settings.image2 | image_url: width: 533, format: 'webp' }}"
             alt="image2"
             loading="lazy"
             >
@@ -74,9 +74,9 @@
       <div class="side-banner orange-banner">
         <a href="{{ section.settings.btn_link_3}}">
             <img
-            width="100%"
-            height="100%"
-            src="{{ section.settings.image3 | image_url }}"
+            width="177"
+            height="100"
+            src="{{ section.settings.image3 | image_url: width: 533, format: 'webp' }}"
             style="height: 100%; width:100%"
             alt="image3"
             loading="lazy"
