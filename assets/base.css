@@ -4492,7 +4492,7 @@ div.snize .snize-filters-sidebar div.snize-product-filters-title {
 }
 
 .product-form__input{
-  align-items: center;
+  /* align-items: center; */
 }
 
 .paypal-button > .paypal-button-label-container {
@@ -4501,4 +4501,8 @@ div.snize .snize-filters-sidebar div.snize-product-filters-title {
 
 .paypal-button.paypal-button-color-gold, .paypal-button-row.paypal-button-color-gold .menu-button {
   background: #f4993d !important;
+}
+
+.sunzi-lego-mini .sunzi__button-custom-Zi7RG {
+  margin-top: 10px;
 }
