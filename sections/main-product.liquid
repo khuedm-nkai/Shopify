@@ -1267,13 +1267,13 @@
                   <div id="modal" class="modal">
                       <div class="modal-content">
                           <div class="header-modal-content">
-                              <span>The Best Dad Ever - Family Personalized Custom Unisex T-shirt, Hoodie, Sweatshirt - Father's Day,
+                              {% comment %} <span>The Best Dad Ever - Family Personalized Custom Unisex T-shirt, Hoodie, Sweatshirt - Father's Day,
                                   Birthday Gift For Dad
-                                  Size Charts</span>
+                                  Size Charts</span> {% endcomment %}
                               <span id="closeModalBtn" class="close-btn">&times;</span>
                           </div>
                           <div class="body-modal-content">
-                              <img class='body-human-size' src="https://cdn.kiwisizing.com/thepawfecthouse-1678173008572.png" alt="body human" loading='lazy'>
+                              {% comment %} <img class='body-human-size' src="https://cdn.kiwisizing.com/thepawfecthouse-1678173008572.png" alt="body human" loading='lazy'>
                               <div class="ks-html-content">
                                   <p class='size-chart-des'><span style="color: #111111;font-size: 16px;"><strong>Shoulder Width:</strong> Measure between
                                           the shoulder seams measured straight across the back.</span></p>
@@ -1285,15 +1285,15 @@
                                           point of the shoulder from the back.</span></p>
                                   <p class='size-chart-des'><span style="color: #111111;font-size: 16px;"><strong>Sleeve Length:</strong> Measure between the
                                           tip of the shoulder to the opening of the sleeve.</span></p>
-                              </div>
+                              </div> {% endcomment %}
   
                               <div class="size-chart-divider"></div>
   
                               <div class="clothes-container">
                                   <div class="shirt-container">
-                                      <div class="shirt-label">A. BASIC TEE</div>
+                                      <div class="shirt-label">A. STANDARD T-SHIRT</div>
                                       <div class='shirt-image-container'>
-                                          <img alt='BASIC TEE' src="https://cdn.kiwisizing.com/thepawfecthouse-1678242851209.png" loading='lazy'>
+                                          <img alt='BASIC TEE' src="https://cdn.shopify.com/s/files/1/0724/5047/4287/files/t-shirt__size_chart.png?v=1730274859" loading='lazy'>
                                       </div>
                                   </div>
                                   <div class="shirt-tabel-container">
@@ -1390,9 +1390,9 @@
                               </div>
                               <div class="clothes-container">
                                   <div class="shirt-container">
-                                      <div class="shirt-label">D. TANK TOP</div>
+                                      <div class="shirt-label">D. WOMEN T-SHIRT</div>
                                       <div class='shirt-image-container'>
-                                          <img alt='TANK TOP' src="https://cdn.kiwisizing.com/thepawfecthouse-1682665597719.png" loading='lazy'>
+                                          <img alt='TANK TOP' src="https://cdn.shopify.com/s/files/1/0724/5047/4287/files/t-shirt__size_chart.png?v=1730274859" loading='lazy'>
                                       </div>
                                   </div>
                                   <div class="shirt-tabel-container">
@@ -1423,9 +1423,9 @@
                               </div>
                               <div class="clothes-container">
                                   <div class="shirt-container">
-                                      <div class="shirt-label">E. YOUTH TEE</div>
+                                      <div class="shirt-label">E. YOUTH T-SHIRT</div>
                                       <div class='shirt-image-container'>
-                                          <img alt='YOUTH TEE' src="https://cdn.kiwisizing.com/thepawfecthouse-1678242851209.png" loading='lazy'>
+                                          <img alt='YOUTH TEE' src="https://cdn.shopify.com/s/files/1/0724/5047/4287/files/t-shirt__size_chart.png?v=1730274859" loading='lazy'>
                                       </div>
                                   </div>
                                   <div class="shirt-tabel-container">
@@ -2934,7 +2934,7 @@
           margin: 2% auto;
           border: 1px solid #888;
           width: 100%;
-          max-width: 800px;
+          max-width: 1000px;
           border-radius: 5px;
           position: relative;
       }
@@ -2943,7 +2943,8 @@
           background-color: #ff9729;
           color: #000;
           display: flex;
-          padding: 20px;
+          padding: 0px 10px;
+          justify-content: end;
       }
   
       .modal-content .body-modal-content {
@@ -3151,6 +3152,7 @@
       document.getElementById('delivered-1').textContent = delivered;
   </script>
   
+  {% comment %} handle table {% endcomment %}
   <script>
     let openModal = document.getElementById('openModalBtn');
     if(openModal){
@@ -3202,7 +3204,8 @@
             { size: "XL", length: '31"', width: '24"' },
             { size: "2XL", length: '32"', width: '26"' },
             { size: "3XL", length: '33"', width: '28"' },
-            { size: "4XL", length: '34"', width: '30"' }
+            { size: "4XL", length: '34"', width: '30"' },
+            { size: "5XL", length: '35"', width: '32"' }
         ],
         basicTeeCm: [
             { size: "S", length: '71.1cm', width: '45.7cm' },
@@ -3211,73 +3214,80 @@
             { size: "XL", length: '78.7cm', width: '61cm' },
             { size: "2XL", length: '81.3cm', width: '66cm' },
             { size: "3XL", length: '83.8cm', width: '71.7cm' },
-            { size: "4XL", length: '86.4cm', width: '76.2cm' }
+            { size: "4XL", length: '86.4cm', width: '76.2cm' },
+            { size: "5XL", length: '88.9cm', width: '81.3cm' }
         ],
         hoodie: [
-            { size: "S", length: '26"', width: '20"' },
-            { size: "M", length: '27"', width: '22"' },
-            { size: "L", length: '28"', width: '24"' },
-            { size: "XL", length: '29"', width: '26"' },
-            { size: "2XL", length: '30"', width: '28"' },
-            { size: "3XL", length: '32"', width: '29"' },
-            { size: "4XL", length: '33"', width: '32"' }
+            { size: "S", length: '27"', width: '20"' },
+            { size: "M", length: '28"', width: '22"' },
+            { size: "L", length: '29"', width: '24"' },
+            { size: "XL", length: '30"', width: '26"' },
+            { size: "2XL", length: '31"', width: '28"' },
+            { size: "3XL", length: '32"', width: '30"' },
+            { size: "4XL", length: '33"', width: '32"' },
+            { size: "5XL", length: '34"', width: '34"' }
         ],
         hoodieCm: [
-            { size: "S", length: '71.1cm', width: '45.7cm' },
-            { size: "M", length: '73.7cm', width: '50.8cm' },
-            { size: "L", length: '76.2cm', width: '55.9cm' },
-            { size: "XL", length: '78.7cm', width: '61cm' },
-            { size: "2XL", length: '81.3cm', width: '66cm' },
-            { size: "3XL", length: '83.8cm', width: '71.7cm' },
-            { size: "4XL", length: '86.4cm', width: '76.2cm' }
+            { size: "S", length: '71.1cm', width: '50.8cm' },
+            { size: "M", length: '73.7cm', width: '55.9cm' },
+            { size: "L", length: '76.2cm', width: '61cm' },
+            { size: "XL", length: '78.7cm', width: '66cm' },
+            { size: "2XL", length: '81.3cm', width: '71.1cm' },
+            { size: "3XL", length: '83.8cm', width: '76.2cm' },
+            { size: "4XL", length: '86.4cm', width: '81.3cm' },
+            { size: "5XL", length: '86.4cm', width: '86.4cm' }
         ],
         sweatShirt: [
-            { size: "S", length: '26"', width: '20"' },
-            { size: "M", length: '27"', width: '22"' },
-            { size: "L", length: '28"', width: '24"' },
-            { size: "XL", length: '29"', width: '26"' },
-            { size: "2XL", length: '30"', width: '28"' },
+            { size: "S", length: '27"', width: '20"' },
+            { size: "M", length: '28"', width: '22"' },
+            { size: "L", length: '29"', width: '24"' },
+            { size: "XL", length: '30"', width: '26"' },
+            { size: "2XL", length: '31"', width: '28"' },
             { size: "3XL", length: '32"', width: '30"' },
-            { size: "4XL", length: '33"', width: '32"' }
+            { size: "4XL", length: '33"', width: '32"' },
+            { size: "5XL", length: '34"', width: '34"' }
         ],
         sweatShirtCm: [
-            { size: "S", length: '66cm', width: '50.8cm' },
-            { size: "M", length: '68.6cm', width: '55.9cm' },
-            { size: "L", length: '71.1cm', width: '61cm' },
-            { size: "XL", length: '73.7cm', width: '66cm' },
-            { size: "2XL", length: '76.2cm', width: '71.1cm' },
-            { size: "3XL", length: '78.7cm', width: '76.2cm' },
-            { size: "4XL", length: '81.3cm', width: '81.3cm' }
+            { size: "S", length: '68.6cm', width: '50.8cm' },
+            { size: "M", length: '71.1cm', width: '55.9cm' },
+            { size: "L", length: '73.7cm', width: '61cm' },
+            { size: "XL", length: '76.2cm', width: '66cm' },
+            { size: "2XL", length: '78.7cm', width: '71.1cm' },
+            { size: "3XL", length: '81.3cm', width: '76.2cm' },
+            { size: "4XL", length: '83.8cm', width: '81.3cm' },
+            { size: "5XL", length: '86.4cm', width: '86.4cm' }
         ],
         tankTop: [
-            { size: "XS", length: '26"', width: '16"' },
-            { size: "S", length: '27"', width: '18"' },
-            { size: "M", length: '28"', width: '20"' },
-            { size: "L", length: '29"', width: '22"' },
-            { size: "XL", length: '30"', width: '24"' },
-            { size: "2XL", length: '31"', width: '26"' },
+            { size: "XS", length: '23.5"', width: '16"' },
+            { size: "S", length: '25"', width: '18"' },
+            { size: "M", length: '26"', width: '19.5"' },
+            { size: "L", length: '27"', width: '21"' },
+            { size: "XL", length: '28"', width: '23"' },
+            { size: "2XL", length: '29"', width: '25"' },
+            { size: "3XL", length: '30"', width: '27"' },
         ],
         tankTopCm: [
-            { size: "XS", length: '66cm', width: '40.6cm' },
-            { size: "S", length: '68.6cm', width: '45.7cm' },
-            { size: "M", length: '71.1cm', width: '50.8cm' },
-            { size: "L", length: '73.7cm', width: '55.9cm' },
-            { size: "XL", length: '76.2cm', width: '61cm' },
-            { size: "2XL", length: '78.7cm', width: '66cm' },
+            { size: "XS", length: '59.7cm', width: '40.6cm' },
+            { size: "S", length: '63.5cm', width: '45.7cm' },
+            { size: "M", length: '66cm', width: '49.5cm' },
+            { size: "L", length: '68.6cm', width: '53.3cm' },
+            { size: "XL", length: '71.1cm', width: '58.4cm' },
+            { size: "2XL", length: '73.7cm', width: '63.5cm' },
+            { size: "3XL", length: '76.2cm', width: '68.6cm' },
         ],
         youthTee: [
-            { size: "XS", length: '20"', width: '16"' },
+            { size: "XS", length: '20.5"', width: '16"' },
             { size: "S", length: '22"', width: '17"' },
-            { size: "M", length: '23"', width: '18"' },
+            { size: "M", length: '23.5"', width: '18"' },
             { size: "L", length: '25"', width: '19"' },
-            { size: "XL", length: '26"', width: '20"' },
+            { size: "XL", length: '26.5"', width: '20"' },
         ],
         youthTeeCm: [
-            { size: "XS", length: '50.8cm', width: '40.6cm' },
+            { size: "XS", length: '52.1cm', width: '40.6cm' },
             { size: "S", length: '55.9cm', width: '43.2cm' },
-            { size: "M", length: '58.4cm', width: '45.7cm' },
+            { size: "M", length: '59.7cm', width: '45.7cm' },
             { size: "L", length: '63.5cm', width: '48.3cm' },
-            { size: "XL", length: '66cm', width: '50.8cm' },
+            { size: "XL", length: '67.3cm', width: '50.8cm' },
         ],
     };
   
